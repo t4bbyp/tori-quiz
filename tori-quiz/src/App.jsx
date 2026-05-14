@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Landing from "./components/Landing";
-import { QuizProvider } from "./store/quizContex";
+import { QuizContext, QuizProvider } from "./store/quizContex";
+import Quiz from "./components/Quiz";
 
 function App() {
-  const [name, setName] = useState("");
+  const quizCtx = useContext(QuizContext);
 
   return (
-    <QuizProvider>
-      <Landing/>
-    </QuizProvider>
+    <>
+      {quizCtx.username === "" && <Landing />}
+      {quizCtx.username !== "" && <Quiz />}
+    </>
   );
+
+
+  //return <Res/>
 }
 
 export default App;

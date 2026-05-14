@@ -1,20 +1,20 @@
 export const questions = [
   {
     id: "q1",
-    q: "Are you...?",
+    q: "Eres...?",
     a: [
-      { id: "a", text: "Male" },
-      { id: "b", text: "Female" },
-      { id: "c", text: "Other" },
+      { id: "a", text: "Hombre" },
+      { id: "b", text: "Mujer" },
+      { id: "c", text: "Otro" },
     ],
   },
   {
     id: "q2",
-    q: "What's your fav color?",
+    q: "Cual es tu color favorito?",
     a: [
-      { id: "a", text: "Blue" },
-      { id: "b", text: "Pink" },
-      { id: "c", text: "Red" },
+      { id: "a", text: "Azul" },
+      { id: "b", text: "Rosa" },
+      { id: "c", text: "Morado" },
     ],
   },
 ];

@@ -1,0 +1,38 @@
+.reset_btn {
+    background-color: #ffafcc;
+    border: 2px solid #812144;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 1%;
+}
+
+.reset_btn:hover {
+    background-color: #f04181;
+}
+
+ul {
+    list-style-type: none !important;
+    padding: 0;
+    width:100%;
+}
+
+li {
+    margin: 1%;
+}
+
+li button {
+    min-width: 30%;
+    height: auto;
+    padding: 2% 3%;
+    font-size: 1.8vmin;
+    background-color: #a2d2ff;
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    color: #014f79;
+}
+
+li button:hover {
+    background-color: #bde0fe;
+}

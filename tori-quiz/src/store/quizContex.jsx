@@ -1,29 +1,28 @@
 import { createContext, useState } from "react";
+import Landing from "../components/Landing";
 
 export const QuizContext = createContext();
 
-export function QuizProvider({children}) {
-    const [username, setUsername] = useState("");
-    const [answers, setAnswers] = useState([]);
+export function QuizProvider({ children }) {
+  const [username, setUsername] = useState("");
+  const [answers, setAnswers] = useState([]);
 
-    function addAnswer(answer) {
-        setAnswers((prev) => [...prev, answer]);
-    }
+  function addAnswer(answer) {
+    setAnswers((prev) => [...prev, answer]);
+  }
 
-    function restartQuiz() {
-        setUsername("");
-        setAnswers([]);
-    }
+  function restartQuiz() {
+    setUsername("");
+    setAnswers([]);
+  }
+  
+  const ctxValue = {
+    username,
+    setUsername,
+    answers,
+    addAnswer,
+    restartQuiz,
+  };
 
-    const ctxValue = {
-        username,
-        setUsername,
-        answers,
-        addAnswer,
-        restartQuiz
-    }
-
-    return (
-        <QuizContext value={ctxValue}>{children}</QuizContext>
-    )
+  return <QuizContext value={ctxValue}>{children}</QuizContext>;
 }
