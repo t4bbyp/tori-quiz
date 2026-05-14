@@ -4,9 +4,9 @@ import "./index.css";
 import App from "./App.jsx";
 import { QuizProvider } from "./store/quizContex.jsx";
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  
     <QuizProvider>
       <App />
     </QuizProvider>
-  </StrictMode>,
+ ,
 );
