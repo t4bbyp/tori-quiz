@@ -6,7 +6,7 @@ import Header from "./Header";
 function Landing() {
   const quizCtx = useContext(QuizContext);
   const [uname, setUname] = useState();
-  const [quizStart, setQuizStart] = useState(false);
+  //const [quizStart, setQuizStart] = useState(false);
 
   function startQuiz(e) {
     e.preventDefault();

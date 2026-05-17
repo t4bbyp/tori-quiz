@@ -25,13 +25,13 @@ function Quiz() {
     <>
       <Header />
       <div className="mybox">
-        <h2>{questions[activeQuestionIndex].q}</h2>
+        <h2>{questions[activeQuestionIndex].question}</h2>
 
         <ul>
           {answers.map((answer) => {
             return (
               <li key={answer.id}>
-                <button onClick={() => selectAnswer(answer.id)}>
+                <button onClick={() => selectAnswer(answer)}>
                   {answer.text}
                 </button>
               </li>

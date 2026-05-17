@@ -1,241 +1,870 @@
 export const questions = [
   {
     id: "q1",
-    q: "Género",
-    a: [
-      { id: "a", text: "Femenino" },
-      { id: "b", text: "Masculino" },
-      { id: "c", text: "Otro" },
+    question: "Género",
+    answers: [
+      {
+        id: "a",
+        text: "Femenino",
+        meta: {
+          gender: "femenino",
+        },
+      },
+      {
+        id: "b",
+        text: "Masculino",
+        meta: {
+          gender: "masculino",
+        },
+      },
+      {
+        id: "c",
+        text: "Otro",
+        meta: {
+          gender: "otro",
+        },
+      },
     ],
   },
   {
     id: "q2",
-    q: "Orientación sexual",
-    a: [
-      { id: "a", text: "Hetero" },
-      { id: "b", text: "Homo" },
-      { id: "c", text: "Bi" },
-      { id: "d", text: "Otro" },
+    question: "Orientación sexual",
+    answers: [
+      {
+        id: "a",
+        text: "Hetero",
+        meta: {
+          sexuality: "hetero",
+        },
+      },
+      {
+        id: "b",
+        text: "Homo",
+        meta: {
+          sexuality: "homo",
+        },
+      },
+      {
+        id: "c",
+        text: "Bi/Pan",
+        meta: {
+          sexuality: "bi",
+        },
+      },
+      {
+        id: "d",
+        text: "Asexual",
+        meta: {
+          sexuality: "asexual",
+        },
+      },
     ],
   },
   {
     id: "q3",
-    q: "Eres...",
-    a: [
-      { id: "a", text: "Introvertido" },
-      { id: "b", text: "Extrovertido" },
-      { id: "c", text: "Ambivertido" },
+    question: "Eres...",
+    answers: [
+      {
+        id: "a",
+        text: "Introvertido",
+        tags: {
+          introvertido: 3,
+          reservado: 2,
+          distante: 1,
+          evitativo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Extrovertido",
+        tags: {
+          extrovertido: 3,
+          sociable: 2,
+          aventurero: 1,
+          expresivo: 1,
+        },
+      },
+      {
+        id: "c",
+        text: "Ambivertido",
+        tags: {
+          ambivertido: 2,
+          adaptable: 1,
+          sociable: 1,
+          estable: 1,
+        },
+      },
     ],
   },
   {
     id: "q4",
-    q: "Cuando se trata de trabajo/tareas, tú...",
-    a: [
-      { id: "a", text: "Cuanto antes, mejor." },
-      { id: "b", text: "Meh, ya lo haré mañana... (asi todo el mes)" },
+    question: "Cuando se trata de trabajo/tareas, tú...",
+    answers: [
+      {
+        id: "a",
+        text: "Cuanto antes, mejor.",
+        tags: {
+          responsable: 3,
+          organizado: 2,
+          controlador: 1,
+          racional: 1,
+          estricto: 1,
+          directo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Meh, ya lo haré mañana... (asi todo el mes)",
+        tags: {
+          procrastinador: 3,
+          relajado: 2,
+          caotico: 1,
+          evitativo: 1,
+        },
+      },
       {
         id: "c",
         text: "Me centro en lo más importante primero; lo demás ya veré.",
+        tags: {
+          pragmatico: 2,
+          adaptable: 1,
+          responsable: 1,
+          relajado: 1,
+          estable: 1,
+        },
       },
     ],
   },
   {
     id: "q5",
-    q: "Prefieres...",
-    a: [
-      { id: "a", text: "Caos, aventura, eventos inesperados" },
+    question: "Prefieres...",
+    answers: [
+      {
+        id: "a",
+        text: "Caos, aventura, eventos inesperados",
+        tags: {
+          caotico: 3,
+          aventurero: 2,
+          impulsivo: 1,
+          emocional: 1,
+          procrastinador: 1,
+        },
+      },
       {
         id: "b",
         text: "Rutina, saber qué es lo siguiente, tener control sobre tu vida",
+        tags: {
+          estable: 3,
+          controlador: 2,
+          responsable: 2,
+          organizado: 2,
+          racional: 1,
+          estricto: 1,
+        },
       },
       {
         id: "c",
         text: "Un poco de ambas. La tranquilidad y la calma son lo mejor, pero a veces viene bien un poco de adrenalina",
+        tags: {
+          estable: 1,
+          adaptable: 2,
+          ambivertido: 1,
+          responsable: 1,
+          relajado: 1,
+        },
       },
     ],
   },
   {
     id: "q6",
-    q: "En cuanto al contacto físico...",
-    a: [
-      { id: "a", text: "AY, SÍ, POR FAVOR. UN BESO Y MIL ABRAZOS PARA TODOS" },
+    question: "En cuanto al contacto físico...",
+    answers: [
+      {
+        id: "a",
+        text: "AY, SÍ, POR FAVOR. UN BESO Y MIL ABRAZOS",
+        tags: {
+          afectivo: 3,
+          contacto_fisico: 3,
+          impulsivo: 1,
+          romantico: 1,
+          directo: 1,
+          expresivo: 2,
+        },
+      },
       {
         id: "b",
         text: "Con amigos/familia, vale, de vez en cuando. Con desconocidos, solo si las formalidades lo requieren; preferiblemente no.",
+        tags: {
+          reservado: 1,
+          afectivo: 1,
+          adaptable: 1,
+          controlador: 1,
+          contacto_fisico: 2,
+          sutil: 1,
+        },
       },
-      { id: "c", text: "Tócame un pelo y te mato." },
+      {
+        id: "c",
+        text: "Tócame un pelo y te mato.",
+        tags: {
+          distante: 3,
+          contacto_fisico: -1,
+          reservado: 2,
+          controlador: 2,
+          estricto: 1,
+          evitativo: 1,
+          libido: -1,
+        },
+      },
     ],
   },
   {
     id: "q7",
-    q: "Como pareja, serías...",
-    a: [
-      { id: "a", text: "Romántico" },
-      { id: "b", text: "Pragmático" },
-      { id: "c", text: "¿Depende del momento?" },
+    question: "Como pareja, serías...",
+    answers: [
+      {
+        id: "a",
+        text: "Romántico",
+        tags: {
+          romantico: 3,
+          afectivo: 1,
+          emocional: 1,
+          expresivo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Pragmático",
+        tags: {
+          pragmatico: 3,
+          reservado: 1,
+          estable: 1,
+          racional: 1,
+        },
+      },
+      {
+        id: "c",
+        text: "¿Depende del momento?",
+        tags: {
+          adaptable: 2,
+          romantico: 1,
+          pragmatico: 1,
+        },
+      },
     ],
   },
   {
     id: "q8",
-    q: "Eres más...",
-    a: [
-      { id: "a", text: "Emocional" },
-      { id: "b", text: "Racional" },
+    question: "Eres más...",
+    answers: [
+      {
+        id: "a",
+        text: "Emocional",
+        tags: {
+          emocional: 3,
+          caotico: 1,
+          afectivo: 2,
+          expresivo: 1,
+          empatico: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Racional",
+        tags: {
+          racional: 3,
+          organizado: 1,
+          analitico: 2,
+          controlador: 1,
+          estable: 1,
+        },
+      },
     ],
   },
   {
     id: "q9",
-    q: "En contextos sociales, eres...",
-    a: [
-      { id: "a", text: "Educado" },
-      { id: "b", text: "Maleducado" },
-      { id: "c", text: "Depende del momento" },
+    question: "En contextos sociales, eres...",
+    answers: [
+      {
+        id: "a",
+        text: "Educado",
+        tags: {
+          educado: 3,
+          sutil: 1,
+          sociable: 1,
+          responsable: 1,
+          estable: 1,
+          bondadoso: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Maleducado",
+        tags: {
+          grosero: 3,
+          directo: 1,
+          caotico: 1,
+          impulsivo: 1,
+          cruel: 1,
+          hater: 2,
+        },
+      },
+      {
+        id: "c",
+        text: "Depende del momento",
+        tags: {
+          adaptable: 2,
+          ambiguo: 1,
+          pragmatico: 1,
+          aventurero: 1,
+          resolutivo: 1,
+          inteligente: 1,
+        },
+      },
     ],
   },
   {
     id: "q10",
-    q: "Moralmente eres...",
-    a: [
-      { id: "a", text: "Flexible" },
-      { id: "b", text: "Estricto" },
+    question: "Moralmente eres...",
+    answers: [
+      {
+        id: "a",
+        text: "Flexible",
+        tags: {
+          adaptable: 3,
+          resolutivo: 1,
+          empatico: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Estricto",
+        tags: {
+          estricto: 3,
+          organizado: 1,
+          estable: 1,
+        },
+      },
     ],
   },
   {
     id: "q11",
-    q: "Cuando hay conflicto, tiendes a ser...",
-    a: [
-      { id: "a", text: "Evitativo" },
-      { id: "b", text: "Resolutivo" },
+    question: "Cuando hay conflicto, tiendes a ser...",
+    answers: [
+      {
+        id: "a",
+        text: "Evitativo",
+        tags: {
+          evitativo: 3,
+          reservado: 2,
+          caotico: 1,
+          distante: 1,
+          sutil: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Resolutivo",
+        tags: {
+          resolutivo: 3,
+          directo: 1,
+          adaptable: 1,
+          analitico: 2,
+          expresivo: 1,
+        },
+      },
     ],
   },
   {
     id: "q12",
-    q: "Prefieres el ligoteo...",
-    a: [
-      { id: "a", text: "Explícito" },
-      { id: "b", text: "Sutil" },
+    question: "Prefieres el ligoteo...",
+    answers: [
+      {
+        id: "a",
+        text: "Explícito",
+        tags: {
+          directo: 3,
+          afectivo: 1,
+          romantico: 1,
+          expresivo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Sutil",
+        tags: {
+          sutil: 3,
+          reservado: 1,
+          relajado: 1,
+          distante: 1,
+        },
+      },
     ],
   },
   {
     id: "q13",
-    q: "Procesando las emociones, tú...",
-    a: [
+    question: "Procesando las emociones, tú...",
+    answers: [
       {
         id: "a",
         text: "Te tomas tu tiempo. A veces te cuesta, o prefieres analizar las cosas con cuidado.",
+        tags: {
+          introspectivo: 3,
+          analitico: 2,
+          resolutivo: 1,
+        },
       },
       {
         id: "b",
-        text: "Te las tomas tal cual vienen. No tienes problema con sentirlas, sean buenas o malas, y cuanto antes las aceptes, mejor.",
+        text: "Te las tomas tal como vienen. No tienes problema con sentirlas, sean buenas o malas, y cuanto antes las aceptes, mejor.",
+        tags: {
+          emocional: 2,
+          expresivo: 2,
+        },
+      },
+      {
+        id: "c",
+        text: "¿Emociones? Absolutamente no, una perdida de tiempo.",
+        tags: {
+          evitativo: 3,
+          reservado: 1,
+          distante: 1,
+        },
       },
     ],
   },
   {
     id: "q14",
-    q: "Realmente eres...",
-    a: [
-      { id: "a", text: "Inteligente" },
-      { id: "b", text: "Tonto" },
-      { id: "c", text: "Tienes cabeza, pero falta interés/recursos" },
+    question: "Realmente eres...",
+    answers: [
+      {
+        id: "a",
+        text: "Inteligente",
+        tags: {
+          inteligente: 3,
+          analitico: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "No muy brillante.",
+        tags: {
+          caotico: 2,
+          grosero: 1,
+        },
+      },
+      {
+        id: "c",
+        text: "Tienes cabeza, pero falta interés/recursos",
+        tags: {
+          inteligente: 1,
+          caotico: 1,
+          relajado: 1,
+        },
+      },
     ],
   },
   {
     id: "q15",
-    q: "Los demás dirían que eres...",
-    a: [
-      { id: "a", text: "Buena persona" },
-      { id: "b", text: "Mala persona" },
-      { id: "c", text: "Bastante ambiguo, difícil de etiquetar" },
+    question: "Los demás dirían que eres...",
+    answers: [
+      {
+        id: "a",
+        text: "Buena persona",
+        tags: {
+          bondadoso: 3,
+          empatico: 2,
+          resolutivo: 1,
+          educado: 2,
+        },
+      },
+      {
+        id: "b",
+        text: "Mala persona",
+        tags: {
+          cruel: 3,
+          hater: 1,
+          evitativo: 1,
+          caotico: 1,
+        },
+      },
+      {
+        id: "c",
+        text: "Bastante ambiguo, difícil de etiquetar",
+        tags: {
+          ambiguo: 2,
+          adaptable: 1,
+          caotico: 1,
+        },
+      },
     ],
   },
   {
     id: "q16",
-    q: "En cuanto a los problemas ajenos, tú...",
-    a: [
-      { id: "a", text: "Ofreces apoyo emocional y te centras, antes que nada, en hacer que el otro se sienta mejor" },
-      { id: "b", text: "Buscas soluciones directamente. Solo un par de palabras dulces no cambiarán la situación." },
+    question: "En cuanto a los problemas ajenos, tú...",
+    answers: [
+      {
+        id: "a",
+        text: "Ofreces apoyo emocional y te centras, antes de nada, en hacer que el otro se sienta mejor",
+        tags: {
+          empatico: 3,
+          emocional: 1,
+          sociable: 1,
+          afectivo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Buscas soluciones directamente. Solo un par de palabras dulces no cambiarán la situación.",
+        tags: {
+          pragmatico: 3,
+          directo: 1,
+          analitico: 1,
+          racional: 2,
+        },
+      },
     ],
   },
   {
     id: "q17",
-    q: "Tu libido es...",
-    a: [
-      { id: "a", text: "Muy intenso" },
-      { id: "b", text: "Moderado" },
-      { id: "c", text: "Bajo o inexistente" },
+    question: "Tu libido es...",
+    answers: [
+      {
+        id: "a",
+        text: "Muy intenso",
+        tags: {
+          libido: 3,
+          contacto_fisico: 1,
+          afectivo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Moderado",
+        tags: {
+          libido: 2,
+        },
+      },
+      {
+        id: "c",
+        text: "Bajo o inexistente",
+        tags: {
+          libido: 1,
+          contacto_fisico: -1,
+        },
+      },
     ],
   },
   {
     id: "q18",
-    q: "Buscas......",
-    a: [
-      { id: "a", text: "Líos de una noche" },
-      { id: "b", text: "Relaciones estables y duraderas" },
+    question: "Buscas...",
+    answers: [
+      {
+        id: "a",
+        text: "Líos de una noche",
+        tags: {
+          casual: 3,
+          pragmatico: 1,
+          distante: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Relaciones estables y duraderas",
+        tags: {
+          compromiso: 3,
+          romantico: 1,
+          responsable: 1,
+        },
+      },
     ],
   },
   {
     id: "q19",
-    q: "Te gustaría alguien mas...",
-    a: [
-      { id: "a", text: "Dominante" },
-      { id: "b", text: "Sumiso" },
-      { id: "c", text: "Adaptable" },
+    question: "Te gustaría alguien mas...",
+    answers: [
+      {
+        id: "a",
+        text: "Dominante",
+        meta: {
+          tipo: "dom",
+        },
+      },
+      {
+        id: "b",
+        text: "Sumiso",
+        meta: {
+          tipo: "sub",
+        },
+      },
+      {
+        id: "c",
+        text: "Adaptable",
+        meta: {
+          tipo: "switch",
+        },
+      },
     ],
   },
   {
     id: "q20",
-    q: "¿Quieres hijos?",
-    a: [
-      { id: "a", text: "Sí" },
-      { id: "b", text: "No" },
-      { id: "c", text: "No estoy segur@..." },
+    question: "¿Quieres hijos?",
+    answers: [
+      {
+        id: "a",
+        text: "Sí",
+        meta: {
+          child: "yes",
+        },
+      },
+      {
+        id: "b",
+        text: "No",
+        meta: {
+          child: "no",
+        },
+      },
+      {
+        id: "c",
+        text: "No estoy segur@...",
+        meta: {
+          child: "maybe",
+        },
+      },
     ],
   },
   {
     id: "q21",
-    q: "Prefieres las relaciones......",
-    a: [
-      { id: "a", text: "Monógamas" },
-      { id: "b", text: "Poliamorosas" },
-      { id: "c", text: "Abiertas" },
-      { id: "d", text: "Ninguna, gracias." },
-      { id: "e", text: "Da igual." },
+    question: "Prefieres las relaciones...",
+    answers: [
+      {
+        id: "a",
+        text: "Monógamas",
+        meta: {
+          relacion: "mono",
+        },
+      },
+      {
+        id: "b",
+        text: "Poliamorosas",
+        meta: {
+          relacion: "poli",
+        },
+      },
+      {
+        id: "c",
+        text: "Abiertas",
+        meta: {
+          relacion: "abierta",
+        },
+      },
+      {
+        id: "d",
+        text: "Ninguna, gracias.",
+        meta: {
+          relacion: "arromantico",
+        },
+      },
+      {
+        id: "e",
+        text: "Da igual.",
+        meta: {
+          relacion: "cualquiera",
+        },
+      },
     ],
   },
   {
     id: "q22",
-    q: "Tu estilo de apego es...",
-    a: [
-      { id: "a", text: "Seguro" },
-      { id: "b", text: "Evitativo" },
-      { id: "c", text: "Ansioso" },
-      { id: "d", text: "Desorganizado" },
-      { id: "e", text: "No me gusta la gente." },
+    question: "Tu estilo de apego es...",
+    answers: [
+      {
+        id: "a",
+        text: "Seguro",
+        meta: {
+          apego: "seguro",
+        },
+        tags: {
+          estable: 2,
+          directo: 1,
+          resolutivo: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Evitativo",
+        meta: {
+          apego: "evitativo",
+        },
+        tags: {
+          evitativo: 2,
+          reservado: 1,
+          distante: 1,
+        },
+      },
+      {
+        id: "c",
+        text: "Ansioso",
+        meta: {
+          apego: "ansioso",
+        },
+        tags: {
+          controlador: 1,
+          emocional: 2,
+          resolutivo: 1,
+        },
+      },
+      {
+        id: "d",
+        text: "Desorganizado",
+        meta: {
+          apego: "desorganizado",
+        },
+        tags: {
+          caotico: 1,
+          adaptable: 1,
+        },
+      },
+      {
+        id: "e",
+        text: "No me gusta la gente.",
+        meta: {
+          apego: "hater",
+        },
+        tags: {
+          hater: 2,
+          distante: 1,
+        },
+      },
     ],
   },
   {
     id: "q23",
-    q: "Y te gustaría que tu pareja fuera...",
-    a: [
-      { id: "a", text: "Seguro" },
-      { id: "b", text: "Evitativo" },
-      { id: "c", text: "Ansioso" },
-      { id: "d", text: "Desorganizado" },
-      { id: "e", text: "No le gusta la gente... y a ti te gusta sufrir, claramente." },
+    question: "Y te gustaría que tu pareja fuera...",
+    answers: [
+      {
+        id: "a",
+        text: "Seguro",
+        meta: {
+          quiere_apego: "seguro",
+        },
+      },
+      {
+        id: "b",
+        text: "Evitativo",
+        meta: {
+          quiere_apego: "evitativo",
+        },
+      },
+      {
+        id: "c",
+        text: "Ansioso",
+        meta: {
+          quiere_apego: "ansioso",
+        },
+      },
+      {
+        id: "d",
+        text: "Desorganizado",
+        meta: {
+          quiere_apego: "desorganizado",
+        },
+      },
+      {
+        id: "e",
+        text: "No le gusta la gente... y a ti te gusta sufrir, claramente.",
+        meta: {
+          quiere_apego: "hater",
+        },
+      },
     ],
   },
   {
     id: "q24",
-    q: "Tu lenguaje amoroso:",
-    a: [
-      { id: "a", text: "Palabras de afirmación" },
-      { id: "b", text: "Tiempo de calidad" },
-      { id: "c", text: "Recibir/dar regalos" },
-      { id: "d", text: "Pingüinada (regalar objetos cotidianos o pequeños gestos)" },
-      { id: "e", text: "Actos de servicio" },
-      { id: "f", text: "Contacto físico" },
-      { id: "a", text: "Ninguno de estos" },
+    question: "Tu lenguaje amoroso:",
+    answers: [
+      {
+        id: "a",
+        text: "Palabras de afirmación",
+        tags: {
+          afirmacion: 3,
+          afectivo: 1,
+          romantico: 1,
+        },
+      },
+      {
+        id: "b",
+        text: "Tiempo de calidad",
+        tags: {
+          calidad: 3,
+          aventurero: 1,
+        },
+      },
+      {
+        id: "c",
+        text: "Recibir/dar regalos",
+        tags: {
+          regalos: 3,
+          empatico: 1,
+        },
+      },
+      {
+        id: "d",
+        text: "Pingüinada (regalar objetos cotidianos o pequeños gestos)",
+        tags: {
+          pinguino: 3,
+          impulsivo: 1,
+        },
+      },
+      {
+        id: "e",
+        text: "Actos de servicio",
+        tags: {
+          actos: 3,
+          responsable: 1,
+        },
+      },
+      {
+        id: "f",
+        text: "Contacto físico",
+        tags: {
+          contacto_fisico: 1,
+        },
+      },
+      {
+        id: "g",
+        text: "Ninguno de estos",
+        tags: {
+          otro_lenguaje: 3,
+        },
+      },
     ],
   },
-
+  {
+    id: "q25",
+    question: "Te consideras mas...",
+    answers: [
+      {
+        id: "a",
+        text: "Dominante",
+        meta: {
+          quiere_tipo: "dom",
+        },
+      },
+      {
+        id: "b",
+        text: "Sumiso",
+        meta: {
+          quiere_tipo: "sub",
+        },
+      },
+      {
+        id: "c",
+        text: "Adaptable",
+        meta: {
+          quiere_tipo: "switch",
+        },
+      },
+    ],
+  },
 ];

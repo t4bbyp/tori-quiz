@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import Landing from "../components/Landing";
 
 export const QuizContext = createContext();
 
