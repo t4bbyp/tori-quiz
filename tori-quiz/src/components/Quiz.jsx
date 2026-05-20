@@ -14,7 +14,7 @@ function Quiz() {
     return <Results />;
   }
 
-  const answers = [...questions[activeQuestionIndex].a];
+  const answers = [...questions[activeQuestionIndex].answers];
 
   function selectAnswer(clickedAnswer) {
     console.log(clickedAnswer);

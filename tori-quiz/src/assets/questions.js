@@ -69,8 +69,6 @@ export const questions = [
         text: "Introvertido",
         tags: {
           introvertido: 3,
-          reservado: 2,
-          distante: 1,
           evitativo: 1,
         },
       },
@@ -79,7 +77,6 @@ export const questions = [
         text: "Extrovertido",
         tags: {
           extrovertido: 3,
-          sociable: 2,
           aventurero: 1,
           expresivo: 1,
         },
@@ -90,7 +87,6 @@ export const questions = [
         tags: {
           ambivertido: 2,
           adaptable: 1,
-          sociable: 1,
           estable: 1,
         },
       },
@@ -105,10 +101,8 @@ export const questions = [
         text: "Cuanto antes, mejor.",
         tags: {
           responsable: 3,
-          organizado: 2,
-          controlador: 1,
           racional: 1,
-          estricto: 1,
+          estricto: 2,
           directo: 1,
         },
       },
@@ -117,7 +111,7 @@ export const questions = [
         text: "Meh, ya lo haré mañana... (asi todo el mes)",
         tags: {
           procrastinador: 3,
-          relajado: 2,
+          estable: 2,
           caotico: 1,
           evitativo: 1,
         },
@@ -129,8 +123,7 @@ export const questions = [
           pragmatico: 2,
           adaptable: 1,
           responsable: 1,
-          relajado: 1,
-          estable: 1,
+          estable: 2,
         },
       },
     ],
@@ -145,7 +138,6 @@ export const questions = [
         tags: {
           caotico: 3,
           aventurero: 2,
-          impulsivo: 1,
           emocional: 1,
           procrastinador: 1,
         },
@@ -155,11 +147,9 @@ export const questions = [
         text: "Rutina, saber qué es lo siguiente, tener control sobre tu vida",
         tags: {
           estable: 3,
-          controlador: 2,
           responsable: 2,
-          organizado: 2,
           racional: 1,
-          estricto: 1,
+          estricto: 3,
         },
       },
       {
@@ -170,7 +160,6 @@ export const questions = [
           adaptable: 2,
           ambivertido: 1,
           responsable: 1,
-          relajado: 1,
         },
       },
     ],
@@ -183,10 +172,9 @@ export const questions = [
         id: "a",
         text: "AY, SÍ, POR FAVOR. UN BESO Y MIL ABRAZOS",
         tags: {
-          afectivo: 3,
           contacto_fisico: 3,
-          impulsivo: 1,
-          romantico: 1,
+          caotico: 1,
+          romantico: 3,
           directo: 1,
           expresivo: 2,
         },
@@ -195,10 +183,10 @@ export const questions = [
         id: "b",
         text: "Con amigos/familia, vale, de vez en cuando. Con desconocidos, solo si las formalidades lo requieren; preferiblemente no.",
         tags: {
-          reservado: 1,
-          afectivo: 1,
+          introvertido: 1,
+          romantico: 1,
           adaptable: 1,
-          controlador: 1,
+          estricto: 1,
           contacto_fisico: 2,
           sutil: 1,
         },
@@ -207,13 +195,10 @@ export const questions = [
         id: "c",
         text: "Tócame un pelo y te mato.",
         tags: {
-          distante: 3,
           contacto_fisico: -1,
-          reservado: 2,
-          controlador: 2,
-          estricto: 1,
+          introvertido: 3,
+          estricto: 3,
           evitativo: 1,
-          libido: -1,
         },
       },
     ],
@@ -227,7 +212,6 @@ export const questions = [
         text: "Romántico",
         tags: {
           romantico: 3,
-          afectivo: 1,
           emocional: 1,
           expresivo: 1,
         },
@@ -237,7 +221,7 @@ export const questions = [
         text: "Pragmático",
         tags: {
           pragmatico: 3,
-          reservado: 1,
+          introvertido: 1,
           estable: 1,
           racional: 1,
         },
@@ -263,7 +247,7 @@ export const questions = [
         tags: {
           emocional: 3,
           caotico: 1,
-          afectivo: 2,
+          romantico: 2,
           expresivo: 1,
           empatico: 1,
         },
@@ -273,9 +257,8 @@ export const questions = [
         text: "Racional",
         tags: {
           racional: 3,
-          organizado: 1,
-          analitico: 2,
-          controlador: 1,
+          responsable: 1,
+          estricto: 1,
           estable: 1,
         },
       },
@@ -291,22 +274,18 @@ export const questions = [
         tags: {
           educado: 3,
           sutil: 1,
-          sociable: 1,
+          extrovertido: 1,
           responsable: 1,
           estable: 1,
-          bondadoso: 1,
         },
       },
       {
         id: "b",
         text: "Maleducado",
         tags: {
-          grosero: 3,
           directo: 1,
           caotico: 1,
-          impulsivo: 1,
-          cruel: 1,
-          hater: 2,
+          hater: 3,
         },
       },
       {
@@ -341,7 +320,7 @@ export const questions = [
         text: "Estricto",
         tags: {
           estricto: 3,
-          organizado: 1,
+          responsable: 1,
           estable: 1,
         },
       },
@@ -356,9 +335,8 @@ export const questions = [
         text: "Evitativo",
         tags: {
           evitativo: 3,
-          reservado: 2,
+          introvertido: 2,
           caotico: 1,
-          distante: 1,
           sutil: 1,
         },
       },
@@ -369,7 +347,7 @@ export const questions = [
           resolutivo: 3,
           directo: 1,
           adaptable: 1,
-          analitico: 2,
+          racional: 2,
           expresivo: 1,
         },
       },
@@ -384,7 +362,6 @@ export const questions = [
         text: "Explícito",
         tags: {
           directo: 3,
-          afectivo: 1,
           romantico: 1,
           expresivo: 1,
         },
@@ -394,9 +371,8 @@ export const questions = [
         text: "Sutil",
         tags: {
           sutil: 3,
-          reservado: 1,
-          relajado: 1,
-          distante: 1,
+          introvertido: 1,
+          estable: 1,
         },
       },
     ],
@@ -409,9 +385,8 @@ export const questions = [
         id: "a",
         text: "Te tomas tu tiempo. A veces te cuesta, o prefieres analizar las cosas con cuidado.",
         tags: {
-          introspectivo: 3,
-          analitico: 2,
-          resolutivo: 1,
+          racional: 2,
+          resolutivo: 3,
         },
       },
       {
@@ -427,8 +402,7 @@ export const questions = [
         text: "¿Emociones? Absolutamente no, una perdida de tiempo.",
         tags: {
           evitativo: 3,
-          reservado: 1,
-          distante: 1,
+          introvertido: 1,
         },
       },
     ],
@@ -442,7 +416,7 @@ export const questions = [
         text: "Inteligente",
         tags: {
           inteligente: 3,
-          analitico: 1,
+          racional: 1,
         },
       },
       {
@@ -450,7 +424,7 @@ export const questions = [
         text: "No muy brillante.",
         tags: {
           caotico: 2,
-          grosero: 1,
+          hater: 1,
         },
       },
       {
@@ -459,7 +433,6 @@ export const questions = [
         tags: {
           inteligente: 1,
           caotico: 1,
-          relajado: 1,
         },
       },
     ],
@@ -472,7 +445,6 @@ export const questions = [
         id: "a",
         text: "Buena persona",
         tags: {
-          bondadoso: 3,
           empatico: 2,
           resolutivo: 1,
           educado: 2,
@@ -482,8 +454,7 @@ export const questions = [
         id: "b",
         text: "Mala persona",
         tags: {
-          cruel: 3,
-          hater: 1,
+          hater: 3,
           evitativo: 1,
           caotico: 1,
         },
@@ -509,8 +480,8 @@ export const questions = [
         tags: {
           empatico: 3,
           emocional: 1,
-          sociable: 1,
-          afectivo: 1,
+          extrovertido: 1,
+          romantico: 1,
         },
       },
       {
@@ -519,7 +490,6 @@ export const questions = [
         tags: {
           pragmatico: 3,
           directo: 1,
-          analitico: 1,
           racional: 2,
         },
       },
@@ -535,7 +505,7 @@ export const questions = [
         tags: {
           libido: 3,
           contacto_fisico: 1,
-          afectivo: 1,
+          romantico: 1,
         },
       },
       {
@@ -550,7 +520,6 @@ export const questions = [
         text: "Bajo o inexistente",
         tags: {
           libido: 1,
-          contacto_fisico: -1,
         },
       },
     ],
@@ -565,16 +534,14 @@ export const questions = [
         tags: {
           casual: 3,
           pragmatico: 1,
-          distante: 1,
         },
       },
       {
         id: "b",
         text: "Relaciones estables y duraderas",
         tags: {
-          compromiso: 3,
           romantico: 1,
-          responsable: 1,
+          responsable: 2,
         },
       },
     ],
@@ -698,8 +665,7 @@ export const questions = [
         },
         tags: {
           evitativo: 2,
-          reservado: 1,
-          distante: 1,
+          introvertido: 1,
         },
       },
       {
@@ -709,7 +675,7 @@ export const questions = [
           apego: "ansioso",
         },
         tags: {
-          controlador: 1,
+          estricto: 1,
           emocional: 2,
           resolutivo: 1,
         },
@@ -733,7 +699,7 @@ export const questions = [
         },
         tags: {
           hater: 2,
-          distante: 1,
+          introvertido: 1,
         },
       },
     ],
@@ -788,7 +754,6 @@ export const questions = [
         text: "Palabras de afirmación",
         tags: {
           afirmacion: 3,
-          afectivo: 1,
           romantico: 1,
         },
       },
@@ -813,7 +778,7 @@ export const questions = [
         text: "Pingüinada (regalar objetos cotidianos o pequeños gestos)",
         tags: {
           pinguino: 3,
-          impulsivo: 1,
+          caotico: 1,
         },
       },
       {
