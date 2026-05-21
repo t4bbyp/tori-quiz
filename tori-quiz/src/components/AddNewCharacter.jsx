@@ -10,63 +10,6 @@ export default function AddNewCharacter() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const charaMeta = {
-    gender: "",
-    sexuality: "",
-    tipo: "",
-    quiere_tipo: "",
-    apego: "",
-    quiere_apego: "",
-    relacion: "",
-    child: "",
-  };
-
-  const charaTraits = {
-    adaptable: 0,
-    afirmacion: 0,
-    ambivertido: 0,
-    ambiguo: 0,
-    actos: 0,
-    aventurero: 0,
-    caotico: 0,
-    casual: 0,
-    contacto_fisico: 0,
-    directo: 0,
-    educado: 0,
-    emocional: 0,
-    empatico: 0,
-    estricto: 0,
-    expresivo: 0,
-    extrovertido: 0,
-    hater: 0,
-    introvertido: 0,
-    inteligente: 0,
-    libido: 0,
-    otro_lenguaje: 0,
-    pinguino: 0,
-    pragmatico: 0,
-    procrastinador: 0,
-    racional: 0,
-    responsable: 0,
-    resolutivo: 0,
-    romantico: 0,
-    sutil: 0,
-  };
-
-  quizCtx.answers.forEach((answer) => {
-    if (answer.tags) {
-      for (const tag in answer.tags) {
-        charaTraits[tag] = (charaTraits[tag] || 0) + answer.tags[tag];
-      }
-    }
-
-    if (answer.meta) {
-      for (const key in answer.meta) {
-        charaMeta[key] = answer.meta[key];
-      }
-    }
-  });
-
   useEffect(() => {
     async function saveCharacter() {
       try {
@@ -76,8 +19,7 @@ export default function AddNewCharacter() {
           character_img: quizCtx.pjImg,
           character_desc: quizCtx.pjDesc,
 
-          character_preferences: charaMeta,
-          character_traits: charaTraits,
+          character_answers: quizCtx.answers,
         };
 
         const { error } = await supabase

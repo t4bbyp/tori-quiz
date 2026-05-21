@@ -6,6 +6,8 @@ import { supabase } from "../utils/supabase";
 import { calculateScore, normalizeTo01 } from "../utils/calculations";
 import { traitMax } from "../utils/extra";
 import { toDimensions } from "../utils/personalities";
+import { characterBuilder } from "../utils/characterBuilder";
+import { getFullAnswers } from "../utils/getFullAnswers";
 
 export default function Results() {
   const quizCtx = useContext(QuizContext);
@@ -26,25 +28,16 @@ export default function Results() {
       }
 
       const formatted = data.map((c) => {
-        const parsedTraits =
-          typeof c.character_traits === "string"
-            ? JSON.parse(c.character_traits)
-            : c.character_traits;
-
-        const parsedPreferences =
-          typeof c.character_preferences === "string"
-            ? JSON.parse(c.character_preferences)
-            : c.character_preferences;
-
-        const normalizedCharacterTraits = normalizeTo01(parsedTraits, traitMax);
+        const built = characterBuilder(c.character_answers);
 
         return {
           id: c.character_id,
           name: c.character_name,
           img: c.character_img,
           desc: c.character_desc,
-          preferences: parsedPreferences,
-          traits: toDimensions(normalizedCharacterTraits),
+
+          preferences: built.preferences,
+          traits: toDimensions(normalizeTo01(built.traits, traitMax)),
         };
       });
 
@@ -55,7 +48,9 @@ export default function Results() {
     fetchCharacters();
   }, []);
 
-  quizCtx.answers.forEach((answer) => {
+  const fullAnswers = getFullAnswers(quizCtx.answers);
+
+  fullAnswers.forEach((answer) => {
     if (answer.tags) {
       for (const tag in answer.tags) {
         userTraits[tag] = (userTraits[tag] || 0) + answer.tags[tag];

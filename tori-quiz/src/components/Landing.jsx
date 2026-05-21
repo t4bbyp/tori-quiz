@@ -27,15 +27,19 @@ function Landing({ mode }) {
 
     setError("");
 
-    const {data, error} = await supabase.from("characters").select("character_id").eq("character_id", pjID).maybeSingle();
+    const { data, error } = await supabase
+      .from("characters")
+      .select("character_id")
+      .eq("character_id", pjID)
+      .maybeSingle();
 
-    if(error) {
+    if (error) {
       console.error(error);
       setError("Error comprobando ID");
       return;
     }
 
-    if(data) {
+    if (data) {
       setError("Ese ID ya existe");
       return;
     }
@@ -89,7 +93,7 @@ function Landing({ mode }) {
             <Input
               type="text"
               name="username"
-              placeholder="tu nombre"
+              placeholder="nombre del personaje"
               defaultValue=""
               onChange={(e) => setPjName(e.target.value)}
             />
@@ -97,7 +101,7 @@ function Landing({ mode }) {
             <Input
               type="url"
               name="img"
-              placeholder="link para imagen del pj"
+              placeholder="link para la imagen del personaje"
               defaultValue=""
               onChange={(e) => setPjImg(e.target.value)}
             />
@@ -105,7 +109,7 @@ function Landing({ mode }) {
             <textarea
               type="text"
               name="desc"
-              placeholder="texto corto que describa al pj"
+              placeholder="descripcion corta del personaje"
               defaultValue=""
               onChange={(e) => setPjDesc(e.target.value)}
             />

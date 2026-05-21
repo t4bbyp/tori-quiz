@@ -6,24 +6,23 @@ import classes from "./Quiz.module.css";
 import Header from "./Header";
 import AddNewCharacter from "./AddNewCharacter";
 
-function Quiz({mode}) {
+function Quiz({ mode }) {
   const quizCtx = useContext(QuizContext);
   const activeQuestionIndex = quizCtx.answers.length;
   const quizComplete = activeQuestionIndex === questions.length;
 
-  if (quizComplete && mode === 'user') {
-    return <Results/>;
+  if (quizComplete && mode === "user") {
+    return <Results />;
   }
 
-  if(quizComplete && mode === 'new') {
-    return <AddNewCharacter/>;
+  if (quizComplete && mode === "new") {
+    return <AddNewCharacter />;
   }
 
   const answers = [...questions[activeQuestionIndex].answers];
 
-  function selectAnswer(clickedAnswer) {
-    console.log(clickedAnswer);
-    quizCtx.addAnswer(clickedAnswer);
+  function selectAnswer(answerId) {
+    quizCtx.addAnswer(questions[activeQuestionIndex].id, answerId);
   }
 
   return (
@@ -36,7 +35,7 @@ function Quiz({mode}) {
           {answers.map((answer) => {
             return (
               <li key={answer.id}>
-                <button onClick={() => selectAnswer(answer)}>
+                <button onClick={() => selectAnswer(answer.id)}>
                   {answer.text}
                 </button>
               </li>

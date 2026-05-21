@@ -91,6 +91,10 @@ body {
     47.5px 47.5px;
 }
 
+body.edit-page {
+  padding: 1.5% 2%;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
@@ -174,6 +178,10 @@ code {
   border-radius: 10px;
 }
 
+.mybox li {
+  list-style-type: none;
+}
+
 .mybox .start {
   width: 30%;
   height: auto;
@@ -201,3 +209,4 @@ code {
   color: black;
   border-radius: 10px;
 }
+

@@ -12,8 +12,14 @@ export function QuizProvider({ children }) {
 
   const [answers, setAnswers] = useState([]);
 
-  function addAnswer(answer) {
-    setAnswers((prev) => [...prev, answer]);
+  function addAnswer(questionId, answerId) {
+    setAnswers((prev) => [
+      ...prev,
+      {
+        questionId,
+        answerId,
+      },
+    ]);
   }
 
   function restartQuiz() {
@@ -38,7 +44,7 @@ export function QuizProvider({ children }) {
     pjImg,
     setPjImg,
     pjDesc,
-    setPjDesc
+    setPjDesc,
   };
 
   return <QuizContext value={ctxValue}>{children}</QuizContext>;
