@@ -1,8 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import QuizPage from "./pages/quiz";
 import NewCharacterPage from "./pages/newCharacter";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
