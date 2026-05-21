@@ -76,7 +76,7 @@ export default function Results() {
     .map((character) => {
       const score = calculateScore(character, userMeta, userDimensions);
 
-      console.log(character.name, score); // 👈 AQUÍ
+      console.log(character.name, score);
 
       return {
         character,
