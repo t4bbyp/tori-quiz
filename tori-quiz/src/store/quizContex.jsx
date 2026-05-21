@@ -5,10 +5,10 @@ export const QuizContext = createContext();
 export function QuizProvider({ children }) {
   const [username, setUsername] = useState("");
 
-  const [pjName, setPjName] = useState();
-  const [pjID, setPjID] = useState();
-  const [pjImg, setPjImg] = useState();
-  const [pjDesc, setPjDesc] = useState();
+  const [pjName, setPjName] = useState("");
+  const [pjID, setPjID] = useState("");
+  const [pjImg, setPjImg] = useState("");
+  const [pjDesc, setPjDesc] = useState("");
 
   const [answers, setAnswers] = useState([]);
 

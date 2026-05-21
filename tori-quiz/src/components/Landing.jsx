@@ -3,22 +3,43 @@ import Quiz from "./Quiz";
 import { QuizContext } from "../store/quizContex";
 import Header from "./Header";
 import Input from "./Input";
+import { supabase } from "../utils/supabase";
 
 function Landing({ mode }) {
   const quizCtx = useContext(QuizContext);
+
   const [uname, setUname] = useState();
+
   const [pjName, setPjName] = useState();
   const [pjID, setPjID] = useState();
   const [pjImg, setPjImg] = useState();
   const [pjDesc, setPjDesc] = useState();
+
+  const [error, setError] = useState("");
 
   function startQuiz(e) {
     e.preventDefault();
     quizCtx.setUsername(uname);
   }
 
-  function startAddNew(e) {
+  async function startAddNew(e) {
     e.preventDefault();
+
+    setError("");
+
+    const {data, error} = await supabase.from("characters").select("character_id").eq("character_id", pjID).maybeSingle();
+
+    if(error) {
+      console.error(error);
+      setError("Error comprobando ID");
+      return;
+    }
+
+    if(data) {
+      setError("Ese ID ya existe");
+      return;
+    }
+
     quizCtx.setPjID(pjID);
     quizCtx.setPjName(pjName);
     quizCtx.setPjImg(pjImg);
@@ -88,6 +109,8 @@ function Landing({ mode }) {
               defaultValue=""
               onChange={(e) => setPjDesc(e.target.value)}
             />
+
+            {error && <p>{error}</p>}
 
             <button className="start" onClick={startAddNew}>
               Empezar!

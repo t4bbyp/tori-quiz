@@ -6,6 +6,8 @@ import { useContext } from "react";
 export default function NewCharacterPage() {
   const quizCtx = useContext(QuizContext);
   const mode = "new";
+  console.log(quizCtx.pjName);
+  
   return (
     <>
       {quizCtx.pjName === "" && <Landing mode={mode} />}
