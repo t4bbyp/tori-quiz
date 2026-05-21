@@ -13,9 +13,9 @@ const router = createHashRouter(
       element: <NewCharacterPage />,
     },
   ],
-  {
-    basename: "/tori-quiz",
-  }
+  // {
+  //   basename: "/tori-quiz",
+  // }
 );
 
 function App() {
