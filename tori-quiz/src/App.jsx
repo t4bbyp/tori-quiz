@@ -1,20 +1,25 @@
-import { useContext, useState } from "react";
-import Landing from "./components/Landing";
-import { QuizContext, QuizProvider } from "./store/quizContex";
-import Quiz from "./components/Quiz";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import QuizPage from "./pages/quiz";
+import NewCharacterPage from "./pages/newCharacter";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <QuizPage />,
+    },
+    {
+      path: "/new",
+      element: <NewCharacterPage />,
+    },
+  ],
+  {
+    basename: "/tori-quiz",
+  }
+);
 
 function App() {
-  const quizCtx = useContext(QuizContext);
-
-  return (
-    <>
-      {quizCtx.username === "" && <Landing />}
-      {quizCtx.username !== "" && <Quiz />}
-    </>
-  );
-
-
-  //return <Res/>
+  return <RouterProvider router={router} />;
 }
 
 export default App;

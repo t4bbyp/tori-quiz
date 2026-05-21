@@ -4,14 +4,19 @@ import { QuizContext } from "../store/quizContex";
 import Results from "./Results";
 import classes from "./Quiz.module.css";
 import Header from "./Header";
+import AddNewCharacter from "./AddNewCharacter";
 
-function Quiz() {
+function Quiz({mode}) {
   const quizCtx = useContext(QuizContext);
   const activeQuestionIndex = quizCtx.answers.length;
   const quizComplete = activeQuestionIndex === questions.length;
 
-  if (quizComplete) {
-    return <Results />;
+  if (quizComplete && mode === 'user') {
+    return <Results/>;
+  }
+
+  if(quizComplete && mode === 'new') {
+    return <AddNewCharacter/>;
   }
 
   const answers = [...questions[activeQuestionIndex].answers];

@@ -33,7 +33,6 @@ export default function Results() {
   console.log(userTraits);
 
   characterScores.sort((a, b) => b.score - a.score);
-
   const topMatches = characterScores.slice(0, 3);
 
   return (
@@ -49,17 +48,11 @@ export default function Results() {
 
           return (
             <div key={match.character.id}>
-              {index === 0 && (
-                <h3>Match principal!</h3>
-              )}
+              {index === 0 && <h3>Match principal!</h3>}
 
-              {index === 1 && (
-                <h3>tmbn conectarias con...</h3>
-              )}
+              {index === 1 && <h3>tmbn conectarias con...</h3>}
 
-              {index === 2 && (
-                <h3>Y quizas...</h3>
-              )}
+              {index === 2 && <h3>Y quizas...</h3>}
 
               <h2>{match.character.name}</h2>
 
@@ -69,7 +62,7 @@ export default function Results() {
 
               <p>{match.character.desc}</p>
             </div>
-          )
+          );
         })}
 
         <button className={classes.reset} onClick={quizCtx.restartQuiz}>
