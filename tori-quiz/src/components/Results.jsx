@@ -3,6 +3,12 @@ import { QuizContext } from "../store/quizContex";
 import Header from "./Header";
 import classes from "./Results.module.css";
 import { supabase } from "../utils/supabase";
+import {
+  normalizeUserTraits,
+  normalizeCharacterTraits,
+  calculateScore,
+} from "../utils/calculations";
+import { traitMax } from "../utils/extra";
 
 export default function Results() {
   const quizCtx = useContext(QuizContext);
@@ -11,24 +17,37 @@ export default function Results() {
 
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchCharacters() {
       const { data, error } = await supabase.from("characters").select("");
 
       if (error) {
-        console.error(error);
+        setError(error.message);
         return;
       }
 
-      const formatted = data.map((c) => ({
-        id: c.character_id,
-        name: c.character_name,
-        img: c.character_img,
-        desc: c.character_desc,
-        preferences: c.character_preferences,
-        traits: c.character_traits,
-      }));
+      const formatted = data.map((c) => {
+        const parsedTraits =
+          typeof c.character_traits === "string"
+            ? JSON.parse(c.character_traits)
+            : c.character_traits;
+
+        const parsedPreferences =
+          typeof c.character_preferences === "string"
+            ? JSON.parse(c.character_preferences)
+            : c.character_preferences;
+
+        return {
+          id: c.character_id,
+          name: c.character_name,
+          img: c.character_img,
+          desc: c.character_desc,
+          preferences: parsedPreferences,
+          traits: normalizeCharacterTraits(parsedTraits, traitMax),
+        };
+      });
 
       setCharacters(formatted);
       setLoading(false);
@@ -51,10 +70,20 @@ export default function Results() {
     }
   });
 
-  const characterScores = characters.map((character) => ({
-    character,
-    score: calculateScore(character, userMeta, userTraits),
-  }));
+  const normalizedUserTraits = normalizeUserTraits(userTraits, traitMax);
+
+  const characterScores = characters
+    .map((character) => {
+      const score = calculateScore(character, userMeta, normalizedUserTraits);
+
+      console.log(character.name, score); // 👈 AQUÍ
+
+      return {
+        character,
+        score,
+      };
+    })
+    .filter((c) => c.score >= 0);
 
   console.log(characterScores);
   console.log(userMeta);
@@ -76,7 +105,7 @@ export default function Results() {
             </p>
 
             {topMatches.map((match, index) => {
-              const compatibility = Math.min(Math.round(match.score), 100);
+              const compatibility = Math.round(match.score * 100);
 
               return (
                 <div key={match.character.id}>
@@ -105,66 +134,4 @@ export default function Results() {
       </div>
     </>
   );
-}
-
-function isGenderCompatible(userMeta, character) {
-  const userGender = userMeta.gender;
-  const userSexuality = userMeta.sexuality;
-
-  const charGender = character.preferences.gender;
-  const charSexuality = character.preferences.sexuality;
-
-  const userLikesChara =
-    userSexuality === "bi" ||
-    (userSexuality === "hetero" && userGender !== charGender) ||
-    (userSexuality === "homo" && userGender === charGender);
-
-  const charaLikesUser =
-    charSexuality === "bi" ||
-    (charSexuality === "hetero" && charGender !== userGender) ||
-    (charSexuality === "homo" && charGender === userGender);
-
-  return userLikesChara && charaLikesUser;
-}
-
-function calculateScore(character, userMeta, userTraits) {
-  let score = 0;
-
-  //META
-
-  if(!isGenderCompatible(userMeta, character)) {
-    return -999;
-  }
-
-  if (userMeta.tipo === character.preferences.quiere_tipo) {
-    score += 20;
-  }
-
-  if (userMeta.apego === character.preferences.quiere_apego) {
-    score += 15;
-  }
-
-  if (userMeta.child === character.preferences.child) {
-    score += 10;
-  }
-
-  if (userMeta.relacion === character.preferences.relacion) {
-    score += 10;
-  }
-
-  //TRAITS
-
-  for (const trait in userTraits) {
-    const userValue = userTraits[trait];
-
-    const characterValue = character.traits[trait] || 0;
-
-    const difference = Math.abs(userValue - characterValue);
-
-    const compatibility = 10 - difference;
-
-    score += compatibility;
-  }
-
-  return score;
 }

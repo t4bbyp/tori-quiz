@@ -195,7 +195,6 @@ export const questions = [
         id: "c",
         text: "Tócame un pelo y te mato.",
         tags: {
-          contacto_fisico: -1,
           introvertido: 3,
           estricto: 3,
           evitativo: 1,
