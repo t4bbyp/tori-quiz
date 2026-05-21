@@ -1,4 +1,5 @@
 import { questions } from "../assets/questions";
+import { cosineSimilarity, applyWeights } from "../utils/personalities";
 
 export function computeTraitMax(question) {
   const max = {};
@@ -17,58 +18,6 @@ export function computeTraitMax(question) {
   }
 
   return max;
-}
-
-export function normalizeUserTraits(rawTraits, traitMax) {
-  const normalized = {};
-
-  for (const trait in rawTraits) {
-    const max = traitMax[trait] || 1;
-    normalized[trait] = rawTraits[trait] / max;
-  }
-
-  return normalized;
-}
-
-export function normalizeCharacterTraits(rawTraits, traitMax) {
-  const normalized = {};
-
-  for (const trait in traitMax) {
-    const max = traitMax[trait] || 1;
-    normalized[trait] = (rawTraits?.[trait] || 0) / max;
-  }
-
-  return normalized;
-}
-
-function traitSimilarity(user, character) {
-  const traits = Object.keys(user);
-
-  let sum = 0;
-  let count = 0;
-
-  const userAdapt = user.adaptable || 0;
-  const charAdapt = character.adaptable || 0;
-
-  const adaptability = (userAdapt + charAdapt) / 20;
-  // normalizado 0–1 aprox
-
-  for (const trait of traits) {
-    if (trait === "adaptable") continue;
-
-    const u = user[trait] || 0;
-    const c = character[trait] || 0;
-
-    const diff = Math.abs(u - c);
-
-    // 👇 aquí está la magia
-    const adjustedDiff = diff * (1 - adaptability * 0.5);
-
-    sum += 1 - Math.min(1, adjustedDiff);
-    count++;
-  }
-
-  return count ? sum / count : 0;
 }
 
 function isGenderCompatible(userMeta, character) {
@@ -104,24 +53,22 @@ function metaScore(userMeta, character) {
   return score / 4;
 }
 
-export function calculateScore(character, userMeta, userTraits) {
-  //META
+export function calculateScore(character, userMeta, userDimensions) {
   const meta = metaScore(userMeta, character);
-
   if (meta < 0) return -1;
 
-  let traitSum = 0;
-  let traitCount = 0;
+  const charDims = applyWeights(character.traits);
+  const userDims = applyWeights(userDimensions);
 
-  for (const trait in userTraits) {
-    const userValue = userTraits[trait] || 0;
-    const characterValue = character.traits?.[trait] || 0;
+  const traitScore = cosineSimilarity(userDims, charDims);
 
-    traitSum += traitSimilarity(userValue, characterValue);
-    traitCount++;
+  return meta * 0.3 + traitScore * 0.7;
+}
+
+export function normalizeTo01(traits, traitMax) {
+  const out = {};
+  for (const t in traits) {
+    out[t] = (traits[t] || 0) / (traitMax[t] || 1);
   }
-
-  const traitScore = traitCount ? traitSum / traitCount : 0;
-
-  return meta * 0.4 + traitScore * 0.6;
+  return out;
 }

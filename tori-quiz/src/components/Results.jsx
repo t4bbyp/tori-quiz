@@ -3,12 +3,9 @@ import { QuizContext } from "../store/quizContex";
 import Header from "./Header";
 import classes from "./Results.module.css";
 import { supabase } from "../utils/supabase";
-import {
-  normalizeUserTraits,
-  normalizeCharacterTraits,
-  calculateScore,
-} from "../utils/calculations";
+import { calculateScore, normalizeTo01 } from "../utils/calculations";
 import { traitMax } from "../utils/extra";
+import { toDimensions } from "../utils/personalities";
 
 export default function Results() {
   const quizCtx = useContext(QuizContext);
@@ -39,13 +36,15 @@ export default function Results() {
             ? JSON.parse(c.character_preferences)
             : c.character_preferences;
 
+        const normalizedCharacterTraits = normalizeTo01(parsedTraits, traitMax);
+
         return {
           id: c.character_id,
           name: c.character_name,
           img: c.character_img,
           desc: c.character_desc,
           preferences: parsedPreferences,
-          traits: normalizeCharacterTraits(parsedTraits, traitMax),
+          traits: toDimensions(normalizedCharacterTraits),
         };
       });
 
@@ -70,11 +69,12 @@ export default function Results() {
     }
   });
 
-  const normalizedUserTraits = normalizeUserTraits(userTraits, traitMax);
+  const normalizedUserTraits = normalizeTo01(userTraits, traitMax);
+  const userDimensions = toDimensions(normalizedUserTraits);
 
   const characterScores = characters
     .map((character) => {
-      const score = calculateScore(character, userMeta, normalizedUserTraits);
+      const score = calculateScore(character, userMeta, userDimensions);
 
       console.log(character.name, score); // 👈 AQUÍ
 
