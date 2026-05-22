@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { QuizContext } from "../store/quizContex";
-import Header from "./Header";
 import classes from "./Results.module.css";
 import { supabase } from "../utils/supabase";
 
