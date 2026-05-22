@@ -89,7 +89,6 @@ export default function Results() {
 
   return (
     <>
-      <Header />
       <div className="mybox">
         {loading && <p>Cargando resultados...</p>}
 

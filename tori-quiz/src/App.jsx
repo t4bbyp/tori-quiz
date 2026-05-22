@@ -3,30 +3,44 @@ import QuizPage from "./pages/quiz";
 import NewCharacterPage, {
   action as newSessionAction,
 } from "./pages/newCharacter";
-import EditCharacterPage, {action as editSessionAction} from "./pages/editCharacter";
-import StartPage from "./pages/start";
+import EditCharacterPage, {
+  action as editSessionAction,
+} from "./pages/editCharacter";
+import HomePage from "./pages/home";
 import { useEffect } from "react";
 import { supabase } from "./utils/supabase";
-
+import CharactersListPage from "./pages/charactersList";
+import RootLayout from "./pages/rootLayout";
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <StartPage />,
-  },
-  {
-    path: "/quiz",
-    element: <QuizPage />,
-  },
-  {
-    path: "/new",
-    element: <NewCharacterPage />,
-    action: newSessionAction,
-  },
-  {
-    path: "/edit/:id",
-    element: <EditCharacterPage />,
-    action: editSessionAction
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      {
+        path: "/quiz",
+        element: <QuizPage />,
+      },
+      {
+        path: "/new",
+        element: <NewCharacterPage />,
+        action: newSessionAction,
+      },
+      {
+        path: "/edit",
+        element: <EditCharacterPage />,
+        action: editSessionAction,
+      },
+      {
+        path: "/edit/:id",
+        element: <EditCharacterPage />,
+      },
+      {
+        path: "/characters-list",
+        element: <CharactersListPage />,
+      },
+    ],
   },
 ]);
 

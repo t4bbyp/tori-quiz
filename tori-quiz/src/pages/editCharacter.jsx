@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import Editor from "../components/Editor";
 import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
+import CharaList from "../components/CharaList";
 
 export default function EditCharacterPage() {
   const [session, setSession] = useState(undefined);
   const params = useParams();
+  const navigate = useNavigate();
+  const isEditing = !!params.id;
 
   useEffect(() => {
     document.body.classList.add("edit-page");
@@ -50,10 +53,13 @@ export default function EditCharacterPage() {
 
   return (
     <>
-      <Header />
-      <h2>Editar personaje</h2>
+      {!isEditing && (
+        <>
+          <CharaList onSelect={(c) => navigate(`/edit/${c.character_id}`)} />
+        </>
+      )}
 
-      <Editor pjId={params.id} />
+      {isEditing && <Editor pjId={params.id} />}
     </>
   );
 }

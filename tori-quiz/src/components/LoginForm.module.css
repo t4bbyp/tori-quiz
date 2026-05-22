@@ -1,0 +1,19 @@
+.login {
+    width: 50% !important;
+}
+
+.login p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login label {
+    text-align: left !important;
+}
+
+.login input {
+    width: 100%;
+    font-size: 2vmin;
+    padding: 5%;
+}

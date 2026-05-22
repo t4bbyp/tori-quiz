@@ -3,10 +3,12 @@ import { questions } from "../assets/questions";
 import classes from "./Editor.module.css";
 import Input from "./Input";
 import { supabase } from "../utils/supabase";
+import { Form, useNavigate } from "react-router";
 
 export default function Editor({ pjId }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const [pjName, setPjName] = useState("");
   const [pjID, setPjID] = useState("");
@@ -62,6 +64,7 @@ export default function Editor({ pjId }) {
     }
 
     alert("Personaje actualizado!");
+    navigate("/edit");
   }
 
   function selectAnswer(questionId, answerId) {
@@ -77,7 +80,7 @@ export default function Editor({ pjId }) {
       ];
     });
   }
-  
+
   return (
     <>
       {loading && (
@@ -91,69 +94,77 @@ export default function Editor({ pjId }) {
           <p>Ha ocurrido un error al guardar. Intentelo de nuevo.</p>
         </div>
       )}
+      
+      <Form onSubmit={handleEdit} method="post">
+        <div className={classes.mybox2}>
+          <Input
+            type="text"
+            name="id"
+            placeholder="ID unico*"
+            value={pjID || ""}
+            onChange={(e) => setPjID(e.target.value)}
+            className="id"
+            extra={
+              <small>
+                * Un identificador simple, unico (ej. primer nombre). Solo
+                letras latinas, minusculas. Aseguraos de no haber usado el mismo
+                para otro pj. Si hace falta, preguntad a Tori.
+              </small>
+            }
+          />
 
-      <div className={classes.mybox2}>
-        <Input
-          type="text"
-          name="id"
-          placeholder="ID unico*"
-          value={pjID || ""}
-          onChange={(e) => setPjID(e.target.value)}
-          className="id"
-          extra="1"
-        />
+          <Input
+            type="text"
+            name="name"
+            placeholder="nombre del personaje"
+            value={pjName || ""}
+            onChange={(e) => setPjName(e.target.value)}
+          />
 
-        <Input
-          type="text"
-          name="name"
-          placeholder="nombre del personaje"
-          value={pjName || ""}
-          onChange={(e) => setPjName(e.target.value)}
-        />
+          <Input
+            type="url"
+            name="img"
+            placeholder="link para la imagen del personaje"
+            value={pjImg || ""}
+            onChange={(e) => setPjImg(e.target.value)}
+          />
 
-        <Input
-          type="url"
-          name="img"
-          placeholder="link para la imagen del personaje"
-          value={pjImg || ""}
-          onChange={(e) => setPjImg(e.target.value)}
-        />
+          <textarea
+            name="desc"
+            placeholder="corta descripcion del personaje"
+            value={pjDesc || ""}
+            onChange={(e) => setPjDesc(e.target.value)}
+          />
+        </div>
 
-        <textarea
-          type="text"
-          name="desc"
-          placeholder="corta descripcion del personaje"
-          value={pjDesc || ""}
-          onChange={(e) => setPjDesc(e.target.value)}
-        />
-      </div>
+        {questions.map((q) => {
+          const selectedAnswer = answers.find((ans) => ans.questionId === q.id);
 
-      {questions.map((q) => {
-        const selectedAnswer = answers.find((ans) => ans.questionId === q.id);
+          return (
+            <div className={classes.mybox2} key={q.id}>
+              <h3>{q.question}</h3>
+              {q.answers.map((a) => {
+                const isSelected = selectedAnswer?.answerId === a.id;
+                return (
+                  <li key={a.id}>
+                    <button
+                      type="button"
+                      onClick={() => selectAnswer(q.id, a.id)}
+                      className={`${classes.answer} ${isSelected ? classes.selected : ""}`}
+                    >
+                      {a.text}
+                    </button>
+                  </li>
+                );
+              })}
+            </div>
+          );
+        })}
 
-        return (
-          <div className={classes.mybox2} key={q.id}>
-            <h3>{q.question}</h3>
-            {q.answers.map((a) => {
-              const isSelected = selectedAnswer?.answerId === a.id;
-              return (
-                <li key={a.id}>
-                  <button
-                    onClick={() => selectAnswer(q.id, a.id)}
-                    className={`${classes.answer} ${isSelected ? classes.selected : ""}`}
-                  >
-                    {a.text}
-                  </button>
-                </li>
-              );
-            })}
-          </div>
-        );
-      })}
-
-      <button className={classes.save} onClick={handleEdit} disabled={loading}>
-        {loading ? "Guardando..." : "Guardar"}
-      </button>
+        <button type="submit" className={classes.save} disabled={loading}>
+          {loading ? "Guardando..." : "Guardar"}
+        </button>
+      </Form>
     </>
   );
 }

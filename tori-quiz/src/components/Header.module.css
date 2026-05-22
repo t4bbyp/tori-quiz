@@ -1,0 +1,9 @@
+.header {
+  max-width: 60rem;
+  margin: auto;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+

@@ -4,6 +4,7 @@ import { QuizContext } from "../store/quizContex";
 import Header from "./Header";
 import Input from "./Input";
 import { supabase } from "../utils/supabase";
+import { Form } from "react-router";
 
 function Landing({ mode }) {
   const quizCtx = useContext(QuizContext);
@@ -52,8 +53,10 @@ function Landing({ mode }) {
 
   return (
     <>
-      <Header />
-      <div className="mybox">
+      <Form
+        className="mybox"
+        onSubmit={mode === "user" ? startQuiz : startAddNew}
+      >
         {mode === "user" ? (
           <>
             <h2>¡Bienvenid@!</h2>
@@ -68,9 +71,7 @@ function Landing({ mode }) {
               defaultValue=""
               onChange={(e) => setUname(e.target.value)}
             />
-            <button className="start" onClick={startQuiz}>
-              Empezar!
-            </button>
+            <button className="start">Empezar!</button>
           </>
         ) : (
           <>
@@ -87,7 +88,13 @@ function Landing({ mode }) {
               defaultValue=""
               onChange={(e) => setPjID(e.target.value)}
               className="id"
-              extra="1"
+              extra={
+                <small>
+                  * Un identificador simple, unico (ej. primer nombre). Solo
+                  letras latinas, minusculas. Aseguraos de no haber usado el
+                  mismo para otro pj. Si hace falta, preguntad a Tori.
+                </small>
+              }
             />
 
             <Input
@@ -107,7 +114,6 @@ function Landing({ mode }) {
             />
 
             <textarea
-              type="text"
               name="desc"
               placeholder="descripcion corta del personaje"
               defaultValue=""
@@ -116,12 +122,10 @@ function Landing({ mode }) {
 
             {error && <p>{error}</p>}
 
-            <button className="start" onClick={startAddNew}>
-              Empezar!
-            </button>
+            <button className="start">Empezar!</button>
           </>
         )}
-      </div>
+      </Form>
     </>
   );
 }

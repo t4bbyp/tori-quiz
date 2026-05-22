@@ -1,0 +1,77 @@
+.container {
+  width: 40vw;
+  max-width: 50vw;
+  height: auto;
+  border-radius: 50px;
+  background: white;
+  box-shadow: 0 5px 5px rgb(94, 66, 91);
+  font-size: 1.5vmin;
+  padding: 5% 7%;
+  padding-bottom: 3%;
+  overflow: hidden;
+}
+
+.details {
+  margin: auto;
+  border-spacing: 0px;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.profile img {
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.desc {
+    width: 70%;
+    background-color: white;
+    text-align: justify;
+    padding: 5%;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black;
+}
+
+.profile .pfp {
+    margin: 0;
+    text-align: left;
+}
+
+.tags {
+    padding: 2% 0%;
+}
+
+.taglist {
+    display: flex;
+    gap: 2%;
+    justify-content: start;
+    align-items: center;
+}
+
+.tag_item {
+    padding: 2px 15px;
+    border: 2px solid black;
+    font-size: 1.2vmin;
+    font-weight: 600;
+    border-radius: 10px;
+
+}
+
+.return {
+    float: left;
+    line-height: 0;
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+
+.return span {
+    margin: 0;
+    font-size: 3.5vmin;
+}
+
+.return:hover {
+    cursor: pointer;
+}

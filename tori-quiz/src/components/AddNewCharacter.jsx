@@ -42,7 +42,6 @@ export default function AddNewCharacter() {
 
   return (
     <>
-      <Header />
       <div className="mybox">
         {loading && <p>Guardando personaje...</p>}
 

@@ -3,6 +3,7 @@ import {
   useActionData,
   useNavigation,
 } from "react-router-dom";
+import classes from "./LoginForm.module.css";
 
 export default function LoginForm() {
   const data = useActionData();
@@ -11,8 +12,8 @@ export default function LoginForm() {
 
   return (
     <>
-      <Form method="post">
-        <h2>Entra en tu cuenta</h2>
+      <Form method="post" className={`mybox ${classes.login}`}>
+        <h2>Necesitas una cuenta para seguir :D</h2>
         {data && data.errors && (
           <ul>
             {Object.values(data.errors).map((err) => (
@@ -24,16 +25,16 @@ export default function LoginForm() {
         {data && data.message && <p>{data.message}</p>}
 
         <p>
-          <label htmlFor="email">Nombre de usuario</label>
+          <label htmlFor="email">Email</label>
           <input id="email" type="email" name="email" required />
         </p>
         <p>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Contraseña</label>
           <input id="password" type="password" name="password" required />
         </p>
 
-        <button disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Login"}
+        <button disabled={isSubmitting} className="start">
+          {isSubmitting ? "Submitting..." : "Entra"}
         </button>
       </Form>
     </>

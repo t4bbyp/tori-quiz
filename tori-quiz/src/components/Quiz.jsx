@@ -27,7 +27,6 @@ function Quiz({ mode }) {
 
   return (
     <>
-      <Header />
       <div className="mybox">
         <h2>{questions[activeQuestionIndex].question}</h2>
 

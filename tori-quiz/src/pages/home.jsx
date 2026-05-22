@@ -1,11 +1,10 @@
 import { Link } from "react-router";
 import Header from "../components/Header";
-import classes from './start.module.css';
+import classes from './home.module.css';
 
-export default function StartPage() {
+export default function HomePage() {
   return (
     <>
-      <Header />
       <div className={classes.text_container}>
         <p>Hola!</p>
         <p>
@@ -17,8 +16,6 @@ export default function StartPage() {
         </p>
       </div>
 
-      <h2 className={classes.h2}>Que quieres hacer?</h2>
-
         <div className={classes.menu}>
             <button className={classes.menu_btn}>
                 <Link to="/quiz">
@@ -27,7 +24,7 @@ export default function StartPage() {
                 </Link>
             </button>
             <button className={classes.menu_btn}>
-                <Link to="/algo">
+                <Link to="/characters-list">
                     <img src="https://placehold.co/200x200"/>
                     <h3>Personajes disponibles</h3>
                 </Link>
