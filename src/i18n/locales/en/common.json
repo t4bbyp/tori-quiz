@@ -1,0 +1,273 @@
+{
+  "title": "Romance in the Tower",
+  "welcome": {
+    "description": "Welcome to <italic>Romance in the Tower</italic>, the place where you can discover which character from <link/> would be a compatible partner for you, or even your OC!"
+  },
+  "loading": "Loading...",
+
+  "buttons": {
+    "takeTest": "Take the test",
+    "characterList": "Available characters",
+    "addNewCharacter": "Add a new character",
+    "editCharacter": "Edit a character",
+    "save": "Save",
+    "cancel": "Cancel",
+    "start": "Start",
+    "repeat": "Repeat",
+    "login": "Log in"
+  },
+
+  "errors": {
+    "verifyID": "Error verifying ID",
+    "existingID": "This ID exists already.",
+    "savingChara": "Error saving character: "
+  },
+
+  "landing": {
+    "welcome": "Welcome!",
+    "description": "Are you ready to discover your ideal match in the world of L4G? :D",
+
+    "newTitle": "Do you want to add a new character?",
+    "description2": "Answer the following questions from the perspective of the character you want to add to the test.",
+    "idExplanation": "* A simple, unique identifier (e.g. first name). Only lowercase Latin letters. Make sure it hasn't been used for another character. If needed, ask Tori.",
+    "name": "character name",
+    "img": "link to the character image",
+    "desc": "short character description"
+  },
+
+  "results": {
+    "loading": "Loading results...",
+    "yourDate": "your perfect match would be...",
+    "first": "Main match!",
+    "second": "you would also connect with...",
+    "third": "And maybe...",
+    "compatibility": "Compatibility: "
+  },
+
+  "newCharacter": {
+    "saving": "Saving character...",
+    "success": "Yippie, your character has been added :D"
+  },
+
+  "editor": {
+    "saving": "The character is being updated...",
+    "success": "Yay, your character was updated successfully!",
+    "id": "unique ID*"
+  },
+
+  "login": {
+    "text": "Necesitas una cuenta para seguir :D",
+    "password": "Password",
+    "loging": "Connecting..."
+  },
+
+  "quiz": {
+    "q1": {
+      "question": "Gender",
+      "answers": {
+        "female": "Female",
+        "male": "Male",
+        "other": "Other"
+      }
+    },
+    "q2": {
+      "question": "Sexual orientation",
+      "answers": {
+        "hetero": "Straight",
+        "homo": "Gay",
+        "bi": "Bi/Pan",
+        "asexual": "Asexual"
+      }
+    },
+
+    "q3": {
+      "question": "You are...",
+      "answers": {
+        "introvertido": "Introverted",
+        "extrovertido": "Extroverted",
+        "ambivertido": "Ambiverted"
+      }
+    },
+
+    "q4": {
+      "question": "When it comes to work/tasks, you...",
+      "answers": {
+        "responsable": "Do it as soon as possible.",
+        "irresponsable": "Meh, I'll do it tomorrow... (like that for the whole month)",
+        "medio": "I focus on what's important first; the rest I'll figure out later."
+      }
+    },
+    "q5": {
+      "question": "You prefer...",
+      "answers": {
+        "caos": "Chaos, adventure, unexpected events",
+        "rutina": "Routine, knowing what's next, having control over your life",
+        "medio": "A bit of both. Calm is great, but sometimes a bit of adrenaline is nice"
+      }
+    },
+    "q6": {
+      "question": "Regarding physical contact...",
+      "answers": {
+        "si": "YES PLEASE. KISSES AND HUGS FOREVER",
+        "medio": "With friends/family okay sometimes. With strangers only if necessary; preferably not.",
+        "no": "Touch me and you're dead."
+      }
+    },
+    "q7": {
+      "question": "As a partner, you are...",
+      "answers": {
+        "romantico": "Romantic",
+        "pragmatico": "Pragmatic",
+        "medio": "Depends on the moment"
+      }
+    },
+    "q8": {
+      "question": "You are more...",
+      "answers": {
+        "emocional": "Emotional",
+        "racional": "Rational"
+      }
+    },
+    "q9": {
+      "question": "In social contexts, you are...",
+      "answers": {
+        "educado": "Polite",
+        "maleducado": "Rude",
+        "medio": "Depends on the moment"
+      }
+    },
+    "q10": {
+      "question": "Morally you are...",
+      "answers": {
+        "flexible": "Flexible",
+        "estricto": "Strict"
+      }
+    },
+    "q11": {
+      "question": "When there is conflict, you tend to be...",
+      "answers": {
+        "evitativo": "Avoidant",
+        "resolutivo": "Solution-oriented"
+      }
+    },
+    "q12": {
+      "question": "Flirting style...",
+      "answers": {
+        "explicito": "Explicit",
+        "sutil": "Subtle"
+      }
+    },
+    "q13": {
+      "question": "When processing emotions, you...",
+      "answers": {
+        "lento": "Take your time. You may struggle or prefer to analyze things carefully.",
+        "rapido": "You feel them as they come. You have no problem experiencing them, good or bad, and you prefer to accept them quickly.",
+        "no": "Emotions? Absolutely not, a waste of time."
+      }
+    },
+    "q14": {
+      "question": "You are really...",
+      "answers": {
+        "listo": "Smart",
+        "tonto": "Not very bright",
+        "medio": "You have potential, but lack interest/resources"
+      }
+    },
+    "q15": {
+      "question": "Others would say you are...",
+      "answers": {
+        "bueno": "A good person",
+        "malo": "A bad person",
+        "medio": "Depends who you ask"
+      }
+    },
+    "q16": {
+      "question": "When others have problems, you...",
+      "answers": {
+        "empatico": "Offer emotional support first and focus on making them feel better",
+        "solucionador": "Look for solutions directly. A few kind words won't change the situation."
+      }
+    },
+    "q17": {
+      "question": "Your libido is...",
+      "answers": {
+        "intenso": "Very high",
+        "medio": "Moderate",
+        "bajo": "Low or nonexistent"
+      }
+    },
+    "q18": {
+      "question": "You are looking for...",
+      "answers": {
+        "lios": "One-night flings",
+        "largas": "Stable long-term relationships"
+      }
+    },
+    "q19": {
+      "question": "You would prefer a partner who is more...",
+      "answers": {
+        "dominante": "Dominant",
+        "sumiso": "Submissive",
+        "adaptable": "Adaptable"
+      }
+    },
+    "q20": {
+      "question": "Do you want children?",
+      "answers": {
+        "si": "Yes",
+        "no": "No",
+        "puede": "Not sure..."
+      }
+    },
+    "q21": {
+      "question": "You prefer relationships...",
+      "answers": {
+        "mono": "Monogamous",
+        "poli": "Polyamorous",
+        "abierta": "Open",
+        "ninguna": "None, thanks",
+        "idc": "Doesn't matter"
+      }
+    },
+    "q22": {
+      "question": "Your attachment style is...",
+      "answers": {
+        "seguro": "Secure",
+        "evitativo": "Avoidant",
+        "ansioso": "Anxious",
+        "desorganizado": "Disorganized",
+        "no": "I don't like people"
+      }
+    },
+    "q23": {
+      "question": "You would like your partner to be...",
+      "answers": {
+        "seguro": "Secure",
+        "evitativo": "Avoidant",
+        "ansioso": "Anxious",
+        "desorganizado": "Disorganized",
+        "no": "Doesn't like people... and you enjoy suffering clearly"
+      }
+    },
+    "q24": {
+      "question": "Your love language:",
+      "answers": {
+        "palabras": "Words of affirmation",
+        "tiempo": "Quality time",
+        "regalos": "Receiving/giving gifts",
+        "pinguino": "Penguin behavior (small thoughtful gestures)",
+        "actos": "Acts of service",
+        "contacto": "Physical touch",
+        "ninguno": "None of these"
+      }
+    },
+    "q25": {
+      "question": "You consider yourself more...",
+      "answers": {
+        "dominante": "Dominant",
+        "sumiso": "Submissive",
+        "adaptable": "Adaptable"
+      }
+    }
+  }
+}

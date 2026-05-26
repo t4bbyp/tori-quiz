@@ -1,13 +1,18 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
+import { useTranslation } from "react-i18next";
+
 import { questions } from "../assets/questions";
 import { QuizContext } from "../store/quizContex";
+
 import Results from "./Results";
-import classes from "./Quiz.module.css";
-import Header from "./Header";
 import AddNewCharacter from "./AddNewCharacter";
+
+import classes from "./Quiz.module.css";
 
 function Quiz({ mode }) {
   const quizCtx = useContext(QuizContext);
+  const { t } = useTranslation();
+
   const activeQuestionIndex = quizCtx.answers.length;
   const quizComplete = activeQuestionIndex === questions.length;
 
@@ -19,34 +24,30 @@ function Quiz({ mode }) {
     return <AddNewCharacter />;
   }
 
-  const answers = [...questions[activeQuestionIndex].answers];
+  const question = questions[activeQuestionIndex];
 
   function selectAnswer(answerId) {
-    quizCtx.addAnswer(questions[activeQuestionIndex].id, answerId);
+    quizCtx.addAnswer(question.id, answerId);
   }
 
   return (
-    <>
-      <div className="mybox">
-        <h2>{questions[activeQuestionIndex].question}</h2>
+    <div className="mybox">
+      <h2>{t(question.questionKey)}</h2>
 
-        <ul>
-          {answers.map((answer) => {
-            return (
-              <li key={answer.id}>
-                <button onClick={() => selectAnswer(answer.id)}>
-                  {answer.text}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+      <ul>
+        {question.answers.map((answer) => (
+          <li key={answer.id}>
+            <button onClick={() => selectAnswer(answer.id)}>
+              {t(answer.textKey)}
+            </button>
+          </li>
+        ))}
+      </ul>
 
-        <button className={classes.reset_btn} onClick={quizCtx.restartQuiz}>
-          <span className="material-symbols-outlined">restart_alt</span>
-        </button>
-      </div>
-    </>
+      <button className={classes.reset_btn} onClick={quizCtx.restartQuiz}>
+        <span className="material-symbols-outlined">restart_alt</span>
+      </button>
+    </div>
   );
 }
 

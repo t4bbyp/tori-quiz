@@ -1,14 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate, Form } from "react-router-dom";
+
 import { questions } from "../assets/questions";
+import { supabase } from "../utils/supabase";
+
 import classes from "./Editor.module.css";
 import Input from "./Input";
-import { supabase } from "../utils/supabase";
-import { Form, useNavigate } from "react-router";
 
 export default function Editor({ pjId }) {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
   const [pjName, setPjName] = useState("");
   const [pjID, setPjID] = useState("");
@@ -33,7 +38,6 @@ export default function Editor({ pjId }) {
       setPjID(data.character_id);
       setPjImg(data.character_img);
       setPjDesc(data.character_desc);
-
       setAnswers(data.character_answers || []);
     }
 
@@ -63,7 +67,7 @@ export default function Editor({ pjId }) {
       return;
     }
 
-    alert("Personaje actualizado!");
+    alert(t($ => $.editor.success));
     navigate("/edit");
   }
 
@@ -71,52 +75,41 @@ export default function Editor({ pjId }) {
     setAnswers((prev) => {
       const filtered = prev.filter((a) => a.questionId !== questionId);
 
-      return [
-        ...filtered,
-        {
-          questionId,
-          answerId,
-        },
-      ];
+      return [...filtered, { questionId, answerId }];
     });
   }
 
   return (
     <>
+      {/* LOADING */}
       {loading && (
         <div className={classes.mybox2}>
-          <p>El personaje se esta actualizando...</p>
+          <p>{t($ => $.editor.saving)}</p>
         </div>
       )}
 
+      {/* ERROR */}
       {!loading && error && (
         <div className={classes.mybox2}>
-          <p>Ha ocurrido un error al guardar. Intentelo de nuevo.</p>
+          <p>{t($ => $.errors.savingChara)}</p>
         </div>
       )}
-      
+
       <Form onSubmit={handleEdit} method="post">
         <div className={classes.mybox2}>
           <Input
             type="text"
             name="id"
-            placeholder="ID unico*"
+            placeholder={t($ => $.editor.id)}
             value={pjID || ""}
             onChange={(e) => setPjID(e.target.value)}
-            className="id"
-            extra={
-              <small>
-                * Un identificador simple, unico (ej. primer nombre). Solo
-                letras latinas, minusculas. Aseguraos de no haber usado el mismo
-                para otro pj. Si hace falta, preguntad a Tori.
-              </small>
-            }
+            extra={<small>{t($ => $.landing.idExplanation)}</small>}
           />
 
           <Input
             type="text"
             name="name"
-            placeholder="nombre del personaje"
+            placeholder={t($ => $.landing.name)}
             value={pjName || ""}
             onChange={(e) => setPjName(e.target.value)}
           />
@@ -124,35 +117,40 @@ export default function Editor({ pjId }) {
           <Input
             type="url"
             name="img"
-            placeholder="link para la imagen del personaje"
+            placeholder={t($ => $.landing.img)}
             value={pjImg || ""}
             onChange={(e) => setPjImg(e.target.value)}
           />
 
           <textarea
             name="desc"
-            placeholder="corta descripcion del personaje"
+            placeholder={t($ => $.landing.desc)}
             value={pjDesc || ""}
             onChange={(e) => setPjDesc(e.target.value)}
           />
         </div>
 
+        {/* QUESTIONS */}
         {questions.map((q) => {
           const selectedAnswer = answers.find((ans) => ans.questionId === q.id);
 
           return (
             <div className={classes.mybox2} key={q.id}>
-              <h3>{q.question}</h3>
+              <h3>{t(q.questionKey)}</h3>
+
               {q.answers.map((a) => {
                 const isSelected = selectedAnswer?.answerId === a.id;
+
                 return (
                   <li key={a.id}>
                     <button
                       type="button"
                       onClick={() => selectAnswer(q.id, a.id)}
-                      className={`${classes.answer} ${isSelected ? classes.selected : ""}`}
+                      className={`${classes.answer} ${
+                        isSelected ? classes.selected : ""
+                      }`}
                     >
-                      {a.text}
+                      {t(a.textKey)}
                     </button>
                   </li>
                 );
@@ -162,7 +160,7 @@ export default function Editor({ pjId }) {
         })}
 
         <button type="submit" className={classes.save} disabled={loading}>
-          {loading ? "Guardando..." : "Guardar"}
+          {loading ? t($ => $.loading) : t($ => $.editor.saving)}
         </button>
       </Form>
     </>

@@ -1,25 +1,25 @@
 export const questions = [
   {
     id: "q1",
-    question: "Género",
+    questionKey: "quiz.q1.question",
     answers: [
       {
         id: "a",
-        text: "Femenino",
+        textKey: "quiz.q1.answers.female",
         meta: {
           gender: "femenino",
         },
       },
       {
         id: "b",
-        text: "Masculino",
+        textKey: "quiz.q1.answers.male",
         meta: {
           gender: "masculino",
         },
       },
       {
         id: "c",
-        text: "Otro",
+        textKey: "quiz.q1.answers.other",
         meta: {
           gender: "otro",
         },
@@ -28,32 +28,32 @@ export const questions = [
   },
   {
     id: "q2",
-    question: "Orientación sexual",
+    questionKey: "quiz.q2.question",
     answers: [
       {
         id: "a",
-        text: "Hetero",
+        textKey: "quiz.q2.answers.hetero",
         meta: {
           sexuality: "hetero",
         },
       },
       {
         id: "b",
-        text: "Homo",
+        textKey: "quiz.q2.answers.homo",
         meta: {
           sexuality: "homo",
         },
       },
       {
         id: "c",
-        text: "Bi/Pan",
+        textKey: "quiz.q2.answers.bi",
         meta: {
           sexuality: "bi",
         },
       },
       {
         id: "d",
-        text: "Asexual",
+        textKey: "quiz.q2.answers.asexual",
         meta: {
           sexuality: "asexual",
         },
@@ -62,11 +62,11 @@ export const questions = [
   },
   {
     id: "q3",
-    question: "Eres...",
+    questionKey: "quiz.q3.question",
     answers: [
       {
         id: "a",
-        text: "Introvertido",
+        textKey: "quiz.q3.answers.introvertido",
         tags: {
           introvertido: 3,
           evitativo: 1,
@@ -74,7 +74,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Extrovertido",
+        textKey: "quiz.q3.answers.extrovertido",
         tags: {
           extrovertido: 3,
           aventurero: 1,
@@ -83,7 +83,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Ambivertido",
+        textKey: "quiz.q3.answers.ambivertido",
         tags: {
           ambivertido: 2,
           adaptable: 1,
@@ -94,11 +94,11 @@ export const questions = [
   },
   {
     id: "q4",
-    question: "Cuando se trata de trabajo/tareas, tú...",
+    questionKey: "quiz.q4.question",
     answers: [
       {
         id: "a",
-        text: "Cuanto antes, mejor.",
+        textKey: "quiz.q4.answers.responsable",
         tags: {
           responsable: 3,
           racional: 1,
@@ -108,7 +108,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Meh, ya lo haré mañana... (asi todo el mes)",
+        textKey: "quiz.q4.answers.irresponsable",
         tags: {
           procrastinador: 3,
           estable: 2,
@@ -118,7 +118,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Me centro en lo más importante primero; lo demás ya veré.",
+        textKey: "quiz.q4.answers.medio",
         tags: {
           pragmatico: 2,
           adaptable: 1,
@@ -130,11 +130,11 @@ export const questions = [
   },
   {
     id: "q5",
-    question: "Prefieres...",
+    questionKey: "quiz.q5.question",
     answers: [
       {
         id: "a",
-        text: "Caos, aventura, eventos inesperados",
+        textKey: "quiz.q5.answers.caos",
         tags: {
           caotico: 3,
           aventurero: 2,
@@ -144,7 +144,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Rutina, saber qué es lo siguiente, tener control sobre tu vida",
+        textKey: "quiz.q5.answers.rutina",
         tags: {
           estable: 3,
           responsable: 2,
@@ -154,7 +154,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Un poco de ambas. La tranquilidad y la calma son lo mejor, pero a veces viene bien un poco de adrenalina",
+        textKey: "quiz.q5.answers.medio",
         tags: {
           estable: 1,
           adaptable: 2,
@@ -166,11 +166,11 @@ export const questions = [
   },
   {
     id: "q6",
-    question: "En cuanto al contacto físico...",
+    questionKey: "quiz.q6.question",
     answers: [
       {
         id: "a",
-        text: "AY, SÍ, POR FAVOR. UN BESO Y MIL ABRAZOS",
+        textKey: "quiz.q6.answers.si",
         tags: {
           contacto_fisico: 3,
           caotico: 1,
@@ -181,7 +181,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Con amigos/familia, vale, de vez en cuando. Con desconocidos, solo si las formalidades lo requieren; preferiblemente no.",
+        textKey: "quiz.q6.answers.medio",
         tags: {
           introvertido: 1,
           romantico: 1,
@@ -193,7 +193,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Tócame un pelo y te mato.",
+        textKey: "quiz.q6.answers.no",
         tags: {
           introvertido: 3,
           estricto: 3,
@@ -204,11 +204,11 @@ export const questions = [
   },
   {
     id: "q7",
-    question: "Como pareja, serías...",
+    questionKey: "quiz.q7.question",
     answers: [
       {
         id: "a",
-        text: "Romántico",
+        textKey: "quiz.q7.answers.romantico",
         tags: {
           romantico: 3,
           emocional: 1,
@@ -217,7 +217,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Pragmático",
+        textKey: "quiz.q7.answers.pragmatico",
         tags: {
           pragmatico: 3,
           introvertido: 1,
@@ -227,7 +227,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "¿Depende del momento?",
+        textKey: "quiz.q7.answers.medio",
         tags: {
           adaptable: 2,
           romantico: 1,
@@ -238,11 +238,11 @@ export const questions = [
   },
   {
     id: "q8",
-    question: "Eres más...",
+    questionKey: "quiz.q8.question",
     answers: [
       {
         id: "a",
-        text: "Emocional",
+        textKey: "quiz.q8.answers.emocional",
         tags: {
           emocional: 3,
           caotico: 1,
@@ -253,7 +253,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Racional",
+        textKey: "quiz.q8.answers.racional",
         tags: {
           racional: 3,
           responsable: 1,
@@ -265,11 +265,11 @@ export const questions = [
   },
   {
     id: "q9",
-    question: "En contextos sociales, eres...",
+    questionKey: "quiz.q9.question",
     answers: [
       {
         id: "a",
-        text: "Educado",
+        textKey: "quiz.q9.answers.educado",
         tags: {
           educado: 3,
           sutil: 1,
@@ -280,7 +280,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Maleducado",
+        textKey: "quiz.q9.answers.maleducado",
         tags: {
           directo: 1,
           caotico: 1,
@@ -289,7 +289,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Depende del momento",
+        textKey: "quiz.q9.answers.medio",
         tags: {
           adaptable: 2,
           ambiguo: 1,
@@ -303,11 +303,11 @@ export const questions = [
   },
   {
     id: "q10",
-    question: "Moralmente eres...",
+    questionKey: "quiz.q10.question",
     answers: [
       {
         id: "a",
-        text: "Flexible",
+        textKey: "quiz.q10.answers.flexible",
         tags: {
           adaptable: 3,
           resolutivo: 1,
@@ -316,7 +316,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Estricto",
+        textKey: "quiz.q10.answers.estricto",
         tags: {
           estricto: 3,
           responsable: 1,
@@ -327,11 +327,11 @@ export const questions = [
   },
   {
     id: "q11",
-    question: "Cuando hay conflicto, tiendes a ser...",
+    questionKey: "quiz.q11.question",
     answers: [
       {
         id: "a",
-        text: "Evitativo",
+        textKey: "quiz.q11.answers.evitativo",
         tags: {
           evitativo: 3,
           introvertido: 2,
@@ -341,7 +341,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Resolutivo",
+        textKey: "quiz.q11.answers.resolutivo",
         tags: {
           resolutivo: 3,
           directo: 1,
@@ -354,11 +354,11 @@ export const questions = [
   },
   {
     id: "q12",
-    question: "Prefieres el ligoteo...",
+    questionKey: "quiz.q12.question",
     answers: [
       {
         id: "a",
-        text: "Explícito",
+        textKey: "quiz.q12.answers.explicito",
         tags: {
           directo: 3,
           romantico: 1,
@@ -367,7 +367,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Sutil",
+        textKey: "quiz.q12.answers.sutil",
         tags: {
           sutil: 3,
           introvertido: 1,
@@ -378,11 +378,11 @@ export const questions = [
   },
   {
     id: "q13",
-    question: "Procesando las emociones, tú...",
+    questionKey: "quiz.q13.question",
     answers: [
       {
         id: "a",
-        text: "Te tomas tu tiempo. A veces te cuesta, o prefieres analizar las cosas con cuidado.",
+        textKey: "quiz.q13.answers.lento",
         tags: {
           racional: 2,
           resolutivo: 3,
@@ -390,7 +390,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Te las tomas tal como vienen. No tienes problema con sentirlas, sean buenas o malas, y cuanto antes las aceptes, mejor.",
+        textKey: "quiz.q13.answers.rapido",
         tags: {
           emocional: 2,
           expresivo: 2,
@@ -398,7 +398,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "¿Emociones? Absolutamente no, una perdida de tiempo.",
+        textKey: "quiz.q13.answers.no",
         tags: {
           evitativo: 3,
           introvertido: 1,
@@ -408,11 +408,11 @@ export const questions = [
   },
   {
     id: "q14",
-    question: "Realmente eres...",
+    questionKey: "quiz.q14.question",
     answers: [
       {
         id: "a",
-        text: "Inteligente",
+        textKey: "quiz.q14.answers.listo",
         tags: {
           inteligente: 3,
           racional: 1,
@@ -420,7 +420,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "No muy brillante.",
+        textKey: "quiz.q14.answers.tonto",
         tags: {
           caotico: 2,
           hater: 1,
@@ -428,7 +428,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Tienes cabeza, pero falta interés/recursos",
+        textKey: "quiz.q14.answers.medio",
         tags: {
           inteligente: 1,
           caotico: 1,
@@ -438,11 +438,11 @@ export const questions = [
   },
   {
     id: "q15",
-    question: "Los demás dirían que eres...",
+    questionKey: "quiz.q15.question",
     answers: [
       {
         id: "a",
-        text: "Buena persona",
+        textKey: "quiz.q15.answers.bueno",
         tags: {
           empatico: 2,
           resolutivo: 1,
@@ -451,7 +451,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Mala persona",
+        textKey: "quiz.q15.answers.malo",
         tags: {
           hater: 3,
           evitativo: 1,
@@ -460,7 +460,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Bastante ambiguo, difícil de etiquetar",
+        textKey: "quiz.q15.answers.medio",
         tags: {
           ambiguo: 2,
           adaptable: 1,
@@ -471,11 +471,11 @@ export const questions = [
   },
   {
     id: "q16",
-    question: "En cuanto a los problemas ajenos, tú...",
+    questionKey: "quiz.q16.question",
     answers: [
       {
         id: "a",
-        text: "Ofreces apoyo emocional y te centras, antes de nada, en hacer que el otro se sienta mejor",
+        textKey: "quiz.q16.answers.empatico",
         tags: {
           empatico: 3,
           emocional: 1,
@@ -485,7 +485,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Buscas soluciones directamente. Solo un par de palabras dulces no cambiarán la situación.",
+        textKey: "quiz.q16.answers.solucionador",
         tags: {
           pragmatico: 3,
           directo: 1,
@@ -496,11 +496,11 @@ export const questions = [
   },
   {
     id: "q17",
-    question: "Tu libido es...",
+    questionKey: "quiz.q17.question",
     answers: [
       {
         id: "a",
-        text: "Muy intenso",
+        textKey: "quiz.q17.answers.intenso",
         tags: {
           libido: 3,
           contacto_fisico: 1,
@@ -509,14 +509,14 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Moderado",
+        textKey: "quiz.q17.answers.medio",
         tags: {
           libido: 2,
         },
       },
       {
         id: "c",
-        text: "Bajo o inexistente",
+        textKey: "quiz.q17.answers.bajo",
         tags: {
           libido: 1,
         },
@@ -525,11 +525,11 @@ export const questions = [
   },
   {
     id: "q18",
-    question: "Buscas...",
+    questionKey: "quiz.q18.question",
     answers: [
       {
         id: "a",
-        text: "Líos de una noche",
+        textKey: "quiz.q18.answers.lios",
         tags: {
           casual: 3,
           pragmatico: 1,
@@ -537,7 +537,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Relaciones estables y duraderas",
+        textKey: "quiz.q18.answers.largas",
         tags: {
           romantico: 1,
           responsable: 2,
@@ -547,25 +547,25 @@ export const questions = [
   },
   {
     id: "q19",
-    question: "Te gustaría alguien mas...",
+    questionKey: "quiz.q19.question",
     answers: [
       {
         id: "a",
-        text: "Dominante",
+        textKey: "quiz.q19.answers.dominante",
         meta: {
           tipo: "dom",
         },
       },
       {
         id: "b",
-        text: "Sumiso",
+        textKey: "quiz.q19.answers.sumiso",
         meta: {
           tipo: "sub",
         },
       },
       {
         id: "c",
-        text: "Adaptable",
+        textKey: "quiz.q19.answers.adaptable",
         meta: {
           tipo: "switch",
         },
@@ -574,25 +574,25 @@ export const questions = [
   },
   {
     id: "q20",
-    question: "¿Quieres hijos?",
+    questionKey: "quiz.q20.question",
     answers: [
       {
         id: "a",
-        text: "Sí",
+        textKey: "quiz.q20.answers.si",
         meta: {
           child: "yes",
         },
       },
       {
         id: "b",
-        text: "No",
+        textKey: "quiz.q20.answers.no",
         meta: {
           child: "no",
         },
       },
       {
         id: "c",
-        text: "No estoy segur@...",
+        textKey: "quiz.q20.answers.puede",
         meta: {
           child: "maybe",
         },
@@ -601,39 +601,39 @@ export const questions = [
   },
   {
     id: "q21",
-    question: "Prefieres las relaciones...",
+    questionKey: "quiz.q21.question",
     answers: [
       {
         id: "a",
-        text: "Monógamas",
+        textKey: "quiz.q21.answers.mono",
         meta: {
           relacion: "mono",
         },
       },
       {
         id: "b",
-        text: "Poliamorosas",
+        textKey: "quiz.q21.answers.poli",
         meta: {
           relacion: "poli",
         },
       },
       {
         id: "c",
-        text: "Abiertas",
+        textKey: "quiz.q21.answers.abierta",
         meta: {
           relacion: "abierta",
         },
       },
       {
         id: "d",
-        text: "Ninguna, gracias.",
+        textKey: "quiz.q21.answers.ninguna",
         meta: {
           relacion: "arromantico",
         },
       },
       {
         id: "e",
-        text: "Da igual.",
+        textKey: "quiz.q21.answers.idc",
         meta: {
           relacion: "cualquiera",
         },
@@ -642,11 +642,11 @@ export const questions = [
   },
   {
     id: "q22",
-    question: "Tu estilo de apego es...",
+    questionKey: "quiz.q22.question",
     answers: [
       {
         id: "a",
-        text: "Seguro",
+        textKey: "quiz.q22.answers.seguro",
         meta: {
           apego: "seguro",
         },
@@ -658,7 +658,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Evitativo",
+        textKey: "quiz.q22.answers.evitativo",
         meta: {
           apego: "evitativo",
         },
@@ -669,7 +669,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Ansioso",
+        textKey: "quiz.q22.answers.ansioso",
         meta: {
           apego: "ansioso",
         },
@@ -681,7 +681,7 @@ export const questions = [
       },
       {
         id: "d",
-        text: "Desorganizado",
+        textKey: "quiz.q22.answers.desorganizado",
         meta: {
           apego: "desorganizado",
         },
@@ -692,7 +692,7 @@ export const questions = [
       },
       {
         id: "e",
-        text: "No me gusta la gente.",
+        textKey: "quiz.q22.answers.no",
         meta: {
           apego: "hater",
         },
@@ -705,39 +705,39 @@ export const questions = [
   },
   {
     id: "q23",
-    question: "Y te gustaría que tu pareja fuera...",
+    questionKey: "quiz.q23.question",
     answers: [
       {
         id: "a",
-        text: "Seguro",
+        textKey: "quiz.q23.answers.seguro",
         meta: {
           quiere_apego: "seguro",
         },
       },
       {
         id: "b",
-        text: "Evitativo",
+        textKey: "quiz.q23.answers.evitativo",
         meta: {
           quiere_apego: "evitativo",
         },
       },
       {
         id: "c",
-        text: "Ansioso",
+        textKey: "quiz.q23.answers.ansioso",
         meta: {
           quiere_apego: "ansioso",
         },
       },
       {
         id: "d",
-        text: "Desorganizado",
+        textKey: "quiz.q23.answers.desorganizado",
         meta: {
           quiere_apego: "desorganizado",
         },
       },
       {
         id: "e",
-        text: "No le gusta la gente... y a ti te gusta sufrir, claramente.",
+        textKey: "quiz.q23.answers.no",
         meta: {
           quiere_apego: "hater",
         },
@@ -746,11 +746,11 @@ export const questions = [
   },
   {
     id: "q24",
-    question: "Tu lenguaje amoroso:",
+    questionKey: "quiz.q24.question",
     answers: [
       {
         id: "a",
-        text: "Palabras de afirmación",
+        textKey: "quiz.q24.answers.palabras",
         tags: {
           afirmacion: 3,
           romantico: 1,
@@ -758,7 +758,7 @@ export const questions = [
       },
       {
         id: "b",
-        text: "Tiempo de calidad",
+        textKey: "quiz.q24.answers.tiempo",
         tags: {
           calidad: 3,
           aventurero: 1,
@@ -766,7 +766,7 @@ export const questions = [
       },
       {
         id: "c",
-        text: "Recibir/dar regalos",
+        textKey: "quiz.q24.answers.regalos",
         tags: {
           regalos: 3,
           empatico: 1,
@@ -774,7 +774,7 @@ export const questions = [
       },
       {
         id: "d",
-        text: "Pingüinada (regalar objetos cotidianos o pequeños gestos)",
+        textKey: "quiz.q24.answers.pinguino",
         tags: {
           pinguino: 3,
           caotico: 1,
@@ -782,7 +782,7 @@ export const questions = [
       },
       {
         id: "e",
-        text: "Actos de servicio",
+        textKey: "quiz.q24.answers.actos",
         tags: {
           actos: 3,
           responsable: 1,
@@ -790,14 +790,14 @@ export const questions = [
       },
       {
         id: "f",
-        text: "Contacto físico",
+        textKey: "quiz.q24.answers.contacto",
         tags: {
           contacto_fisico: 1,
         },
       },
       {
         id: "g",
-        text: "Ninguno de estos",
+        textKey: "quiz.q24.answers.ninguno",
         tags: {
           otro_lenguaje: 3,
         },
@@ -806,25 +806,25 @@ export const questions = [
   },
   {
     id: "q25",
-    question: "Te consideras mas...",
+    questionKey: "quiz.q25.question",
     answers: [
       {
         id: "a",
-        text: "Dominante",
+        textKey: "quiz.q25.answers.dominante",
         meta: {
           quiere_tipo: "dom",
         },
       },
       {
         id: "b",
-        text: "Sumiso",
+        textKey: "quiz.q25.answers.sumiso",
         meta: {
           quiere_tipo: "sub",
         },
       },
       {
         id: "c",
-        text: "Adaptable",
+        textKey: "quiz.q25.answers.adaptable",
         meta: {
           quiere_tipo: "switch",
         },

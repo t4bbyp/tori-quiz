@@ -4,8 +4,10 @@ import Editor from "../components/Editor";
 import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 import CharaList from "../components/CharaList";
+import { useTranslation } from "react-i18next";
 
 export default function EditCharacterPage() {
+  const {t} = useTranslation();
   const [session, setSession] = useState(undefined);
   const params = useParams();
   const navigate = useNavigate();
@@ -44,7 +46,7 @@ export default function EditCharacterPage() {
   }, []);
 
   if (session === undefined) {
-    return <p>Cargando...</p>;
+    return <p>{t($ => $.loading)}</p>;
   }
 
   if (session === null) {

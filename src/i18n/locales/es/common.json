@@ -1,0 +1,267 @@
+{
+  "title": "Romance en la Torre",
+  "welcome": {
+    "description": "Bienvenido a <italic>Romance en la Torre</italic>, el lugar donde puedes descubrir qué personaje de <link>La Cuarta Generación</link> sería una pareja compatible contigo, o incluso con tu OC!"
+  },
+  "password": "Contraseña",
+  "loging": "Conectando...",
+  "loading": "Cargando...",
+
+  "buttons": {
+    "takeTest": "Haz el test",
+    "characterList": "Personajes disponibles",
+    "addNewCharacter": "Añade un nuevo personaje",
+    "editCharacter": "Edita un personaje",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "start": "Empezar",
+    "repeat": "Repetir",
+    "login": "Conectate"
+  },
+
+  "errors": {
+    "verifyID": "Error comprobando ID",
+    "existingID": "Ese ID ya existe",
+    "savingChara": "Error guardando personaje: "
+  },
+
+  "landing": {
+    "welcome": "¡Bienvenid@!",
+    "description": "Estas listo para descubrir tu pareja ideal en el mundo de L4G? :D",
+
+    "newTitle": "Quieres añadir un nuevo personaje?",
+    "description2": "Responde las siguientes preguntas desde la perspectiva del personaje que quieres añadir al test.",
+    "idExplanation": "* Un identificador simple, unico (ej. primer nombre). Solo letras latinas, minusculas. Aseguraos de no haber usado el mismo para otro pj. Si hace falta, preguntad a Tori.",
+    "name": "nombre del personaje",
+    "img": "link para la imagen del personaje",
+    "desc": "descripcion corta del personaje"
+  },
+
+  "results": {
+    "loadingResults": "Cargando resultados...",
+    "yourDate": "tu cita perfecta sería con...",
+    "first": "Match principal!",
+    "second": "tmbn conectarias con...",
+    "third": "Y quizas...",
+    "compatibility": "Compatibilidad: "
+  },
+
+  "newCharacter": {
+    "saving": "Guardando personaje...",
+    "success": "Yippie, tu personaje se ha añadido :D"
+  },
+
+  "editor": {
+    "saving": "El personaje se esta actualizando..."
+  },
+
+  "quiz": {
+    "q1": {
+      "question": "Género",
+      "answers": {
+        "female": "Femenino",
+        "male": "Masculino",
+        "other": "Otro"
+      }
+    },
+    "q2": {
+      "question": "Orientación sexual",
+      "answers": {
+        "hetero": "Hetero",
+        "homo": "Homo",
+        "bi": "Bi/Pan",
+        "asexual": "Asexual"
+      }
+    },
+
+    "q3": {
+      "question": "Eres...",
+      "answers": {
+        "introvertido": "Introvertido",
+        "extrovertido": "Extrovertido",
+        "ambivertido": "Ambivertido"
+      }
+    },
+
+    "q4": {
+      "question": "Cuando se trata de trabajo/tareas, tú...",
+      "answers": {
+        "responsable": "Cuanto antes, mejor.",
+        "irresponsable": "Meh, ya lo haré mañana... (asi todo el mes)",
+        "medio": "Me centro en lo más importante primero; lo demás ya veré."
+      }
+    },
+    "q5": {
+      "question": "Prefieres...",
+      "answers": {
+        "caos": "Caos, aventura, eventos inesperados",
+        "rutina": "Rutina, saber qué es lo siguiente, tener control sobre tu vida",
+        "medio": "Un poco de ambas. La tranquilidad y la calma son lo mejor, pero a veces viene bien un poco de adrenalina"
+      }
+    },
+    "q6": {
+      "question": "En cuanto al contacto físico...",
+      "answers": {
+        "si": "AY, SÍ, POR FAVOR. UN BESO Y MIL ABRAZOS",
+        "medio": "Con amigos/familia, vale, de vez en cuando. Con desconocidos, solo si las formalidades lo requieren; preferiblemente no.",
+        "no": "Tócame un pelo y te mato."
+      }
+    },
+    "q7": {
+      "question": "Como pareja, serías...",
+      "answers": {
+        "romantico": "Romántico",
+        "pragmatico": "Pragmático",
+        "medio": "¿Depende del momento?"
+      }
+    },
+    "q8": {
+      "question": "Eres más...",
+      "answers": {
+        "emocional": "Emocional",
+        "racional": "Racional"
+      }
+    },
+    "q9": {
+      "question": "En contextos sociales, eres...",
+      "answers": {
+        "educado": "Educado",
+        "maleducado": "Maleducado",
+        "medio": "Depende del momento"
+      }
+    },
+    "q10": {
+      "question": "Moralmente eres...",
+      "answers": {
+        "flexible": "Flexible",
+        "estricto": "Estricto"
+      }
+    },
+    "q11": {
+      "question": "Cuando hay conflicto, tiendes a ser...",
+      "answers": {
+        "evitativo": "Evitativo",
+        "resolutivo": "Resolutivo"
+      }
+    },
+    "q12": {
+      "question": "Prefieres el ligoteo...",
+      "answers": {
+        "explicito": "Explícito",
+        "sutil": "Sutil"
+      }
+    },
+    "q13": {
+      "question": "Procesando las emociones, tú...",
+      "answers": {
+        "lento": "Te tomas tu tiempo. A veces te cuesta, o prefieres analizar las cosas con cuidado.",
+        "rapido": "Te las tomas tal como vienen. No tienes problema con sentirlas, sean buenas o malas, y cuanto antes las aceptes, mejor.",
+        "no": "¿Emociones? Absolutamente no, una perdida de tiempo."
+      }
+    },
+    "q14": {
+      "question": "Realmente eres...",
+      "answers": {
+        "listo": "Inteligente",
+        "tonto": "No muy brillante.",
+        "medio": "Tienes cabeza, pero falta interés/recursos"
+      }
+    },
+    "q15": {
+      "question": "Los demás dirían que eres...",
+      "answers": {
+        "bueno": "Buena persona",
+        "malo": "Mala persona",
+        "medio": "Depende a quien preguntes"
+      }
+    },
+    "q16": {
+      "question": "En cuanto a los problemas ajenos, tú...",
+      "answers": {
+        "empatico": "Ofreces apoyo emocional y te centras, antes de nada, en hacer que el otro se sienta mejor",
+        "solucionador": "Buscas soluciones directamente. Solo un par de palabras dulces no cambiarán la situación."
+      }
+    },
+    "q17": {
+      "question": "Tu libido es...",
+      "answers": {
+        "intenso": "Muy intenso",
+        "medio": "Moderado",
+        "bajo": "Bajo o inexistente"
+      }
+    },
+    "q18": {
+      "question": "Buscas...",
+      "answers": {
+        "lios": "Líos de una noche",
+        "largas": "Relaciones estables y duraderas"
+      }
+    },
+    "q19": {
+      "question": "Te gustaría alguien mas...",
+      "answers": {
+        "dominante": "Dominante",
+        "sumiso": "Sumiso",
+        "adaptable": "Adaptable"
+      }
+    },
+    "q20": {
+      "question": "¿Quieres hijos?",
+      "answers": {
+        "si": "Sí",
+        "no": "No",
+        "puede": "No estoy segur@..."
+      }
+    },
+    "q21": {
+      "question": "Prefieres las relaciones...",
+      "answers": {
+        "mono": "Monógamas",
+        "poli": "Poliamorosas",
+        "abierta": "Abiertas",
+        "ninguna": "Ninguna, gracias.",
+        "idc": "Da igual."
+      }
+    },
+    "q22": {
+      "question": "Tu estilo de apego es...",
+      "answers": {
+        "seguro": "Seguro",
+        "evitativo": "Evitativo",
+        "ansioso": "Ansioso",
+        "desorganizado": "Desorganizado",
+        "no": "No me gusta la gente."
+      }
+    },
+    "q23": {
+      "question": "Y te gustaría que tu pareja fuera...",
+      "answers": {
+        "seguro": "Seguro",
+        "evitativo": "Evitativo",
+        "ansioso": "Ansioso",
+        "desorganizado": "Desorganizado",
+        "no": "No le gusta la gente... y a ti te gusta sufrir, claramente."
+      }
+    },
+    "q24": {
+      "question": "Tu lenguaje amoroso:",
+      "answers": {
+        "palabras": "Palabras de afirmación",
+        "tiempo": "Tiempo de calidad",
+        "regalos": "Recibir/dar regalos",
+        "pinguino": "Pingüinada (regalar objetos cotidianos o pequeños gestos)",
+        "actos": "Actos de servicio",
+        "contacto": "Contacto físico",
+        "ninguno": "Ninguno de estos"
+      }
+    },
+    "q25": {
+      "question": "Te consideras mas...",
+      "answers": {
+        "dominante": "Dominante",
+        "sumiso": "Sumiso",
+        "adaptable": "Adaptable"
+      }
+    }
+  }
+}

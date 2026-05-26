@@ -4,8 +4,10 @@ import {
   useNavigation,
 } from "react-router-dom";
 import classes from "./LoginForm.module.css";
+import {useTranslation} from 'react-i18next';
 
 export default function LoginForm() {
+  const {t} = useTranslation();
   const data = useActionData();
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
@@ -13,7 +15,7 @@ export default function LoginForm() {
   return (
     <>
       <Form method="post" className={`mybox ${classes.login}`}>
-        <h2>Necesitas una cuenta para seguir :D</h2>
+        <h2>{t($ => $.login.text)}</h2>
         {data && data.errors && (
           <ul>
             {Object.values(data.errors).map((err) => (
@@ -29,12 +31,12 @@ export default function LoginForm() {
           <input id="email" type="email" name="email" required />
         </p>
         <p>
-          <label htmlFor="password">Contraseña</label>
+          <label htmlFor="password">{t($ => $.login.password)}</label>
           <input id="password" type="password" name="password" required />
         </p>
 
         <button disabled={isSubmitting} className="start">
-          {isSubmitting ? "Submitting..." : "Entra"}
+          {isSubmitting ? t($ => $.login.loging) : t($ => $.buttons.login)}
         </button>
       </Form>
     </>

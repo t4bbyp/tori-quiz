@@ -2,8 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import { QuizContext } from "../store/quizContex";
 import classes from "./Results.module.css";
 import { supabase } from "../utils/supabase";
+import {useTranslation} from 'react-i18next';
 
 export default function AddNewCharacter() {
+  const {t} = useTranslation();
   const quizCtx = useContext(QuizContext);
 
   const [loading, setLoading] = useState(true);
@@ -42,12 +44,12 @@ export default function AddNewCharacter() {
   return (
     <>
       <div className="mybox">
-        {loading && <p>Guardando personaje...</p>}
+        {loading && <p>{t($ => $.newCharacter.saving)}</p>}
 
         {!loading && !error && (
           <>
             <p className={classes.intro}>
-              Yippie, tu personaje se ha añadido :D
+              {t($ => $.newCharacter.success)}
             </p>
 
             <div key={quizCtx.pjID}>
@@ -57,10 +59,10 @@ export default function AddNewCharacter() {
             </div>
           </>
         )}
-        {error && <p>Error guardando personaje: {error}</p>}
+        {error && <p>{t($ => $.errors.savingChara)} {error}</p>}
 
         <button className={classes.reset} onClick={quizCtx.restartQuiz}>
-          Repetir
+          {t($ => $.buttons.repeat)}
         </button>
       </div>
     </>

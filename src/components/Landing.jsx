@@ -5,8 +5,10 @@ import Header from "./Header";
 import Input from "./Input";
 import { supabase } from "../utils/supabase";
 import { Form } from "react-router";
+import { useTranslation } from "react-i18next";
 
 function Landing({ mode }) {
+  const {t} = useTranslation();
   const quizCtx = useContext(QuizContext);
 
   const [uname, setUname] = useState();
@@ -36,12 +38,12 @@ function Landing({ mode }) {
 
     if (error) {
       console.error(error);
-      setError("Error comprobando ID");
+      setError(t($ => $.errors.verifyID));
       return;
     }
 
     if (data) {
-      setError("Ese ID ya existe");
+      setError(t($ => $.errors.existingID));
       return;
     }
 
@@ -59,40 +61,37 @@ function Landing({ mode }) {
       >
         {mode === "user" ? (
           <>
-            <h2>¡Bienvenid@!</h2>
+            <h2>{t($ => $.landing.welcome)}</h2>
             <p>
-              Estas listo para descubrir tu pareja ideal en el mundo de L4G? :D
+              {t($ => $.landing.description)}
             </p>
 
             <Input
               type="text"
               name="username"
-              placeholder="tu nombre"
+              placeholder={t($ => $.landing.name)}
               defaultValue=""
               onChange={(e) => setUname(e.target.value)}
             />
-            <button className="start">Empezar!</button>
+            <button className="start">{t($ => $.buttons.start)}</button>
           </>
         ) : (
           <>
-            <h2>¿Quieres añadir un nuevo personaje?</h2>
+            <h2>{t($ => $.landing.newTitle)}</h2>
             <p>
-              Responde las siguientes preguntas desde la perspectiva del
-              personaje que quieres añadir al test.
+              {t($ => $.landing.description2)}
             </p>
 
             <Input
               type="text"
               name="id"
-              placeholder="ID unico*"
+              placeholder={t($ => $.editor.id)}
               defaultValue=""
               onChange={(e) => setPjID(e.target.value)}
               className="id"
               extra={
                 <small>
-                  * Un identificador simple, unico (ej. primer nombre). Solo
-                  letras latinas, minusculas. Aseguraos de no haber usado el
-                  mismo para otro pj. Si hace falta, preguntad a Tori.
+                  {t($ => $.landing.idExplanation)}
                 </small>
               }
             />
@@ -100,7 +99,7 @@ function Landing({ mode }) {
             <Input
               type="text"
               name="username"
-              placeholder="nombre del personaje"
+              placeholder={t($ => $.landing.name)}
               defaultValue=""
               onChange={(e) => setPjName(e.target.value)}
             />
@@ -108,21 +107,21 @@ function Landing({ mode }) {
             <Input
               type="url"
               name="img"
-              placeholder="link para la imagen del personaje"
+              placeholder={t($ => $.landing.img)}
               defaultValue=""
               onChange={(e) => setPjImg(e.target.value)}
             />
 
             <textarea
               name="desc"
-              placeholder="descripcion corta del personaje"
+              placeholder={t($ => $.landing.desc)}
               defaultValue=""
               onChange={(e) => setPjDesc(e.target.value)}
             />
 
             {error && <p>{error}</p>}
 
-            <button className="start">Empezar!</button>
+            <button className="start">{t($ => $.buttons.start)}</button>
           </>
         )}
       </Form>

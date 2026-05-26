@@ -1,3 +1,5 @@
+import { questions } from "../assets/questions";
+
 export function characterBuilder(characterAnswers) {
   const traits = {};
   const preferences = {};

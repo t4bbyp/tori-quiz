@@ -8,8 +8,10 @@ import { traitMax } from "../utils/extra";
 import { toDimensions } from "../utils/personalities";
 import { characterBuilder } from "../utils/characterBuilder";
 import { getFullAnswers } from "../utils/getFullAnswers";
+import { useTranslation } from "react-i18next";
 
 export default function Results() {
+  const {t} = useTranslation();
   const quizCtx = useContext(QuizContext);
   const userTraits = {};
   const userMeta = {};
@@ -90,12 +92,12 @@ export default function Results() {
   return (
     <>
       <div className="mybox">
-        {loading && <p>Cargando resultados...</p>}
+        {loading && <p>{t($ => $.results.loading)}</p>}
 
         {!loading && !error && (
           <>
             <p className={classes.intro}>
-              {quizCtx.username}, tu cita perfecta sería con...
+              {quizCtx.username}, {t($ => $.results.yourDate)}
             </p>
 
             {topMatches.map((match, index) => {
@@ -103,11 +105,11 @@ export default function Results() {
 
               return (
                 <div key={match.character.id}>
-                  {index === 0 && <h3>Match principal!</h3>}
+                  {index === 0 && <h3>{t($ => $.results.first)}</h3>}
 
-                  {index === 1 && <h3>tmbn conectarias con...</h3>}
+                  {index === 1 && <h3>{t($ => $.results.second)}</h3>}
 
-                  {index === 2 && <h3>Y quizas...</h3>}
+                  {index === 2 && <h3>{t($ => $.results.third)}</h3>}
 
                   <h2>{match.character.name}</h2>
 
@@ -121,7 +123,7 @@ export default function Results() {
             })}
 
             <button className={classes.reset} onClick={quizCtx.restartQuiz}>
-              Repetir
+              {t($ => $.buttons.repeat)}
             </button>
           </>
         )}

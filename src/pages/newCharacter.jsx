@@ -5,8 +5,10 @@ import { useContext, useEffect, useState } from "react";
 import { supabase } from "../utils/supabase";
 import LoginForm from "../components/LoginForm";
 import { redirect } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function NewCharacterPage() {
+  const {t} = useTranslation();
   const [session, setSession] = useState(undefined);
   const quizCtx = useContext(QuizContext);
   const mode = "new";
@@ -36,7 +38,7 @@ export default function NewCharacterPage() {
   }, []);
 
   if (session === undefined) {
-    return <p>Cargando...</p>;
+    return <p>{t($ => $.loading)}</p>;
   }
 
   if (session === null) {
