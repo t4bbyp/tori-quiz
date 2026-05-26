@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { supabase } from "./utils/supabase";
 import CharactersListPage from "./pages/charactersList";
 import RootLayout from "./pages/rootLayout";
+import FaqPage from "./pages/faq";
 
 const router = createHashRouter([
   {
@@ -40,6 +41,10 @@ const router = createHashRouter([
         path: "/characters-list",
         element: <CharactersListPage />,
       },
+      {
+        path: "/faq",
+        element: <FaqPage/>
+      }
     ],
   },
 ]);

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className={classes.footer}>
       <p>tvbbyp — 2026</p>
-      <Link className={classes.faq}>FAQ</Link>
+      <Link to="./faq" className={classes.faq}>FAQ</Link>
     </footer>
   );
 }

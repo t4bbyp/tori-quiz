@@ -61,6 +61,23 @@
     "loging": "Connecting..."
   },
 
+  "faq": {
+    "q1": "What is this?",
+    "a1": "This platform offers a personality quiz test to determine what character from La Cuarta Generacion in Scripta Manent has higher (romantic) compatibility with you or, maybe, even with your original characters! Keep in mind this project was made for fun, so please take it as such. Enjoy <3",
+    "q2": "What's Scripta Manent?",
+    "a2": "<a>Scripta Manent</a> (SM) is a Spanish web forum dedicated to role-play. It offers a couple of different settings, one of them being La Cuarta Generación, the one that contains the characters used in this quiz.",
+    "q3": "What is roleplay? What are RP forums?",
+    "a3": "Roleplaying (RP) is a form of collaborative storytelling where people create characters and develop scenes/stories together, each controlling only their own character's actions, dialogue, etc. and taking turns to interact. Unlike tabletop RPGs (eg. D&D), narrative RP (mostly used in web forums or other writing-oriented online platforms) focus more on character interaction and long-term story development than game mechanics. <br/> RP web forums are online communities built around this style of writing. Users usually create an account for their character, join threads of specific events and post written replies as said characters.",
+    "q4": "What is La Cuarta Generacion?",
+    "a4": "The most popular story-setting in SM, inspired in the book series <i>\"Cronicas de la Torre\"</i> by Laura Gallego García. It presents a medieval fantasy world focused on a magic school, the Tower (<i>Torre</i>) and an open world that includes multiple cultures and supernatural creatures.",
+    "q5": "Can I add characters to the list? Can I modify any of them?",
+    "a5": "For security reasons and proper control over the test, access to the data involving available characters displayed in the test results is open only to members of the forum and creators of said characters.",
+    "q6": "Who made this?",
+    "a6": "All the code and most of the text content in this platform was made by TVBBY.P (me). The first one to come up with the test idea was one of the forum users, Efimero, but the project was abandoned. I chose to bring it back up when I wanted to test my React skills after completing a course. The characters involved and their descriptions were made by their respective owners from SM.",
+    "q7": "Do you have more questions?",
+    "a7": "Is there anything else you'd like to know? Did you find any errors or bugs? Would you like to suggest an improvement to the quiz or just share a word? Feel free to contact me!"
+  },
+
   "quiz": {
     "q1": {
       "question": "Gender",
