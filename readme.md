@@ -37,7 +37,8 @@ Since this was deployed through GH Pages, it doesn't require any installation. Y
 ## Credits
 
 Of course, I have to mention the following, for their helpful resources:
-- First and foremost, MYSELF :D Because without the sudden rush of dopamine that had me coding all day everyday for a week, we wouldn't be here T.T 
-- My friend Toñi, for being the first to think of making a quiz like this, coming up with most of the questions/answers (which I had the freedom to adapt as I wished later on) and cheering on me while I coded everything else.
+- First and foremost, MYSELF :D
+- My friend Efi, for being the first to think of making a quiz like this, coming up with most of the questions/answers (which I had the freedom to adapt as I wished later on) and cheering on me while I coded everything else.
 - [MagicPattern](https://www.magicpattern.design/tools/css-backgrounds) - because I got a cute background from their platform
 - My friends in the forum, who created their amazing characters, which are now the love interests in my quiz!
+- Any images present in my page belong only to their respective creators/artists and I claim no ownership or rights to them.
