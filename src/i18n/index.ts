@@ -16,7 +16,7 @@ i18n
       },
     },
 
-    lng: "en",
+    lng: "es",
     fallbackLng: "en",
 
     interpolation: {

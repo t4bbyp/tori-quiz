@@ -2,11 +2,12 @@
   width: 40vw;
   max-width: 50vw;
   height: auto;
-  border-radius: 50px;
+  border-radius: 20px;
   background: white;
   box-shadow: 0 5px 5px rgba(94, 66, 91, 0.5);
   padding: 1% 2%;
   font-size: 1.5vmin;
+  margin-bottom: 1rem;
 }
 
 .menu {

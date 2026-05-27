@@ -1,7 +1,7 @@
 {
   "title": "Romance en la Torre",
   "welcome": {
-    "description": "Bienvenido a <italic>Romance en la Torre</italic>, el lugar donde puedes descubrir qué personaje de <link>La Cuarta Generación</link> sería una pareja compatible contigo, o incluso con tu OC!"
+    "description": "Bienvenido a <italic>Romance en la Torre</italic>, el lugar donde puedes descubrir qué personaje de <link /> sería una pareja compatible contigo, o incluso con tu OC~"
   },
   "password": "Contraseña",
   "loging": "Conectando...",
@@ -52,7 +52,64 @@
   },
 
   "editor": {
-    "saving": "El personaje se esta actualizando..."
+    "saving": "Guardando...",
+    "success": "¡Yay, tu personaje se ha actualizado!",
+    "id": "ID unico*"
+  },
+
+  "login": {
+    "text": "Necesitas una cuenta para seguir :D"
+  },
+
+  "tags": {
+    "gender": {
+      "masc": "Hombre",
+      "fem": "Mujer",
+      "other": "No binario"
+    },
+    "sexuality": {
+      "hetero": "Heterosexual",
+      "homo": "Homosexual",
+      "bi": "Bi/Pan",
+      "asex": "Asexual"
+    },
+    "attachment": {
+      "seguro": "Seguro",
+      "evitativo": "Evitativo",
+      "ansioso": "Ansioso",
+      "desorganizado": "Desorganizado",
+      "no": "No le gusta la gente."
+    },
+    "social": {
+      "intro": "Introvertido",
+      "extro": "Extrovertido",
+      "ambi": "Ambivertido"
+    },
+    "love_type": {
+      "romantico": "Romántico",
+      "pragmatico": "Pragmático"
+    },
+    "mental": {
+      "emotional": "Emocional",
+      "rational": "Racional"
+    }
+  },
+
+  "faq": {
+    "q1": "¿Qué es esto?",
+    "a1": "Esta plataforma ofrece un test de personalidad para determinar qué personaje de La Cuarta Generación en Scripta Manent tiene mayor compatibilidad (romántica) contigo o, tal vez, ¡incluso con tus personajes originales! Ten en cuenta que este proyecto se hizo por diversión, así que tómalo como tal. ¡Disfruta <3!",
+    "q2": "¿Qué es Scripta Manent?",
+    "a2": "<a>Scripta Manent</a> (SM) es un foro web español dedicado al rol. Ofrece un par de escenarios diferentes, uno de ellos es La Cuarta Generación, el que contiene los personajes utilizados en este test.",
+    "q3": "¿Qué es el rol? ¿Qué son los foros de rol?",
+    "a3": "El rol (RP) es una forma de narración colaborativa donde las personas crean personajes y desarrollan escenas/historias juntas, cada una controlando solo las acciones, diálogos, etc. de su propio personaje y turnándose para interactuar. A diferencia de los juegos de rol de mesa (por ejemplo, D&D), el rol narrativo (utilizado principalmente en foros web u otras plataformas en línea orientadas a la escritura) se centra más en la interacción de los personajes y el desarrollo de la historia a largo plazo que en las mecánicas del juego. <br/> Los foros web de rol son comunidades en línea construidas en torno a este estilo de escritura. Los usuarios suelen crear una cuenta para su personaje, unirse a hilos de eventos específicos y publicar respuestas escritas como dichos personajes.",
+    "q4": "¿Qué es La Cuarta Generación?",
+    "a4": "El escenario de historia más popular en SM, inspirado en la serie de libros <i>\"Crónicas de la Torre\"</i> de Laura Gallego García. Presenta un mundo de fantasía medieval centrado en una escuela de magia, la Torre (<i>Torre</i>), y un mundo abierto que incluye múltiples culturas y criaturas sobrenaturales.",
+    "q5": "¿Puedo agregar personajes a la lista? ¿Puedo modificar alguno de ellos?",
+    "a5": "Por razones de seguridad y para un control adecuado de la prueba, el acceso a los datos relacionados con los personajes disponibles que se muestran en los resultados de la prueba está abierto solo a los miembros del foro y a los creadores de dichos personajes.",
+    "q6": "¿Quién hizo esto?",
+    "a6": "Todo el código y la mayor parte del contenido de texto de esta plataforma fueron creados por TVBBY.P (yo). <br/> La primera persona en tener la idea de la prueba fue uno de los usuarios del foro, Efimero, pero el proyecto fue abandonado. Decidí retomarlo cuando quise poner a prueba mis habilidades con React después de completar un curso. <br/> Los personajes y sus descripciones fueron creados por sus respectivos dueños de SM. <br/> Las imagenes en la pagina de Inicio fueron creadas con <a>picrew</a>. Los creditos para las imagenes de los personajes se pueden encontrar en el listado de personajes y en los resultados del test.",
+    "q7": "¿Tienes más preguntas?",
+    "a7": "¿Hay algo más que quieras saber? ¿Encontraste algún error o fallo? ¿Te gustaría sugerir una mejora para el cuestionario o simplemente compartir algo? ¡No dudes en contactarme!"
   },
 
   "quiz": {
@@ -67,10 +124,7 @@
     "q2": {
       "question": "Orientación sexual",
       "answers": {
-        "hetero": "Hetero",
-        "homo": "Homo",
-        "bi": "Bi/Pan",
-        "asexual": "Asexual"
+        "hetero": "Hetero"
       }
     },
 

@@ -5,7 +5,12 @@ export function characterBuilder(characterAnswers) {
   const preferences = {};
 
   for (const question of questions) {
-    const selectedAnswerId = characterAnswers[question.id];
+
+    const savedAnswer = characterAnswers.find(
+      (a) => a.questionId === question.id
+    )
+
+    const selectedAnswerId = savedAnswer?.answerId;
 
     const answer = question.answers.find(
       (a) => a.id === selectedAnswerId

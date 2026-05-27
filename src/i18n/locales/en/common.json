@@ -3,6 +3,8 @@
   "welcome": {
     "description": "Welcome to <italic>Romance in the Tower</italic>, the place where you can discover which character from <link/> would be a compatible partner for you, or even your OC!"
   },
+  "password": "Password",
+  "loging": "Signing in...",
   "loading": "Loading...",
 
   "buttons": {
@@ -50,15 +52,44 @@
   },
 
   "editor": {
-    "saving": "The character is being updated...",
+    "saving": "Saving...",
     "success": "Yay, your character was updated successfully!",
     "id": "unique ID*"
   },
 
   "login": {
-    "text": "Necesitas una cuenta para seguir :D",
-    "password": "Password",
-    "loging": "Connecting..."
+    "text": "You need to login to continue Q.Q"
+  },
+
+  "tags": {
+    "gender": {
+      "masc": "Man",
+      "fem": "Woman",
+      "other": "Non-binary"
+    },
+    "sexuality": {
+      "hetero": "Straight"
+    },
+    "attachment": {
+      "seguro": "Secure",
+      "evitativo": "Avoidant",
+      "ansioso": "Anxious",
+      "desorganizado": "Disorganized",
+      "no": "Does't like people."
+    },
+    "social": {
+      "intro": "Introverted",
+      "extro": "Extroverted",
+      "ambi": "Ambiverted"
+    },
+    "love_type": {
+      "romantico": "Romantic",
+      "pragmatico": "Pragmatic"
+    },
+    "mental": {
+      "emotional": "Emotional",
+      "rational": "Rational"
+    }
   },
 
   "faq": {
@@ -73,7 +104,7 @@
     "q5": "Can I add characters to the list? Can I modify any of them?",
     "a5": "For security reasons and proper control over the test, access to the data involving available characters displayed in the test results is open only to members of the forum and creators of said characters.",
     "q6": "Who made this?",
-    "a6": "All the code and most of the text content in this platform was made by TVBBY.P (me). The first one to come up with the test idea was one of the forum users, Efimero, but the project was abandoned. I chose to bring it back up when I wanted to test my React skills after completing a course. The characters involved and their descriptions were made by their respective owners from SM.",
+    "a6": "All the code and most of the text content on this platform were created by TVBBY.P (me). <br/> The first person to have the idea for the test was one of the forum users, Efimero, but the project was abandoned. I decided to pick it up again when I wanted to test my React skills after completing a course. <br/> The characters and their descriptions were created by their respective owners on SM. <br/> The images on the Home page were created with <a>picrew</a>. Credits for the character images can be found in the character list and in the test results.",
     "q7": "Do you have more questions?",
     "a7": "Is there anything else you'd like to know? Did you find any errors or bugs? Would you like to suggest an improvement to the quiz or just share a word? Feel free to contact me!"
   },

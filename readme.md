@@ -13,13 +13,14 @@ So hopefully whoever finds this enjoys it too, or at least appreciates the effor
 
 ## Tech Stack
 
-(This section is mostly for me, to track what I’ve used and the project’s structure.)
+(This section is mostly for myself, to track what I’ve used and the project’s structure.)
 
 - Vite + Basic React elements (components, useState, useEffect, useContext, etc.)
 - CSS modules
 - React Router (createHashRouter, Forms, Links, etc.)
-- Supabase (Database & Authentication)
+- Supabase (database & authentication)
 - GitHub Pages (deployment)
+- i18next (EN & ES localization)
 
 
 ## Features
@@ -42,3 +43,5 @@ Of course, I have to mention the following, for their helpful resources:
 - [MagicPattern](https://www.magicpattern.design/tools/css-backgrounds) - because I got a cute background from their platform
 - My friends in the forum, who created their amazing characters, which are now the love interests in my quiz!
 - Any images present in my page belong only to their respective creators/artists and I claim no ownership or rights to them.
+ - Home Page images: (picrew)[https://picrew.me/en/image_maker/1108773]
+ - Characters' images: artist names can be found in the Characters List and in the Results page.
