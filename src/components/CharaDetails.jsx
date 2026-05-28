@@ -5,18 +5,21 @@ import { characterBuilder } from "../utils/characterBuilder";
 import { toDimensions } from "../utils/personalities";
 import { normalizeTo01 } from "../utils/calculations";
 import { traitMax } from "../utils/extra";
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export default function CharaDetails({ pjId, onBack }) {
+  const [loading, setLoading] = useState(true);
   const [pjName, setPjName] = useState("");
   const [pjImg, setPjImg] = useState("");
   const [pjDesc, setPjDesc] = useState("");
   const [answers, setAnswers] = useState([]);
   const [tags, setTags] = useState([]);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     async function fetchCharacter() {
+      setLoading(true);
+
       const { data, error } = await supabase
         .from("characters")
         .select("*")
@@ -25,40 +28,49 @@ export default function CharaDetails({ pjId, onBack }) {
 
       if (error) {
         setError(error.message);
+        setLoading(false);
         return;
       }
 
-      setPjName(data.character_name);
-      setPjImg(data.character_img);
-      setPjDesc(data.character_desc);
-
-      setAnswers(data.character_answers || []);
-    }
-
-    fetchCharacter();
-  }, [pjId]);
-
-  useEffect(() => {
-    if (answers.length > 0) {
-      const built = characterBuilder(answers);
+      const built = characterBuilder(data.character_answers || []);
 
       const preferences = built.preferences;
       const rawTraits = built.traits;
 
       const dimensions = toDimensions(normalizeTo01(rawTraits, traitMax));
-      console.log("preferences: " + JSON.stringify(preferences));
-      console.log("traits: " + JSON.stringify(rawTraits));
-      const builtTags = buildCharacterTags(rawTraits, preferences, dimensions, t);
-      console.log(builtTags);
 
+      const builtTags = buildCharacterTags(
+        rawTraits,
+        preferences,
+        dimensions,
+        t,
+      );
+
+      // SET EVERYTHING ONLY AFTER READY
+      setPjName(data.character_name);
+      setPjImg(data.character_img);
+      setPjDesc(data.character_desc);
+      setAnswers(data.character_answers || []);
       setTags(builtTags);
+
+      setLoading(false);
     }
-  }, [answers, t]);
+
+    fetchCharacter();
+  }, [pjId, t]);
+
+    if (loading) {
+    return (
+      <div className={classes.loader_container}>
+        <div className={classes.loader}></div>
+      </div>
+    );
+  }
 
   return (
-    <>
+    <>{!loading && 
       <div className={classes.container}>
-        <h1>{pjName}</h1>
+        <h1 className={classes.chara_name}>{pjName}</h1>
         <table className={classes.details}>
           <tbody>
             <tr className={classes.profile}>
@@ -73,8 +85,13 @@ export default function CharaDetails({ pjId, onBack }) {
                 {tags && (
                   <div className={classes.taglist}>
                     {tags.map((tag) => (
-                      <span key={tag} className={classes.tag_item}>
-                        {tag}
+                      <span
+                        key={tag.label}
+                        className={`${classes.tag_item} ${
+                          classes[tag.category]
+                        }`}
+                      >
+                        {tag.label}
                       </span>
                     ))}
                   </div>
@@ -86,7 +103,7 @@ export default function CharaDetails({ pjId, onBack }) {
         <button className={classes.return} onClick={onBack}>
           <span className="material-symbols-outlined">arrow_circle_left</span>
         </button>
-      </div>
+      </div>}
     </>
   );
 }

@@ -1,12 +1,13 @@
 import { Trans, useTranslation } from "react-i18next";
 
 export default function Welcome() {
-  useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
       <p>
         <Trans
+        t={t}
           i18nKey="welcome.description"
           components={{
             italic: <i />,

@@ -11,6 +11,32 @@
   overflow: hidden;
 }
 
+.loader_container {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chara_name {
+  font-size: 5vmin !important;
+}
+
 .details {
   margin: auto;
   border-spacing: 0px;
@@ -19,60 +45,116 @@
 }
 
 .profile img {
-    max-width: 200px;
-    width: 100%;
-    height: 100%;
+  max-width: 200px;
+  width: 100%;
+  height: 100%;
 }
 
 .desc {
-    width: 70%;
-    background-color: white;
-    text-align: justify;
-    padding: 5%;
-    overflow-y: auto;
-    border-radius: 10px;
-    box-shadow: inset 0 0 5px black;
+  width: 70%;
+  background-color: white;
+  text-align: justify;
+  padding: 5%;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px black;
 }
 
 .profile .pfp {
-    margin: 0;
-    text-align: left;
+  margin: 0;
+  text-align: left;
 }
 
 .tags {
-    padding: 2% 0%;
+  padding: 2% 0%;
 }
 
 .taglist {
-    display: flex;
-    gap: 2%;
-    justify-content: start;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1.8%;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tag_item {
-    padding: 2px 15px;
-    border: 2px solid black;
-    font-size: 1.2vmin;
-    font-weight: 600;
-    border-radius: 10px;
+  padding: 2px 15px;
+  font-size: 1.2vmin;
+  font-weight: 700;
+  border-radius: 10px;
+}
 
+/* categories */
+
+.gender {
+  border: 2px solid #a0c4ff;
+  color: #5d9bfd;
+  box-shadow: 0 0 5px #a0c4ff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  background-color: rgba(192, 216, 255, 0.2);
+}
+
+.sexuality {
+  border: 2px solid #6de25d;
+  color: #60db4f;
+  box-shadow: 0 0 5px #6de25d;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  background-color: rgba(187, 255, 178, 0.2);
+}
+
+.attachment {
+  border: 2px solid #ffadad;
+  color: #fc7e7e;
+  box-shadow: 0 0 5px #ffadad;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  background-color: rgba(255, 208, 208, 0.2);
+}
+
+.type {
+  border: 2px solid #eda1fc;
+  color: #e176f7;
+  box-shadow: 0 0 5px #eda1fc;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  background-color: rgba(245, 195, 255, 0.2);
+}
+
+.social {
+  border: 2px solid #fec89a;
+  color: #ffa04e;
+  box-shadow: 0 0 5px #fec89a;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  background-color: rgba(255, 227, 201, 0.3);
+}
+
+.love_type {
+  border: 2px solid #a5ffd6;
+  color: #2add8d;
+  box-shadow: 0 0 5px #a5ffd6;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  background-color: rgba(187, 255, 224, 0.2);
+}
+
+.mental {
+  border: 2px solid #9bf6ff;
+  color: #1fd8e9;
+  box-shadow: 0 0 5px #9bf6ff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  background-color: rgba(175, 247, 253, 0.2);
 }
 
 .return {
-    float: left;
-    line-height: 0;
-    background-color: transparent;
-    color: black;
-    border: none;
+  float: left;
+  line-height: 0;
+  background-color: transparent;
+  color: black;
+  border: none;
 }
 
 .return span {
-    margin: 0;
-    font-size: 3.5vmin;
+  margin: 0;
+  font-size: 3.5vmin;
 }
 
 .return:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
