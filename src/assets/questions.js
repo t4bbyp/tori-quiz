@@ -543,6 +543,15 @@ export const questions = [
           responsable: 2,
         },
       },
+      {
+        id: "c",
+        textKey: "quiz.q18.answers.medio",
+        tags: {
+          adaptable: 1,
+          casual: 1,
+          romantico: 1,
+        }
+      }
     ],
   },
   {
@@ -608,13 +617,6 @@ export const questions = [
         textKey: "quiz.q21.answers.mono",
         meta: {
           relacion: "mono",
-        },
-      },
-      {
-        id: "b",
-        textKey: "quiz.q21.answers.poli",
-        meta: {
-          relacion: "poli",
         },
       },
       {

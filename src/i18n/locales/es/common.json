@@ -1,7 +1,7 @@
 {
   "title": "Romance en la Torre",
   "welcome": {
-    "description": "Bienvenido a <italic>Romance en la Torre</italic>, el lugar donde puedes descubrir qué personaje de <link /> sería una pareja compatible contigo~"
+    "description": "Bienvenido a <italic>Romance en la Torre</italic>, el lugar donde puedes descubrir qué personaje de <link /> sería compatible contigo~"
   },
   "loading": "Cargando...",
 
@@ -250,7 +250,8 @@
       "question": "Buscas...",
       "answers": {
         "lios": "Líos de una noche",
-        "largas": "Relaciones estables y duraderas"
+        "largas": "Relaciones estables y duraderas",
+        "medio": "Un poco de todo"
       }
     },
     "q19": {
