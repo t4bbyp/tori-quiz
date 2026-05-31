@@ -15,7 +15,7 @@ export default function FaqPage() {
       <Accordion title={t(($) => $.faq.q4)} content={<FaqString stringKey="faq.a4" />} />
       <Accordion title={t(($) => $.faq.q5)} content={t(($) => $.faq.a5)} />
       <Accordion title={t(($) => $.faq.q6)} content={<FaqString stringKey="faq.a6" link="https://picrew.me/en/image_maker/1108773" />} />
-      <Accordion title={t(($) => $.faq.q7)} content={t(($) => $.faq.a7)} />
+      <Accordion title={t(($) => $.faq.q7)} content={<FaqPage stringKey="faq.a7" link="mailto:asaaphsm@gmail.com" />} />
     </>
   );
 }

@@ -73,4 +73,4 @@ This project helped me practice and better understand the following:
 - The members of Scripta Manent for creating the characters featured here
 - [MagicPattern](https://www.magicpattern.design/tools/css-backgrounds) - because I got a cute background from their platform
 - All character artwork belongs to their respective artists
- - Home Page images: (picrew)[https://picrew.me/en/image_maker/1108773]
+ - Home Page images: [picrew](https://picrew.me/en/image_maker/1108773)
