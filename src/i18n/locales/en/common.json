@@ -39,10 +39,8 @@
 
   "results": {
     "loading": "Loading results...",
-    "yourDate": "your perfect match would be...",
-    "first": "Main match!",
-    "second": "you would also connect with...",
-    "third": "And maybe...",
+    "yourDate": "your perfect date would be with...",
+    "second": "Maybe you'll also like...",
     "compatibility": "Compatibility: "
   },
 
