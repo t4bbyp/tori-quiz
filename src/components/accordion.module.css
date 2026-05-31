@@ -22,7 +22,7 @@
   font-weight: bold;
   font-size: 2vmin;
   box-shadow: 0 5px 5px rgba(32, 77, 134, 0.25);
-  ;
+
 }
 
 .accordionBtn:hover {
@@ -35,7 +35,7 @@
   box-shadow: none;
 }
 
-.accordion {
+.panel {
   padding: 1rem;
   background-color: white;
   display: none;
