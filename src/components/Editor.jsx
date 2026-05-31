@@ -84,14 +84,12 @@ export default function Editor({ pjId }) {
 
   return (
     <>
-      {/* LOADING */}
       {loading && (
         <div className={classes.mybox2}>
           <p>{t($ => $.editor.saving)}</p>
         </div>
       )}
 
-      {/* ERROR */}
       {!loading && error && (
         <div className={classes.mybox2}>
           <p>{t($ => $.errors.savingChara)}</p>
@@ -141,7 +139,6 @@ export default function Editor({ pjId }) {
           />
         </div>
 
-        {/* QUESTIONS */}
         {questions.map((q) => {
           const selectedAnswer = answers.find((ans) => ans.questionId === q.id);
 

@@ -1,12 +1,9 @@
 import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-
 import { questions } from "../assets/questions";
 import { QuizContext } from "../store/quizContex";
-
 import Results from "./Results";
 import AddNewCharacter from "./AddNewCharacter";
-
 import classes from "./Quiz.module.css";
 
 function Quiz({ mode }) {

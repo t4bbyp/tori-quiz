@@ -1,11 +1,11 @@
 .mybox2 {
-  width: 30vw;
-  max-width: 50vw;
+  width: clamp(280px, 32vw, 500px);
+  max-width: 90vw;
   height: auto;
-  border-radius: 50px;
+  border-radius: 30px;
   background: white;
-  box-shadow: 0 5px 5px rgb(94, 66, 91);
-  padding: 3% 1%;
+  box-shadow: 0 8px 24px rgba(32, 77, 134, 0.2);
+  padding: 3% 3%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,41 +13,47 @@
   margin-bottom: 1rem;
 }
 
-
-.mybox2 li {
-  list-style-type: none;
-}
-
 .mybox2 small {
-    font-size: 1.1vmin;
-    line-height: 1.5;
-    padding: 0 2rem;
+  font-size: 1.1vmin;
+  line-height: 1.5;
+  padding: 0 2rem;
 }
 
 .mybox2 h3 {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
+}
+
+.mybox2 input,
+.mybox2 textarea {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  border: 1.5px solid #a8c8f0;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.mybox2 input:focus,
+.mybox2 textarea:focus {
+  border-color: #0b487e;
 }
 
 .mybox2 input {
   width: 40%;
-  height: auto;
-  font-size: 2vmin;
+  font-size: 1.8vmin;
   padding: 0.5rem;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
   margin-top: 1rem;
 }
 
 .mybox2 textarea {
   width: 50%;
-  height: auto;
   font-size: 1.5vmin;
   padding: 2% 5%;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
   margin-top: 1rem;
+  resize: none;
+  height: 100px;
 }
 
 .mybox2 ul {
@@ -55,14 +61,21 @@
   width: 100%;
 }
 
+.mybox2 li {
+  width:80%;
+  list-style-type: none;
+}
+
 .answer {
-  min-width: 30%;
-  padding: 0.8rem 1rem;
-  font-size: 1.8vmin;
+  width: 90%;
+  padding: 0.8rem 0.5rem;
+  font-size: 90%;
   background-color: #a2d2ff;
   border: 2px solid #0077b6;
   border-radius: 10px;
   color: #014f79;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .answer:hover {
@@ -72,6 +85,11 @@
 .selected {
   background-color: #ffa2a2 !important;
   border: 2px solid #b60000 !important;
+  color: #6b0000 !important;
+}
+
+.selected:hover {
+  background-color: #ffbdbd !important;
 }
 
 .save {
@@ -85,6 +103,8 @@
   border: 2px solid #0b487e;
   border-radius: 10px;
   margin-top: 2%;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .save:hover {
@@ -92,15 +112,17 @@
 }
 
 .reset_btn {
-    background-color: #ffafcc;
-    border: 2px solid #812144;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1% 1%;
+  background-color: #ffafcc;
+  border: 2px solid #812144;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 1%;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .reset_btn:hover {
-    background-color: #f04181;
+  background-color: #f04181;
 }

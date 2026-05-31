@@ -1,17 +1,19 @@
 import { Link } from "react-router";
 import classes from "./Header.module.css";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useContext } from "react";
+import { QuizContext } from "../store/quizContex";
+
 
 function Header() {
+  const quizCtx = useContext(QuizContext);
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language; // "en" or "es"
-
+  const currentLang = i18n.language;
   return (
     <header className={classes.header}>
       <div />
       <h1>
-        <Link to="./">{t(($) => $.title)}</Link>
+        <Link onClick={quizCtx.restartQuiz} to="./">{t(($) => $.title)}</Link>
       </h1>
       <div className={classes.locales}>
         <button

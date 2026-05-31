@@ -170,28 +170,42 @@ a:hover {
 }
 
 .mybox {
-  width: 40vw;
-  max-width: 50vw;
+  width: clamp(320px, 45vw, 650px);
+  max-width: 90vw;
   height: auto;
-  border-radius: 50px;
+  border-radius: 30px;
   background: white;
-  box-shadow: 0 5px 5px rgb(94, 66, 91);
+  box-shadow: 0 8px 24px rgba(32, 77, 134, 0.25);
   padding: 4% 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
-.mybox input {
+.mybox input,
+.mybox textarea {
   width: 50%;
-  height: auto;
-  font-size: 2.1vmin;
+  font-size: 1.8vmin;
   padding: 2% 5%;
   background-color: white;
   color: black;
   border-radius: 10px;
+  border: 1.5px solid #a8c8f0;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.mybox input:focus,
+.mybox textarea:focus {
+  border-color: #0b487e;
+}
+
+.mybox textarea {
+  resize: none;
+  height: 100px;
 }
 
 .mybox li {
@@ -209,6 +223,7 @@ a:hover {
   border: 2px solid #0b487e;
   border-radius: 10px;
   margin-top: 2%;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .mybox .start:hover {
@@ -216,12 +231,8 @@ a:hover {
   cursor: pointer;
 }
 
-.mybox textarea {
-  width: 50%;
-  height: auto;
-  font-size: 1.5vmin;
-  padding: 2% 5%;
-  background-color: white;
-  color: black;
-  border-radius: 10px;
+.mybox .error {
+  color: #c0392b;
+  font-size: 1.4vmin;
+  margin: 0;
 }

@@ -3,7 +3,7 @@
   height: auto;
   border-radius: 30px;
   background: white;
-  box-shadow: 0 8px 24px rgba(94, 66, 91, 0.25);
+  box-shadow: 0 8px 24px rgba(32, 77, 134, 0.25);
   font-size: 1.5vmin;
   padding: 5% 6% 3%;
   display: flex;
@@ -17,7 +17,6 @@
   text-align: center;
 }
 
-/* Profile row */
 .profile {
   display: flex;
   align-items: flex-start;
@@ -61,7 +60,6 @@
   margin: 0;
 }
 
-/* Tags */
 .taglist {
   display: flex;
   gap: 1.5%;
@@ -78,7 +76,6 @@
   border-radius: 10px;
 }
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: flex-end;
@@ -102,7 +99,6 @@
   transform: scale(1.1);
 }
 
-/* Tag categories — unchanged */
 .gender {
   border: 2px solid #a0c4ff;
   color: #5d9bfd;

@@ -4,7 +4,7 @@
   height: auto;
   border-radius: 20px;
   background: white;
-  box-shadow: 0 5px 5px rgba(94, 66, 91, 0.5);
+  box-shadow: 0 5px 5px rgba(32, 77, 134, 0.5);
   padding: 1% 2%;
   font-size: 1.5vmin;
   margin-bottom: 1rem;
@@ -24,13 +24,13 @@
     flex-direction: column;
     gap: 0;
     padding: 0.5rem;
-    box-shadow: 0 5px 10px 1px rgba(94, 66, 91, 0.3);
+    box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.3);
     transition: transform 0.2s ease-in-out;
 }
 
 .menu_btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 10px 1px rgba(94, 66, 91, 0.5);
+    box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.5);
 }
 
 .menu_btn img {

@@ -10,7 +10,7 @@ export default function AddNewCharacter() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [savedCharacter, setSavedCharacter] = useState(null); // store before reset
+  const [savedCharacter, setSavedCharacter] = useState(null);
 
   useEffect(() => {
     async function saveCharacter() {
@@ -30,8 +30,8 @@ export default function AddNewCharacter() {
 
         if (error) throw error;
 
-        setSavedCharacter(newCharacter); // save data locally
-        quizCtx.restartQuiz();           // then reset context
+        setSavedCharacter(newCharacter);
+        quizCtx.restartQuiz();          
       } catch (err) {
         console.error(err);
         setError(err.message);
