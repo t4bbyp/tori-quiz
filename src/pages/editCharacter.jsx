@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import LoginForm from "../components/LoginForm";
 import CharaList from "../components/CharaList";
 import { useTranslation } from "react-i18next";
+import { redirect } from "react-router";
 
 export default function EditCharacterPage() {
   const {t} = useTranslation();

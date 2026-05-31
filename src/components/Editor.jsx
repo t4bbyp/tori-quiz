@@ -18,6 +18,7 @@ export default function Editor({ pjId }) {
   const [pjName, setPjName] = useState("");
   const [pjID, setPjID] = useState("");
   const [pjImg, setPjImg] = useState("");
+  const [pjArtist, setPjArtist] = useState("");
   const [pjDesc, setPjDesc] = useState("");
   const [answers, setAnswers] = useState([]);
 
@@ -37,6 +38,7 @@ export default function Editor({ pjId }) {
       setPjName(data.character_name);
       setPjID(data.character_id);
       setPjImg(data.character_img);
+      setPjArtist(data.character_artist);
       setPjDesc(data.character_desc);
       setAnswers(data.character_answers || []);
     }
@@ -55,6 +57,7 @@ export default function Editor({ pjId }) {
         character_name: pjName,
         character_id: pjID,
         character_img: pjImg,
+        character_artist: pjArtist,
         character_desc: pjDesc,
         character_answers: answers,
       })
@@ -122,6 +125,14 @@ export default function Editor({ pjId }) {
             onChange={(e) => setPjImg(e.target.value)}
           />
 
+          <Input
+            type="text"
+            name="artist"
+            placeholder={t($ => $.landing.artist)}
+            value={pjArtist || ""}
+            onChange={(e) => setPjArtist(e.target.value)}
+          />
+
           <textarea
             name="desc"
             placeholder={t($ => $.landing.desc)}
@@ -160,7 +171,7 @@ export default function Editor({ pjId }) {
         })}
 
         <button type="submit" className={classes.save} disabled={loading}>
-          {loading ? t($ => $.loading) : t($ => $.editor.saving)}
+          {loading ? t($ => $.loading) : t($ => $.buttons.save)}
         </button>
       </Form>
     </>

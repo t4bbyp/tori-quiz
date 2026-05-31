@@ -1,11 +1,12 @@
-import { Link } from "react-router";
+import { createPortal } from 'react-dom';
 import classes from './Footer.module.css';
 
 export default function Footer() {
-  return (
+  return createPortal(
     <footer className={classes.footer}>
       <p>tvbbyp — 2026</p>
-      <Link to="./faq" className={classes.faq}>FAQ</Link>
-    </footer>
+      <a href="#/faq">FAQ</a>
+    </footer>,
+    document.body
   );
 }

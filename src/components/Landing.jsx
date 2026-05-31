@@ -69,7 +69,7 @@ function Landing({ mode }) {
             <Input
               type="text"
               name="username"
-              placeholder={t($ => $.landing.name)}
+              placeholder={t($ => $.landing.userName)}
               defaultValue=""
               onChange={(e) => setUname(e.target.value)}
             />
@@ -99,7 +99,7 @@ function Landing({ mode }) {
             <Input
               type="text"
               name="username"
-              placeholder={t($ => $.landing.name)}
+              placeholder={t($ => $.landing.charaName)}
               defaultValue=""
               onChange={(e) => setPjName(e.target.value)}
             />

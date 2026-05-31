@@ -9,6 +9,7 @@ export function QuizProvider({ children }) {
   const [pjID, setPjID] = useState("");
   const [pjImg, setPjImg] = useState("");
   const [pjDesc, setPjDesc] = useState("");
+  const [pjArtist, setPjArtist] = useState("");
 
   const [answers, setAnswers] = useState([]);
 
@@ -29,6 +30,7 @@ export function QuizProvider({ children }) {
     setPjID("");
     setPjImg("");
     setPjDesc("");
+    setPjArtist("");
   }
 
   const ctxValue = {
@@ -45,6 +47,8 @@ export function QuizProvider({ children }) {
     setPjImg,
     pjDesc,
     setPjDesc,
+    pjArtist,
+    setPjArtist
   };
 
   return <QuizContext value={ctxValue}>{children}</QuizContext>;

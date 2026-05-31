@@ -11,7 +11,7 @@ import { getFullAnswers } from "../utils/getFullAnswers";
 import { useTranslation } from "react-i18next";
 
 export default function Results() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const quizCtx = useContext(QuizContext);
   const userTraits = {};
   const userMeta = {};
@@ -37,6 +37,7 @@ export default function Results() {
           name: c.character_name,
           img: c.character_img,
           desc: c.character_desc,
+          artist: c.character_artist,
 
           preferences: built.preferences,
           traits: toDimensions(normalizeTo01(built.traits, traitMax)),
@@ -92,38 +93,66 @@ export default function Results() {
   return (
     <>
       <div className="mybox">
-        {loading && <p>{t($ => $.results.loading)}</p>}
-
+        {loading && <p>{t(($) => $.results.loading)}</p>}
         {!loading && !error && (
           <>
             <p className={classes.intro}>
-              {quizCtx.username}, {t($ => $.results.yourDate)}
+              {quizCtx.username}, {t(($) => $.results.yourDate)}
             </p>
 
-            {topMatches.map((match, index) => {
-              const compatibility = Math.round(match.score * 100);
+            {topMatches[0] && (
+              <div className={classes.first}>
+                <h2>{topMatches[0].character.name}</h2>
+                <small>@{topMatches[0].character.artist}</small>
+                <p>
+                  {t(($) => $.results.compatibility)}{" "}
+                  {Math.round(topMatches[0].score * 100)}%
+                </p>
+                <img
+                  src={topMatches[0].character.img}
+                  alt={topMatches[0].character.name}
+                />
+                <p className={classes.desc}>{topMatches[0].character.desc}</p>
+              </div>
+            )}
 
-              return (
-                <div key={match.character.id}>
-                  {index === 0 && <h3>{t($ => $.results.first)}</h3>}
+            <h3>{t(($) => $.results.second)}</h3>
 
-                  {index === 1 && <h3>{t($ => $.results.second)}</h3>}
-
-                  {index === 2 && <h3>{t($ => $.results.third)}</h3>}
-
-                  <h2>{match.character.name}</h2>
-
-                  <p>Compatibilidad: {compatibility}%</p>
-
-                  <img src={match.character.img} alt={match.character.name} />
-
-                  <p>{match.character.desc}</p>
+            <div className={classes.runners}>
+              {topMatches[1] && (
+                <div className={classes.runner}>
+                  <p className={classes.runnerName}>
+                    {topMatches[1].character.name}
+                  </p>
+                  <p>
+                    {t(($) => $.results.compatibility)}{" "}
+                    {Math.round(topMatches[1].score * 100)}%
+                  </p>
+                  <img
+                    src={topMatches[1].character.img}
+                    alt={topMatches[1].character.name}
+                  />
                 </div>
-              );
-            })}
+              )}
+              {topMatches[2] && (
+                <div className={classes.runner}>
+                  <p className={classes.runnerName}>
+                    {topMatches[2].character.name}
+                  </p>
+                  <p>
+                    {t(($) => $.results.compatibility)}{" "}
+                    {Math.round(topMatches[2].score * 100)}%
+                  </p>
+                  <img
+                    src={topMatches[2].character.img}
+                    alt={topMatches[2].character.name}
+                  />
+                </div>
+              )}
+            </div>
 
             <button className={classes.reset} onClick={quizCtx.restartQuiz}>
-              {t($ => $.buttons.repeat)}
+              {t(($) => $.buttons.repeat)}
             </button>
           </>
         )}

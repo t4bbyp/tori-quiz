@@ -1,15 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { QuizContext } from "../store/quizContex";
-import classes from "./Results.module.css";
-import { supabase } from "../utils/supabase";
-import {useTranslation} from 'react-i18next';
-
 export default function AddNewCharacter() {
   const {t} = useTranslation();
   const quizCtx = useContext(QuizContext);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [savedCharacter, setSavedCharacter] = useState(null); // store before reset
 
   useEffect(() => {
     async function saveCharacter() {
@@ -19,7 +14,6 @@ export default function AddNewCharacter() {
           character_name: quizCtx.pjName,
           character_img: quizCtx.pjImg,
           character_desc: quizCtx.pjDesc,
-
           character_answers: quizCtx.answers,
         };
 
@@ -27,9 +21,10 @@ export default function AddNewCharacter() {
           .from("characters")
           .insert([newCharacter]);
 
-        if (error) {
-          throw error;
-        }
+        if (error) throw error;
+
+        setSavedCharacter(newCharacter); // save data locally
+        quizCtx.restartQuiz();           // then reset context
       } catch (err) {
         console.error(err);
         setError(err.message);
@@ -46,19 +41,19 @@ export default function AddNewCharacter() {
       <div className="mybox">
         {loading && <p>{t($ => $.newCharacter.saving)}</p>}
 
-        {!loading && !error && (
+        {!loading && !error && savedCharacter && (
           <>
             <p className={classes.intro}>
               {t($ => $.newCharacter.success)}
             </p>
-
-            <div key={quizCtx.pjID}>
-              <h3>{quizCtx.pjName}</h3>
-              <img src={quizCtx.pjImg} alt={quizCtx.pjName} />
-              <p>{quizCtx.pjDesc}</p>
+            <div>
+              <h3>{savedCharacter.character_name}</h3>
+              <img src={savedCharacter.character_img} alt={savedCharacter.character_name} />
+              <p>{savedCharacter.character_desc}</p>
             </div>
           </>
         )}
+
         {error && <p>{t($ => $.errors.savingChara)} {error}</p>}
 
         <button className={classes.reset} onClick={quizCtx.restartQuiz}>

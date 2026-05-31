@@ -3,8 +3,6 @@
   "welcome": {
     "description": "Bienvenido a <italic>Romance en la Torre</italic>, el lugar donde puedes descubrir qué personaje de <link /> sería una pareja compatible contigo~"
   },
-  "password": "Contraseña",
-  "loging": "Conectando...",
   "loading": "Cargando...",
 
   "buttons": {
@@ -29,11 +27,13 @@
     "welcome": "¡Bienvenid@!",
     "description": "Estas listo para descubrir tu pareja ideal en el mundo de L4G? :D",
 
-    "newTitle": "Quieres añadir un nuevo personaje?",
+    "newTitle": "¿Quieres añadir un nuevo personaje?",
     "description2": "Responde las siguientes preguntas desde la perspectiva del personaje que quieres añadir al test.",
     "idExplanation": "* Un identificador simple, unico (ej. primer nombre). Solo letras latinas, minusculas. Aseguraos de no haber usado el mismo para otro pj. Si hace falta, preguntad a Tori.",
-    "name": "nombre del personaje",
+    "userName": "tu nombre",
+    "charaName": "nombre del personaje",
     "img": "link para la imagen del personaje",
+    "artist": "artista de la imagen de tu personaje",
     "desc": "descripcion corta del personaje"
   },
 
@@ -58,7 +58,9 @@
   },
 
   "login": {
-    "text": "Necesitas una cuenta para seguir :D"
+    "text": "Necesitas una cuenta para seguir :D",
+    "password": "Contraseña",
+    "loging": "Conectando..."
   },
 
   "tags": {

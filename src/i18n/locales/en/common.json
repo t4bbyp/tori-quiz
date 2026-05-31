@@ -3,8 +3,6 @@
   "welcome": {
     "description": "Welcome to <italic>Romance in the Tower</italic>, the place where you can discover which character from <link/> would be a compatible partner for you!"
   },
-  "password": "Password",
-  "loging": "Signing in...",
   "loading": "Loading...",
 
   "buttons": {
@@ -32,8 +30,10 @@
     "newTitle": "Do you want to add a new character?",
     "description2": "Answer the following questions from the perspective of the character you want to add to the test.",
     "idExplanation": "* A simple, unique identifier (e.g. first name). Only lowercase Latin letters. Make sure it hasn't been used for another character. If needed, ask Tori.",
-    "name": "character name",
+    "userName": "your name",
+    "charaName": "character name",
     "img": "link to the character image",
+    "artist": "artist of your character's image",
     "desc": "short character description"
   },
 
@@ -58,7 +58,9 @@
   },
 
   "login": {
-    "text": "You need to login to continue Q.Q"
+    "text": "You need to login to continue Q.Q",
+    "password": "Password",
+    "loging": "Signing in..."
   },
 
   "tags": {

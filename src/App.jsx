@@ -76,9 +76,9 @@ async function checkSession() {
 }
 
 function App() {
+  
   useEffect(() => {
     checkSession();
-
     const interval = setInterval(checkSession, 60000);
 
     return () => clearInterval(interval);

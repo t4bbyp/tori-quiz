@@ -1,91 +1,108 @@
 .container {
-  min-width: 40vw;
-  max-width: 50vw;
+  width: clamp(320px, 55vw, 700px);
   height: auto;
-  border-radius: 50px;
+  border-radius: 30px;
   background: white;
-  box-shadow: 0 5px 5px rgb(94, 66, 91);
+  box-shadow: 0 8px 24px rgba(94, 66, 91, 0.25);
   font-size: 1.5vmin;
-  padding: 5% 6%;
-  padding-bottom: 3%;
-  overflow: hidden;
-}
-
-.loader_container {
-  min-height: 60vh;
+  padding: 5% 6% 3%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #ccc;
-  border-top-color: #8b5cf6;
-  border-radius: 50%;
-  animation: spin 0.7s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .chara_name {
-  font-size: 5vmin !important;
+  font-size: 5vmin;
+  margin: 0;
+  text-align: center;
 }
 
-.details {
-  margin: auto;
-  border-spacing: 0px;
-  width: 100%;
-  margin-bottom: 2%;
+/* Profile row */
+.profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 5%;
 }
 
-.profile img {
-  max-width: 200px;
-  width: 100%;
-  height: 100%;
+.pfp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.pfp img {
+  width: clamp(100px, 14vw, 200px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(160, 196, 255, 0.6);
+}
+
+.pfp small {
+  font-size: 1.2vmin;
+  color: #999;
 }
 
 .desc {
-  width: 70%;
-  background-color: white;
+  flex: 1;
+  min-height: 120px;
+  max-height: 180px;
+  background-color: #fafafa;
   text-align: justify;
-  padding: 5%;
+  padding: 4%;
   overflow-y: auto;
-  border-radius: 10px;
-  box-shadow: inset 0 0 5px black;
-}
-
-.profile .pfp {
+  border-radius: 14px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.08);
+  line-height: 1.7;
+  font-size: 1.4vmin;
+  color: #333;
   margin: 0;
-  text-align: left;
 }
 
-.tags {
-  padding: 2% 0%;
-}
-
+/* Tags */
 .taglist {
   display: flex;
-  gap: 1.8%;
-  justify-content: start;
+  gap: 1.5%;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  row-gap: 0.5rem;
 }
 
 .tag_item {
-  padding: 2px 15px;
+  padding: 3px 14px;
   font-size: 1.2vmin;
   font-weight: 700;
   border-radius: 10px;
 }
 
-/* categories */
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.return {
+  line-height: 0;
+  background-color: transparent;
+  color: #c084a8;
+  border: none;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.return span {
+  font-size: 3.5vmin;
+}
+
+.return:hover {
+  cursor: pointer;
+  color: #812144;
+  transform: scale(1.1);
+}
+
+/* Tag categories — unchanged */
 .gender {
   border: 2px solid #a0c4ff;
   color: #5d9bfd;
@@ -93,7 +110,6 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   background-color: rgba(192, 216, 255, 0.2);
 }
-
 .sexuality {
   border: 2px solid #6de25d;
   color: #60db4f;
@@ -101,7 +117,6 @@
   text-shadow: 0 0 3px rgba(255, 255, 255, 1);
   background-color: rgba(187, 255, 178, 0.2);
 }
-
 .attachment {
   border: 2px solid #ffadad;
   color: #fc7e7e;
@@ -109,7 +124,6 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   background-color: rgba(255, 208, 208, 0.2);
 }
-
 .type {
   border: 2px solid #eda1fc;
   color: #e176f7;
@@ -117,7 +131,6 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   background-color: rgba(245, 195, 255, 0.2);
 }
-
 .social {
   border: 2px solid #fec89a;
   color: #ffa04e;
@@ -125,7 +138,6 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   background-color: rgba(255, 227, 201, 0.3);
 }
-
 .love_type {
   border: 2px solid #a5ffd6;
   color: #2add8d;
@@ -133,28 +145,10 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   background-color: rgba(187, 255, 224, 0.2);
 }
-
 .mental {
   border: 2px solid #9bf6ff;
   color: #1fd8e9;
   box-shadow: 0 0 5px #9bf6ff;
   text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   background-color: rgba(175, 247, 253, 0.2);
-}
-
-.return {
-  float: left;
-  line-height: 0;
-  background-color: transparent;
-  color: black;
-  border: none;
-}
-
-.return span {
-  margin: 0;
-  font-size: 3.5vmin;
-}
-
-.return:hover {
-  cursor: pointer;
 }
