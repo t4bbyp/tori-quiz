@@ -17,6 +17,7 @@ function Landing({ mode }) {
   const [pjID, setPjID] = useState();
   const [pjImg, setPjImg] = useState();
   const [pjDesc, setPjDesc] = useState();
+  const [pjArtist, setPjArtist] = useState();
 
   const [error, setError] = useState("");
 
@@ -51,6 +52,7 @@ function Landing({ mode }) {
     quizCtx.setPjName(pjName);
     quizCtx.setPjImg(pjImg);
     quizCtx.setPjDesc(pjDesc);
+    quizCtx.setPjArtist(pjArtist);
   }
 
   return (
@@ -110,6 +112,14 @@ function Landing({ mode }) {
               placeholder={t($ => $.landing.img)}
               defaultValue=""
               onChange={(e) => setPjImg(e.target.value)}
+            />
+
+            <Input
+              type="text"
+              name="artist"
+              placeholder={t($ => $.landing.artist)}
+              defaultValue=""
+              onChange={(e) => setPjArtist(e.target.value)}
             />
 
             <textarea

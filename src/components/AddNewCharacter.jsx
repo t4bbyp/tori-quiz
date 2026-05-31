@@ -1,3 +1,9 @@
+import { useContext, useEffect, useState } from "react";
+import { QuizContext } from "../store/quizContex";
+import classes from "./Results.module.css";
+import { supabase } from "../utils/supabase";
+import {useTranslation} from 'react-i18next';
+
 export default function AddNewCharacter() {
   const {t} = useTranslation();
   const quizCtx = useContext(QuizContext);
@@ -13,6 +19,7 @@ export default function AddNewCharacter() {
           character_id: quizCtx.pjID,
           character_name: quizCtx.pjName,
           character_img: quizCtx.pjImg,
+          character_artist: quizCtx.pjArtist,
           character_desc: quizCtx.pjDesc,
           character_answers: quizCtx.answers,
         };
@@ -49,6 +56,7 @@ export default function AddNewCharacter() {
             <div>
               <h3>{savedCharacter.character_name}</h3>
               <img src={savedCharacter.character_img} alt={savedCharacter.character_name} />
+              <small>@{savedCharacter.character_artist}</small>
               <p>{savedCharacter.character_desc}</p>
             </div>
           </>
