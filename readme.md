@@ -74,8 +74,11 @@ This project helped me practice and better understand the following:
 - [MagicPattern](https://www.magicpattern.design/tools/css-backgrounds) - because I got a cute background from their platform
 - All character artwork belongs to their respective artists
  - Home Page images: [picrew](https://picrew.me/en/image_maker/1108773)
+ - Demo video background music: [Chillpeach - Gameplay](https://www.youtube.com/watch?v=w4oLP7fa9Vk)
 
  ---
 
 ## Demo Video
-<video src="https://github.com/t4bbyp/tori-quiz/releases/download/v1/video.mp4" controls width="600"></video>
+
+https://github.com/user-attachments/assets/931e6ff2-973d-44e4-8ac7-00f16337a266
+
