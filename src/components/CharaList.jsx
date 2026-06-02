@@ -36,18 +36,20 @@ export default function CharaList({ onSelect }) {
     <>
       {!loading && (
         <div className={classes.container} role="list">
-          {characters.map((c) => (
-            <button
-              key={c.character_id}
-              role="listitem"
-              style={{ backgroundImage: `url(${c.character_img})` }}
-              onClick={() => onSelect(c)}
-              className={classes.item}
-              aria-label={c.character_name}
-            >
-              <h3 aria-hidden="true">{c.character_name}</h3>
-            </button>
-          ))}
+          <div className={classes.innerContainer}>
+            {characters.map((c) => (
+              <button
+                key={c.character_id}
+                role="listitem"
+                style={{ backgroundImage: `url(${c.character_img})` }}
+                onClick={() => onSelect(c)}
+                className={classes.item}
+                aria-label={c.character_name}
+              >
+                <h3 aria-hidden="true">{c.character_name}</h3>
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </>
