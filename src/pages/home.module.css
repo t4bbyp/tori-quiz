@@ -6,7 +6,7 @@
   background: white;
   box-shadow: 0 5px 5px rgba(32, 77, 134, 0.5);
   padding: 1% 2%;
-  font-size: 1.5vmin;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
@@ -17,6 +17,7 @@
 }
 
 .menu_btn {
+    width: 20vmin;
     background-color: white;
     border: none;
     border-radius: 20px;
@@ -27,7 +28,7 @@
     padding: 0.5rem 0.3rem;
     box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.3);
     transition: transform 0.2s ease-in-out;
-    font-size: 0.8vw;
+    font-size: 0.9rem;
 }
 
 .menu_btn:hover {
