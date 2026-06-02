@@ -70,7 +70,7 @@ export default function Editor({ pjId }) {
       return;
     }
 
-    alert(t($ => $.editor.success));
+    alert(t(($) => $.editor.success));
     navigate("/edit");
   }
 
@@ -84,33 +84,35 @@ export default function Editor({ pjId }) {
 
   return (
     <>
-      {loading && (
-        <div className={classes.mybox2}>
-          <p>{t($ => $.editor.saving)}</p>
-        </div>
-      )}
+      <div aria-live="polite" aria-atomic="true">
+        {loading && (
+          <div className={classes.mybox2}>
+            <p>{t(($) => $.editor.saving)}</p>
+          </div>
+        )}
 
-      {!loading && error && (
-        <div className={classes.mybox2}>
-          <p>{t($ => $.errors.savingChara)}</p>
-        </div>
-      )}
+        {!loading && error && (
+          <div className={classes.mybox2}>
+            <p role="alert">{t(($) => $.errors.savingChara)}</p>
+          </div>
+        )}
+      </div>
 
       <Form onSubmit={handleEdit} method="post">
         <div className={classes.mybox2}>
           <Input
             type="text"
             name="id"
-            placeholder={t($ => $.editor.id)}
+            placeholder={t(($) => $.editor.id)}
             value={pjID || ""}
             onChange={(e) => setPjID(e.target.value)}
-            extra={<small>{t($ => $.landing.idExplanation)}</small>}
+            extra={<small>{t(($) => $.landing.idExplanation)}</small>}
           />
 
           <Input
             type="text"
             name="name"
-            placeholder={t($ => $.landing.name)}
+            placeholder={t(($) => $.landing.name)}
             value={pjName || ""}
             onChange={(e) => setPjName(e.target.value)}
           />
@@ -118,7 +120,7 @@ export default function Editor({ pjId }) {
           <Input
             type="url"
             name="img"
-            placeholder={t($ => $.landing.img)}
+            placeholder={t(($) => $.landing.img)}
             value={pjImg || ""}
             onChange={(e) => setPjImg(e.target.value)}
           />
@@ -126,14 +128,14 @@ export default function Editor({ pjId }) {
           <Input
             type="text"
             name="artist"
-            placeholder={t($ => $.landing.artist)}
+            placeholder={t(($) => $.landing.artist)}
             value={pjArtist || ""}
             onChange={(e) => setPjArtist(e.target.value)}
           />
 
           <textarea
             name="desc"
-            placeholder={t($ => $.landing.desc)}
+            placeholder={t(($) => $.landing.desc)}
             value={pjDesc || ""}
             onChange={(e) => setPjDesc(e.target.value)}
           />
@@ -144,7 +146,7 @@ export default function Editor({ pjId }) {
 
           return (
             <div className={classes.mybox2} key={q.id}>
-              <h3>{t(q.questionKey)}</h3>
+              <h3 id={`question-${q.id}`}>{t(q.questionKey)}</h3>
 
               {q.answers.map((a) => {
                 const isSelected = selectedAnswer?.answerId === a.id;
@@ -157,6 +159,7 @@ export default function Editor({ pjId }) {
                       className={`${classes.answer} ${
                         isSelected ? classes.selected : ""
                       }`}
+                      aria-pressed={isSelected}
                     >
                       {t(a.textKey)}
                     </button>
@@ -167,8 +170,13 @@ export default function Editor({ pjId }) {
           );
         })}
 
-        <button type="submit" className={classes.save} disabled={loading}>
-          {loading ? t($ => $.loading) : t($ => $.buttons.save)}
+        <button
+          type="submit"
+          className={classes.save}
+          disabled={loading}
+          aria-disabled={loading}
+        >
+          {loading ? t(($) => $.loading) : t(($) => $.buttons.save)}
         </button>
       </Form>
     </>

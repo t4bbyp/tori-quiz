@@ -129,7 +129,7 @@ function Landing({ mode }) {
               onChange={(e) => setPjDesc(e.target.value)}
             />
 
-            {error && <p>{error}</p>}
+            {error && <p role="alert">{error}</p>}
 
             <button className="start">{t($ => $.buttons.start)}</button>
           </>

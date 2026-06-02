@@ -17,14 +17,14 @@ export default function LoginForm() {
       <Form method="post" className={`mybox ${classes.login}`}>
         <h2>{t($ => $.login.text)}</h2>
         {data && data.errors && (
-          <ul>
+          <ul role="alert">
             {Object.values(data.errors).map((err) => (
               <li key={err}>{err}</li>
             ))}
           </ul>
         )}
 
-        {data && data.message && <p>{data.message}</p>}
+        {data && data.message && <p role="status">{data.message}</p>}
 
         <p>
           <label htmlFor="email">Email</label>

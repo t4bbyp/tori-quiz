@@ -22,16 +22,19 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0;
-    padding: 0.5rem;
+    padding: 0.5rem 0.3rem;
     box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.3);
     transition: transform 0.2s ease-in-out;
+    font-size: 0.8vw;
 }
 
 .menu_btn:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.5);
 }
+
 
 .menu_btn img {
     width: 90%;

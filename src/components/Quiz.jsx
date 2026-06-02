@@ -29,9 +29,9 @@ function Quiz({ mode }) {
 
   return (
     <div className="mybox">
-      <h2>{t(question.questionKey)}</h2>
+      <h2 id="quiz-question">{t(question.questionKey)}</h2>
 
-      <ul>
+      <ul aria-labelledby="quiz-question">
         {question.answers.map((answer) => (
           <li key={answer.id}>
             <button onClick={() => selectAnswer(answer.id)}>
@@ -41,8 +41,14 @@ function Quiz({ mode }) {
         ))}
       </ul>
 
-      <button className={classes.reset_btn} onClick={quizCtx.restartQuiz}>
-        <span className="material-symbols-outlined">restart_alt</span>
+      <button
+        className={classes.reset_btn}
+        onClick={quizCtx.restartQuiz}
+        aria-label="restart"
+      >
+        <span className="material-symbols-outlined" area-hidden="true">
+          restart_alt
+        </span>
       </button>
     </div>
   );

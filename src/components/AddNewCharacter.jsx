@@ -46,7 +46,11 @@ export default function AddNewCharacter() {
   return (
     <>
       <div className="mybox">
-        {loading && <p>{t($ => $.newCharacter.saving)}</p>}
+        <div aria-live="polite" aria-atomic="true">
+          {loading && <p>{t($ => $.newCharacter.saving)}</p>}
+          {error && <p role="alert">{t($ => $.errors.savingChara)} {error}</p>}
+        </div>
+        
 
         {!loading && !error && savedCharacter && (
           <>
@@ -61,8 +65,6 @@ export default function AddNewCharacter() {
             </div>
           </>
         )}
-
-        {error && <p>{t($ => $.errors.savingChara)} {error}</p>}
 
         <button className={classes.reset} onClick={quizCtx.restartQuiz}>
           {t($ => $.buttons.repeat)}

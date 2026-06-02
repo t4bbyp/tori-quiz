@@ -80,7 +80,7 @@ export default function CharaDetails({ pjId, onBack }) {
         </div>
 
         {tags && (
-          <div className={classes.taglist}>
+          <div className={classes.taglist} aria-label="list of character tags">
             {tags.map((tag) => (
               <span key={tag.label} className={`${classes.tag_item} ${classes[tag.category]}`}>
                 {tag.label}
@@ -90,8 +90,8 @@ export default function CharaDetails({ pjId, onBack }) {
         )}
 
         <div className={classes.footer}>
-          <button className={classes.return} onClick={onBack}>
-            <span className="material-symbols-outlined">arrow_circle_left</span>
+          <button className={classes.return} onClick={onBack} aria-label="go back to characters list">
+            <span className="material-symbols-outlined" aria-hidden="true">arrow_circle_left</span>
           </button>
         </div>
       </div>

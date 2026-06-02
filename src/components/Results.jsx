@@ -93,7 +93,10 @@ export default function Results() {
   return (
     <>
       <div className="mybox">
-        {loading && <p>{t(($) => $.results.loading)}</p>}
+        <div aria-live="polite">
+          {loading && <p>{t(($) => $.results.loading)}</p>}
+        </div>
+
         {!loading && !error && (
           <>
             <p className={classes.intro}>
@@ -103,7 +106,7 @@ export default function Results() {
             {topMatches[0] && (
               <div className={classes.first}>
                 <h2>{topMatches[0].character.name}</h2>
-                <small>@{topMatches[0].character.artist}</small>
+                <small aria-label="artist: ">@{topMatches[0].character.artist}</small>
                 <p>
                   {t(($) => $.results.compatibility)}{" "}
                   {Math.round(topMatches[0].score * 100)}%
