@@ -28,8 +28,8 @@ function Landing({ mode }) {
 
   async function startAddNew(e) {
     e.preventDefault();
-
     setError("");
+    const normalizedID = pjID?.trim().toLowerCase();
 
     const { data, error } = await supabase
       .from("characters")
@@ -48,7 +48,7 @@ function Landing({ mode }) {
       return;
     }
 
-    quizCtx.setPjID(pjID);
+    quizCtx.setPjID(normalizedID);
     quizCtx.setPjName(pjName);
     quizCtx.setPjImg(pjImg);
     quizCtx.setPjDesc(pjDesc);
@@ -90,7 +90,6 @@ function Landing({ mode }) {
               placeholder={t($ => $.editor.id)}
               defaultValue=""
               onChange={(e) => setPjID(e.target.value)}
-              className="id"
               extra={
                 <small>
                   {t($ => $.landing.idExplanation)}
