@@ -28,12 +28,12 @@ function isGenderCompatible(userMeta, character) {
   const charSexuality = character.preferences.sexuality;
 
   const userLikesChara =
-    userSexuality === "bi" ||
+    userSexuality === "bi" || userSexuality === "asexual" ||
     (userSexuality === "hetero" && userGender !== charGender) ||
     (userSexuality === "homo" && userGender === charGender);
 
   const charaLikesUser =
-    charSexuality === "bi" ||
+    charSexuality === "bi" || charSexuality === "asexual" ||
     (charSexuality === "hetero" && charGender !== userGender) ||
     (charSexuality === "homo" && charGender === userGender);
 
