@@ -814,21 +814,21 @@ export const questions = [
         id: "a",
         textKey: "quiz.q25.answers.dominante",
         meta: {
-          quiere_tipo: "dom",
+          tipo: "dom",
         },
       },
       {
         id: "b",
         textKey: "quiz.q25.answers.sumiso",
         meta: {
-          quiere_tipo: "sub",
+          tipo: "sub",
         },
       },
       {
         id: "c",
         textKey: "quiz.q25.answers.adaptable",
         meta: {
-          quiere_tipo: "switch",
+          tipo: "switch",
         },
       },
     ],
