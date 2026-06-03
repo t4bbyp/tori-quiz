@@ -44,13 +44,12 @@ So hopefully whoever finds this enjoys it too, or at least appreciates the effor
 - Character management (adding/editing) — restricted and requires authentication
 - Authentication-protected admin functionality
 - English & Spanish localization
-- Responsive design
+- Responsive design (mobile responsive UI in progress)
 
 ## Installation
 
 ```bash
 git clone https://github.com/t4bbyp/tori-quiz.git
-cd tori-quiz
 npm install
 npm run dev
 ```
