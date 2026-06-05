@@ -66,6 +66,11 @@ This project helped me practice and better understand the following:
 - deploying React apps through GitHub Pages
 - Understanding the limitations of static hosting and using createHashRouter for compatibility
 
+## Collaboration & Requests
+
+If you want to report a bug, suggest a feature, make a request or if you're an artist who owns one of the images used here and wish to take it down, feel free to write a post here:
+https://romancetorre.featurebase.app/ 
+
 ## Credits
 
 - My friend Efi, for coming up with the quiz idea, helping with many quiz questions/answers and supporting the project
