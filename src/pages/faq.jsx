@@ -39,7 +39,7 @@ export default function FaqPage() {
       />
       <Accordion
         title={t(($) => $.faq.q7)}
-        content={<FaqString stringKey="faq.a7" link="mailto:asaaphsm@gmail.com" />}
+        content={<FaqString stringKey="faq.a7" link="https://romancetorre.featurebase.app/" />}
       />
     </>
   );

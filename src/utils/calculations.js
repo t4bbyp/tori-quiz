@@ -1,7 +1,6 @@
-import { questions } from "../assets/questions";
 import { cosineSimilarity, applyWeights } from "../utils/personalities";
 
-export function computeTraitMax(question) {
+export function computeTraitMax(questions) {
   const max = {};
 
   for (const q of questions) {
