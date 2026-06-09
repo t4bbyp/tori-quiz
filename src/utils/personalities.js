@@ -1,10 +1,9 @@
 export const DIMENSIONS = {
-  emotional: ["emocional", "empatico", "romantico", "expresivo"],
-  rational: ["racional", "pragmatico", "resolutivo", "directo"],
-  social: ["extrovertido", "introvertido", "contacto_fisico"],
-  stability: ["estable", "caotico", "procrastinador"],
-  openness: ["adaptable", "ambiguo", "aventurero", "sutil"],
-  attachment: ["romantico", "libido", "calidad"],
+  emotional: ["emocional", "empatico", "expresivo", "evitativo", "romantico"],
+  rational: ["racional", "pragmatico", "resolutivo", "directo", "inteligente"],
+  social: ["extrovertido", "introvertido", "ambivertido", "contacto_fisico", "educado", "hater"],
+  stability: ["estable", "caotico", "procrastinador", "estricto", "adaptable"],
+  openness: ["ambiguo", "aventurero", "sutil", "casual"],
 };
 
 export const DIMENSION_WEIGHTS = {
@@ -59,4 +58,20 @@ export function cosineSimilarity(a, b) {
   }
 
   return dot / (Math.sqrt(magA) * Math.sqrt(magB) || 1);
+}
+
+export function euclideanSimilarity(a, b) {
+  let sumSquares = 0;
+  const allKeys = new Set([...Object.keys(a), ...Object.keys(b)]);
+
+  for (const dim of allKeys) {
+    const va = a[dim] || 0;
+    const vb = b[dim] || 0;
+    sumSquares += (va - vb) ** 2;
+  }
+
+  const distance = Math.sqrt(sumSquares);
+  const maxDistance = Math.sqrt(allKeys.size);
+  return 1 - distance / maxDistance;
+
 }

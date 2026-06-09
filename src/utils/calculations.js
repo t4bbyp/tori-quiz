@@ -1,18 +1,26 @@
-import { cosineSimilarity, applyWeights } from "../utils/personalities";
+import { euclideanSimilarity, applyWeights } from "../utils/personalities";
 
 export function computeTraitMax(questions) {
   const max = {};
 
   for (const q of questions) {
+    const traitInQuestion = {};
+
     for (const a of q.answers) {
       if (!a.tags) continue;
 
       for (const trait in a.tags) {
         const value = a.tags[trait];
-        if (value > 0) {
-          max[trait] = (max[trait] || 0) + value;
+
+        if (value > (traitInQuestion[trait] || 0)) {
+          traitInQuestion[trait] = value;
+          //max[trait] = (max[trait] || 0) + value;
         }
       }
+    }
+
+    for (const trait in traitInQuestion) {
+      max[trait] = (max[trait] || 0) + traitInQuestion[trait];
     }
   }
 
@@ -27,12 +35,14 @@ function isGenderCompatible(userMeta, character) {
   const charSexuality = character.preferences.sexuality;
 
   const userLikesChara =
-    userSexuality === "bi" || userSexuality === "asexual" ||
+    userSexuality === "bi" ||
+    userSexuality === "asexual" ||
     (userSexuality === "hetero" && userGender !== charGender) ||
     (userSexuality === "homo" && userGender === charGender);
 
   const charaLikesUser =
-    charSexuality === "bi" || charSexuality === "asexual" ||
+    charSexuality === "bi" ||
+    charSexuality === "asexual" ||
     (charSexuality === "hetero" && charGender !== userGender) ||
     (charSexuality === "homo" && charGender === userGender);
 
@@ -59,7 +69,7 @@ export function calculateScore(character, userMeta, userDimensions) {
   const charDims = applyWeights(character.traits);
   const userDims = applyWeights(userDimensions);
 
-  const traitScore = cosineSimilarity(userDims, charDims);
+  const traitScore = euclideanSimilarity(userDims, charDims);
 
   return meta * 0.3 + traitScore * 0.7;
 }

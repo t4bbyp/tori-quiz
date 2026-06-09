@@ -6,24 +6,14 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q1.answers.female",
-        meta: {
-          gender: "femenino",
-        },
+        meta: { gender: "femenino" },
       },
       {
         id: "b",
         textKey: "quiz.q1.answers.male",
-        meta: {
-          gender: "masculino",
-        },
+        meta: { gender: "masculino" },
       },
-      {
-        id: "c",
-        textKey: "quiz.q1.answers.other",
-        meta: {
-          gender: "otro",
-        },
-      },
+      { id: "c", textKey: "quiz.q1.answers.other", meta: { gender: "otro" } },
     ],
   },
   {
@@ -33,30 +23,14 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q2.answers.hetero",
-        meta: {
-          sexuality: "hetero",
-        },
+        meta: { sexuality: "hetero" },
       },
-      {
-        id: "b",
-        textKey: "quiz.q2.answers.homo",
-        meta: {
-          sexuality: "homo",
-        },
-      },
-      {
-        id: "c",
-        textKey: "quiz.q2.answers.bi",
-        meta: {
-          sexuality: "bi",
-        },
-      },
+      { id: "b", textKey: "quiz.q2.answers.homo", meta: { sexuality: "homo" } },
+      { id: "c", textKey: "quiz.q2.answers.bi", meta: { sexuality: "bi" } },
       {
         id: "d",
         textKey: "quiz.q2.answers.asexual",
-        meta: {
-          sexuality: "asexual",
-        },
+        meta: { sexuality: "asexual" },
       },
     ],
   },
@@ -67,28 +41,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q3.answers.introvertido",
-        tags: {
-          introvertido: 3,
-          evitativo: 1,
-        },
+        tags: { introvertido: 3 },
       },
       {
         id: "b",
         textKey: "quiz.q3.answers.extrovertido",
-        tags: {
-          extrovertido: 3,
-          aventurero: 1,
-          expresivo: 1,
-        },
+        tags: { extrovertido: 3, aventurero: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q3.answers.ambivertido",
-        tags: {
-          ambivertido: 2,
-          adaptable: 1,
-          estable: 1,
-        },
+        tags: { ambivertido: 3, adaptable: 1 },
       },
     ],
   },
@@ -99,32 +62,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q4.answers.responsable",
-        tags: {
-          responsable: 3,
-          racional: 1,
-          estricto: 2,
-          directo: 1,
-        },
+        tags: { estricto: 2, racional: 1, directo: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q4.answers.irresponsable",
-        tags: {
-          procrastinador: 3,
-          estable: 2,
-          caotico: 1,
-          evitativo: 1,
-        },
+        tags: { procrastinador: 3, caotico: 2 },
       },
       {
         id: "c",
         textKey: "quiz.q4.answers.medio",
-        tags: {
-          pragmatico: 2,
-          adaptable: 1,
-          responsable: 1,
-          estable: 2,
-        },
+        tags: { pragmatico: 2, adaptable: 1 },
       },
     ],
   },
@@ -135,32 +83,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q5.answers.caos",
-        tags: {
-          caotico: 3,
-          aventurero: 2,
-          emocional: 1,
-          procrastinador: 1,
-        },
+        tags: { caotico: 3, aventurero: 2 },
       },
       {
         id: "b",
         textKey: "quiz.q5.answers.rutina",
-        tags: {
-          estable: 3,
-          responsable: 2,
-          racional: 1,
-          estricto: 3,
-        },
+        tags: { estable: 3, estricto: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q5.answers.medio",
-        tags: {
-          estable: 1,
-          adaptable: 2,
-          ambivertido: 1,
-          responsable: 1,
-        },
+        tags: { adaptable: 2, ambivertido: 1 },
       },
     ],
   },
@@ -171,34 +104,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q6.answers.si",
-        tags: {
-          contacto_fisico: 3,
-          caotico: 1,
-          romantico: 3,
-          directo: 1,
-          expresivo: 2,
-        },
+        tags: { contacto_fisico: 3, expresivo: 2, romantico: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q6.answers.medio",
-        tags: {
-          introvertido: 1,
-          romantico: 1,
-          adaptable: 1,
-          estricto: 1,
-          contacto_fisico: 2,
-          sutil: 1,
-        },
+        tags: { contacto_fisico: 1, sutil: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q6.answers.no",
-        tags: {
-          introvertido: 3,
-          estricto: 3,
-          evitativo: 1,
-        },
+        tags: { introvertido: 2, estricto: 1 },
       },
     ],
   },
@@ -209,30 +125,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q7.answers.romantico",
-        tags: {
-          romantico: 3,
-          emocional: 1,
-          expresivo: 1,
-        },
+        tags: { romantico: 3, emocional: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q7.answers.pragmatico",
-        tags: {
-          pragmatico: 3,
-          introvertido: 1,
-          estable: 1,
-          racional: 1,
-        },
+        tags: { pragmatico: 3, racional: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q7.answers.medio",
-        tags: {
-          adaptable: 2,
-          romantico: 1,
-          pragmatico: 1,
-        },
+        tags: { adaptable: 2, ambiguo: 1 },
       },
     ],
   },
@@ -243,23 +146,12 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q8.answers.emocional",
-        tags: {
-          emocional: 3,
-          caotico: 1,
-          romantico: 2,
-          expresivo: 1,
-          empatico: 1,
-        },
+        tags: { emocional: 3, expresivo: 1, empatico: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q8.answers.racional",
-        tags: {
-          racional: 3,
-          responsable: 1,
-          estricto: 1,
-          estable: 1,
-        },
+        tags: { racional: 3, estable: 1 },
       },
     ],
   },
@@ -270,34 +162,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q9.answers.educado",
-        tags: {
-          educado: 3,
-          sutil: 1,
-          extrovertido: 1,
-          responsable: 1,
-          estable: 1,
-        },
+        tags: { educado: 3, extrovertido: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q9.answers.maleducado",
-        tags: {
-          directo: 1,
-          caotico: 1,
-          hater: 3,
-        },
+        tags: { hater: 3, directo: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q9.answers.medio",
-        tags: {
-          adaptable: 2,
-          ambiguo: 1,
-          pragmatico: 1,
-          aventurero: 1,
-          resolutivo: 1,
-          inteligente: 1,
-        },
+        tags: { ambiguo: 2, adaptable: 1 },
       },
     ],
   },
@@ -308,20 +183,12 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q10.answers.flexible",
-        tags: {
-          adaptable: 3,
-          resolutivo: 1,
-          empatico: 1,
-        },
+        tags: { adaptable: 3, empatico: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q10.answers.estricto",
-        tags: {
-          estricto: 3,
-          responsable: 1,
-          estable: 1,
-        },
+        tags: { estricto: 3, racional: 1 },
       },
     ],
   },
@@ -332,23 +199,12 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q11.answers.evitativo",
-        tags: {
-          evitativo: 3,
-          introvertido: 2,
-          caotico: 1,
-          sutil: 1,
-        },
+        tags: { evitativo: 3, sutil: 2 },
       },
       {
         id: "b",
         textKey: "quiz.q11.answers.resolutivo",
-        tags: {
-          resolutivo: 3,
-          directo: 1,
-          adaptable: 1,
-          racional: 2,
-          expresivo: 1,
-        },
+        tags: { resolutivo: 3, directo: 1, racional: 1 },
       },
     ],
   },
@@ -359,20 +215,12 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q12.answers.explicito",
-        tags: {
-          directo: 3,
-          romantico: 1,
-          expresivo: 1,
-        },
+        tags: { directo: 3, expresivo: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q12.answers.sutil",
-        tags: {
-          sutil: 3,
-          introvertido: 1,
-          estable: 1,
-        },
+        tags: { sutil: 3, introvertido: 1 },
       },
     ],
   },
@@ -383,26 +231,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q13.answers.lento",
-        tags: {
-          racional: 2,
-          resolutivo: 3,
-        },
+        tags: { racional: 2, resolutivo: 2 },
       },
       {
         id: "b",
         textKey: "quiz.q13.answers.rapido",
-        tags: {
-          emocional: 2,
-          expresivo: 2,
-        },
+        tags: { emocional: 2, expresivo: 2 },
       },
       {
         id: "c",
         textKey: "quiz.q13.answers.no",
-        tags: {
-          evitativo: 3,
-          introvertido: 1,
-        },
+        tags: { evitativo: 3, hater: 1 },
       },
     ],
   },
@@ -413,26 +252,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q14.answers.listo",
-        tags: {
-          inteligente: 3,
-          racional: 1,
-        },
+        tags: { inteligente: 3, resolutivo: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q14.answers.tonto",
-        tags: {
-          caotico: 2,
-          hater: 1,
-        },
+        tags: { caotico: 2, procrastinador: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q14.answers.medio",
-        tags: {
-          inteligente: 1,
-          caotico: 1,
-        },
+        tags: { inteligente: 2, adaptable: 1 },
       },
     ],
   },
@@ -443,29 +273,17 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q15.answers.bueno",
-        tags: {
-          empatico: 2,
-          resolutivo: 1,
-          educado: 2,
-        },
+        tags: { empatico: 3, educado: 2 },
       },
       {
         id: "b",
         textKey: "quiz.q15.answers.malo",
-        tags: {
-          hater: 3,
-          evitativo: 1,
-          caotico: 1,
-        },
+        tags: { hater: 3, caotico: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q15.answers.medio",
-        tags: {
-          ambiguo: 2,
-          adaptable: 1,
-          caotico: 1,
-        },
+        tags: { ambiguo: 2, adaptable: 1 },
       },
     ],
   },
@@ -476,21 +294,12 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q16.answers.empatico",
-        tags: {
-          empatico: 3,
-          emocional: 1,
-          extrovertido: 1,
-          romantico: 1,
-        },
+        tags: { empatico: 3, emocional: 1, extrovertido: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q16.answers.solucionador",
-        tags: {
-          pragmatico: 3,
-          directo: 1,
-          racional: 2,
-        },
+        tags: { pragmatico: 3, directo: 1, racional: 1 },
       },
     ],
   },
@@ -501,26 +310,10 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q17.answers.intenso",
-        tags: {
-          libido: 3,
-          contacto_fisico: 1,
-          romantico: 1,
-        },
+        meta: { libido: "alto" },
       },
-      {
-        id: "b",
-        textKey: "quiz.q17.answers.medio",
-        tags: {
-          libido: 2,
-        },
-      },
-      {
-        id: "c",
-        textKey: "quiz.q17.answers.bajo",
-        tags: {
-          libido: 1,
-        },
-      },
+      { id: "b", textKey: "quiz.q17.answers.medio", meta: { libido: "medio" } },
+      { id: "c", textKey: "quiz.q17.answers.bajo", meta: { libido: "bajo" } },
     ],
   },
   {
@@ -530,54 +323,30 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q18.answers.lios",
-        tags: {
-          casual: 3,
-          pragmatico: 1,
-        },
+        tags: { casual: 3, aventurero: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q18.answers.largas",
-        tags: {
-          romantico: 1,
-          responsable: 2,
-        },
+        tags: { romantico: 2, estable: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q18.answers.medio",
-        tags: {
-          adaptable: 1,
-          casual: 1,
-          romantico: 1,
-        }
-      }
+        tags: { adaptable: 2, ambiguo: 1 },
+      },
     ],
   },
   {
     id: "q19",
     questionKey: "quiz.q19.question",
     answers: [
-      {
-        id: "a",
-        textKey: "quiz.q19.answers.dominante",
-        meta: {
-          tipo: "dom",
-        },
-      },
-      {
-        id: "b",
-        textKey: "quiz.q19.answers.sumiso",
-        meta: {
-          tipo: "sub",
-        },
-      },
+      { id: "a", textKey: "quiz.q19.answers.dominante", meta: { tipo: "dom" } },
+      { id: "b", textKey: "quiz.q19.answers.sumiso", meta: { tipo: "sub" } },
       {
         id: "c",
         textKey: "quiz.q19.answers.adaptable",
-        meta: {
-          tipo: "switch",
-        },
+        meta: { tipo: "switch" },
       },
     ],
   },
@@ -585,60 +354,30 @@ export const questions = [
     id: "q20",
     questionKey: "quiz.q20.question",
     answers: [
-      {
-        id: "a",
-        textKey: "quiz.q20.answers.si",
-        meta: {
-          child: "yes",
-        },
-      },
-      {
-        id: "b",
-        textKey: "quiz.q20.answers.no",
-        meta: {
-          child: "no",
-        },
-      },
-      {
-        id: "c",
-        textKey: "quiz.q20.answers.puede",
-        meta: {
-          child: "maybe",
-        },
-      },
+      { id: "a", textKey: "quiz.q20.answers.si", meta: { child: "yes" } },
+      { id: "b", textKey: "quiz.q20.answers.no", meta: { child: "no" } },
+      { id: "c", textKey: "quiz.q20.answers.puede", meta: { child: "maybe" } },
     ],
   },
   {
     id: "q21",
     questionKey: "quiz.q21.question",
     answers: [
-      {
-        id: "a",
-        textKey: "quiz.q21.answers.mono",
-        meta: {
-          relacion: "mono",
-        },
-      },
+      { id: "a", textKey: "quiz.q21.answers.mono", meta: { relacion: "mono" } },
       {
         id: "c",
         textKey: "quiz.q21.answers.abierta",
-        meta: {
-          relacion: "abierta",
-        },
+        meta: { relacion: "abierta" },
       },
       {
         id: "d",
         textKey: "quiz.q21.answers.ninguna",
-        meta: {
-          relacion: "arromantico",
-        },
+        meta: { relacion: "arromantico" },
       },
       {
         id: "e",
         textKey: "quiz.q21.answers.idc",
-        meta: {
-          relacion: "cualquiera",
-        },
+        meta: { relacion: "cualquiera" },
       },
     ],
   },
@@ -649,59 +388,32 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q22.answers.seguro",
-        meta: {
-          apego: "seguro",
-        },
-        tags: {
-          estable: 2,
-          directo: 1,
-          resolutivo: 1,
-        },
+        meta: { apego: "seguro" },
+        tags: { estable: 2, directo: 1 },
       },
       {
         id: "b",
         textKey: "quiz.q22.answers.evitativo",
-        meta: {
-          apego: "evitativo",
-        },
-        tags: {
-          evitativo: 2,
-          introvertido: 1,
-        },
+        meta: { apego: "evitativo" },
+        tags: { evitativo: 2, introvertido: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q22.answers.ansioso",
-        meta: {
-          apego: "ansioso",
-        },
-        tags: {
-          estricto: 1,
-          emocional: 2,
-          resolutivo: 1,
-        },
+        meta: { apego: "ansioso" },
+        tags: { emocional: 2, estricto: 1 },
       },
       {
         id: "d",
         textKey: "quiz.q22.answers.desorganizado",
-        meta: {
-          apego: "desorganizado",
-        },
-        tags: {
-          caotico: 1,
-          adaptable: 1,
-        },
+        meta: { apego: "desorganizado" },
+        tags: { caotico: 2, ambiguo: 1 },
       },
       {
         id: "e",
         textKey: "quiz.q22.answers.no",
-        meta: {
-          apego: "hater",
-        },
-        tags: {
-          hater: 2,
-          introvertido: 1,
-        },
+        meta: { apego: "hater" },
+        tags: { hater: 2, evitativo: 1 },
       },
     ],
   },
@@ -712,37 +424,27 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q23.answers.seguro",
-        meta: {
-          quiere_apego: "seguro",
-        },
+        meta: { quiere_apego: "seguro" },
       },
       {
         id: "b",
         textKey: "quiz.q23.answers.evitativo",
-        meta: {
-          quiere_apego: "evitativo",
-        },
+        meta: { quiere_apego: "evitativo" },
       },
       {
         id: "c",
         textKey: "quiz.q23.answers.ansioso",
-        meta: {
-          quiere_apego: "ansioso",
-        },
+        meta: { quiere_apego: "ansioso" },
       },
       {
         id: "d",
         textKey: "quiz.q23.answers.desorganizado",
-        meta: {
-          quiere_apego: "desorganizado",
-        },
+        meta: { quiere_apego: "desorganizado" },
       },
       {
         id: "e",
         textKey: "quiz.q23.answers.no",
-        meta: {
-          quiere_apego: "hater",
-        },
+        meta: { quiere_apego: "hater" },
       },
     ],
   },
@@ -753,56 +455,37 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q24.answers.palabras",
-        tags: {
-          afirmacion: 3,
-          romantico: 1,
-        },
+        meta: { lenguaje: "afirmacion" },
       },
       {
         id: "b",
         textKey: "quiz.q24.answers.tiempo",
-        tags: {
-          calidad: 3,
-          aventurero: 1,
-        },
+        meta: { lenguaje: "calidad" },
       },
       {
         id: "c",
-        textKey: "quiz.q24.answers.regalos",
-        tags: {
-          regalos: 3,
-          empatico: 1,
-        },
+        textKey: "quiz.q24.answers.resgalos",
+        meta: { lenguaje: "regalos" },
       },
       {
         id: "d",
         textKey: "quiz.q24.answers.pinguino",
-        tags: {
-          pinguino: 3,
-          caotico: 1,
-        },
+        meta: { lenguaje: "pinguino" },
       },
       {
         id: "e",
         textKey: "quiz.q24.answers.actos",
-        tags: {
-          actos: 3,
-          responsable: 1,
-        },
+        meta: { lenguaje: "actos" },
       },
       {
         id: "f",
         textKey: "quiz.q24.answers.contacto",
-        tags: {
-          contacto_fisico: 1,
-        },
+        meta: { lenguaje: "contacto" },
       },
       {
         id: "g",
         textKey: "quiz.q24.answers.ninguno",
-        tags: {
-          otro_lenguaje: 3,
-        },
+        meta: { lenguaje: "otro" },
       },
     ],
   },
@@ -810,26 +493,12 @@ export const questions = [
     id: "q25",
     questionKey: "quiz.q25.question",
     answers: [
-      {
-        id: "a",
-        textKey: "quiz.q25.answers.dominante",
-        meta: {
-          tipo: "dom",
-        },
-      },
-      {
-        id: "b",
-        textKey: "quiz.q25.answers.sumiso",
-        meta: {
-          tipo: "sub",
-        },
-      },
+      { id: "a", textKey: "quiz.q25.answers.dominante", meta: { tipo: "dom" } },
+      { id: "b", textKey: "quiz.q25.answers.sumiso", meta: { tipo: "sub" } },
       {
         id: "c",
         textKey: "quiz.q25.answers.adaptable",
-        meta: {
-          tipo: "switch",
-        },
+        meta: { tipo: "switch" },
       },
     ],
   },
