@@ -56,13 +56,9 @@ function isTipoCompatible(userMeta, character) {
   const charTipo = character.preferences.tipo;
   const charWants = character.preferences.quiere_tipo;
 
-  const userLikesChara =
-    userTipo === "switch" || 
-    (userTipo === charWants);
+  const userLikesChara = userTipo === "switch" || userTipo === charWants;
 
-  const charaLikesUser =
-    charTipo === "switch" ||
-    (charTipo === userWants);
+  const charaLikesUser = charTipo === "switch" || charTipo === userWants;
 
   return userLikesChara && charaLikesUser;
 }
@@ -74,28 +70,36 @@ function isApegoCompatible(userMeta, character) {
   const charApego = character.preferences.apego;
   const charWants = character.preferences.quiere_apego;
 
-  const userLikesChara =
-    userApego === charWants;
+  const userLikesChara = userApego === charWants;
 
-  const charaLikesUser =
-    charApego === userWants;
+  const charaLikesUser = charApego === userWants;
 
   return userLikesChara && charaLikesUser;
 }
+
+const META_MATCHES = [
+  { userKey: "child", charKey: "child" },
+  { userKey: "relacion", charKey: "relacion" },
+  { userKey: "libido", charKey: "libido" },
+  { userKey: "lenguaje", charKey: "lenguaje" },
+];
 
 function metaScore(userMeta, character) {
   let score = 0;
 
   if (!isGenderCompatible(userMeta, character)) return -1;
+  if (isTipoCompatible(userMeta, character)) score += 1;
+  if (isApegoCompatible(userMeta, character)) score += 1;
+  for (const { userKey, charKey } of META_MATCHES) {
+    if (
+      userMeta[userKey] !== undefined &&
+      character.preferences[charKey] !== undefined
+    ) {
+      if (userMeta[userKey] === character.preferences[charKey]) score += 1;
+    }
+  }
 
-  if (isTipoCompatible) score += 1;
-  if (isApegoCompatible) score += 1;
-  if (userMeta.child === character.preferences.child) score += 1;
-  if (userMeta.relacion === character.preferences.relacion) score += 1;
-  if (userMeta.libido === character.preferences.libido) score += 1;
-  if (userMeta.lenguaje === character.preferences.lenguaje) score += 1;
-
-  return score / 6;
+  return score / (META_MATCHES.length + 2);
 }
 
 export function calculateScore(character, userMeta, userDimensions) {
