@@ -1,7 +1,7 @@
 export default function buildCharacterTags(traits, preferences, dimensions, t) {
   const tags = [];
 
-  switch (preferences.social) {
+  switch (preferences.gender) {
     case "masculino":
       tags.push({ label: t(($) => $.tags.gender.masc), category: "gender" });
       break;
