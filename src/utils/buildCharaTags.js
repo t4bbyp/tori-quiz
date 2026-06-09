@@ -1,7 +1,7 @@
 export default function buildCharacterTags(traits, preferences, dimensions, t) {
   const tags = [];
 
-  switch (preferences.gender) {
+  switch (preferences.social) {
     case "masculino":
       tags.push({ label: t(($) => $.tags.gender.masc), category: "gender" });
       break;
@@ -10,6 +10,17 @@ export default function buildCharacterTags(traits, preferences, dimensions, t) {
       break;
     default:
       tags.push({ label: t(($) => $.tags.gender.other), category: "gender" });
+  }
+
+  switch (preferences.social) {
+    case "ambi":
+      tags.push({ label: t(($) => $.tags.social.ambi), category: "social" });
+      break;
+    case "intro":
+      tags.push({ label: t(($) => $.tags.social.intro), category: "social" });
+      break;
+    default:
+      tags.push({ label: t(($) => $.tags.social.extro), category: "social" });
   }
 
   switch (preferences.sexuality) {
@@ -72,25 +83,10 @@ export default function buildCharacterTags(traits, preferences, dimensions, t) {
       tags.push({ label: "Switch", category: "type" });
   }
 
-  tags.push(getSocialTag(traits, t));
   tags.push(getLoveStyleTag(traits, t));
   tags.push(getMentalStyleTag(dimensions, t));
 
   return tags;
-}
-
-function getSocialTag(traits, t) {
-  const intro = traits.introvertido || 0;
-  const extro = traits.extrovertido || 0;
-  const ambi = traits.ambivertido || 0;
-
-  const max = Math.max(intro, extro, ambi);
-
-  if (max === ambi)
-    return { label: t(($) => $.tags.social.ambi), category: "social" };
-  if (max === intro)
-    return { label: t(($) => $.tags.social.intro), category: "social" };
-  return { label: t(($) => $.tags.social.extro), category: "social" };
 }
 
 function getLoveStyleTag(traits, t) {

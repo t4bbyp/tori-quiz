@@ -233,7 +233,8 @@
       "question": "When others have problems, you...",
       "answers": {
         "empatico": "Offer emotional support first and focus on making them feel better",
-        "solucionador": "Look for solutions directly. A few kind words won't change the situation."
+        "solucionador": "Look for solutions directly. A few kind words won't change the situation.",
+        "apatico": "Those problems belong to others, not to me. Bye."
       }
     },
     "q17": {

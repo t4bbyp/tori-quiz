@@ -233,7 +233,8 @@
       "question": "En cuanto a los problemas ajenos, tú...",
       "answers": {
         "empatico": "Ofreces apoyo emocional y te centras, antes de nada, en hacer que el otro se sienta mejor",
-        "solucionador": "Buscas soluciones directamente. Solo un par de palabras dulces no cambiarán la situación."
+        "solucionador": "Buscas soluciones directamente. Solo un par de palabras dulces no cambiarán la situación.",
+        "apatico": "Son ajenos, no míos. Adiós."
       }
     },
     "q17": {

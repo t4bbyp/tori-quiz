@@ -41,16 +41,19 @@ export const questions = [
       {
         id: "a",
         textKey: "quiz.q3.answers.introvertido",
+        meta: {social: "intro"},
         tags: { introvertido: 3 },
       },
       {
         id: "b",
         textKey: "quiz.q3.answers.extrovertido",
+        meta: {social: "extro"},
         tags: { extrovertido: 3, aventurero: 1 },
       },
       {
         id: "c",
         textKey: "quiz.q3.answers.ambivertido",
+        meta: {social: "ambi"},
         tags: { ambivertido: 3, adaptable: 1 },
       },
     ],
@@ -301,6 +304,11 @@ export const questions = [
         textKey: "quiz.q16.answers.solucionador",
         tags: { pragmatico: 3, directo: 1, racional: 1 },
       },
+      {
+        id: "c",
+        textKey: "quiz.q16.answers.apatico",
+        tags: { hater: 2, evitativo: 1}
+      }
     ],
   },
   {
