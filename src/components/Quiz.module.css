@@ -38,3 +38,10 @@ li button {
 li button:hover {
     background-color: #bde0fe;
 }
+
+/* In your global CSS or Quiz.module.css */
+li button:focus-visible,
+li button.keyboard-focused {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}

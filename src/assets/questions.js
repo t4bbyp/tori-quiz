@@ -464,7 +464,7 @@ export const questions = [
       },
       {
         id: "c",
-        textKey: "quiz.q24.answers.resgalos",
+        textKey: "quiz.q24.answers.regalos",
         meta: { lenguaje: "regalos" },
       },
       {
