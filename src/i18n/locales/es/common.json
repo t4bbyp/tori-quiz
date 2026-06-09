@@ -65,6 +65,14 @@
     "compatible": "Personajes Compatibles"
   },
 
+  "filters": {
+    "gender": "Género",
+    "sexuality": "Sexualidad",
+    "attachment": "Apego",
+    "type": "Tipo",
+    "clear": "Limpiar filtros"
+  },
+
   "tags": {
     "gender": {
       "masc": "Hombre",

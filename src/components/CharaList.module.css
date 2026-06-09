@@ -14,7 +14,7 @@
   height: auto;
   display: grid;
   gap: 0.7rem;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   align-content: start;
   justify-content: space-between;
   overflow: hidden;
@@ -25,6 +25,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #555;
   aspect-ratio: 1 / 1;
   border: none;
   border-radius: 14px;
@@ -69,4 +70,12 @@
 .item:hover {
   transform: scale(1);
   box-shadow: 0 6px 20px rgba(32, 77, 134, 0.4);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  font-size: 1.4vmin;
+  padding: 2rem 0;
 }

@@ -7,7 +7,7 @@ export default function CharactersListPage() {
   return (
     <CharactersProvider>
       {selected === "" && (
-        <CharaList onSelect={(c) => setSelected(c.character_id)} />
+        <CharaList onSelect={(c) => setSelected(c.id)} />
       )}
 
       {selected && (

@@ -30,6 +30,7 @@
   }
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #585e68;
@@ -49,6 +50,7 @@
     filter: invert(1) brightness(2);
   }
 }
+*/
 
 body {
   margin: 0;
@@ -184,6 +186,10 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
+}
+
+input[type="checkbox"] {
+  accent-color: #7882cc !important;
 }
 
 .mybox input,

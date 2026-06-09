@@ -65,6 +65,14 @@
     "compatible": "Compatible Characters"
   },
 
+    "filters": {
+    "gender": "Gender",
+    "sexuality": "Sexuality",
+    "attachment": "Attachment Style",
+    "type": "Type",
+    "clear": "Clear filters"
+  },
+
   "tags": {
     "gender": {
       "masc": "Man",

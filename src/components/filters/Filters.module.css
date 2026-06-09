@@ -1,0 +1,115 @@
+.panel {
+  width: clamp(320px, 50vw, 700px);
+  margin-bottom: 0.75rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: white;
+  border: 1.5px solid #a8c8f0;
+  border-radius: 20px;
+  font-size: 1.4vmin;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+  color: rgb(24, 64, 99); 
+}
+
+.trigger:hover {
+  border-color: #7882cc;
+}
+
+.trigger.active {
+  background: #bde0fe;
+  border-color: #7882cc;
+  font-weight: bold;
+}
+
+.badge {
+  background: #7882cc;
+  color: white;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  font-size: 0.7em;
+  color: #555;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  background: white;
+  border: 1.5px solid #a8c8f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(32, 77, 134, 0.15);
+  padding: 0.5rem;
+  z-index: 100;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3vmin;
+  font-family: inherit;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.option:hover {
+  background: #f0f7ff;
+}
+
+.option input[type="checkbox"] {
+  accent-color: #7882cc !important;
+  cursor: pointer;
+}
+
+.clear {
+  padding: 0.4rem 0.8rem;
+  background: #ffafcc;
+  border: 1.5px solid #812144;
+  border-radius: 20px;
+  color: #812144;
+  font-size: 1.4vmin;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.clear:hover {
+  background: #f04181;
+  color: #fde2ec;
+}
