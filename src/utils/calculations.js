@@ -49,13 +49,47 @@ function isGenderCompatible(userMeta, character) {
   return userLikesChara && charaLikesUser;
 }
 
+function isTipoCompatible(userMeta, character) {
+  const userTipo = userMeta.tipo;
+  const userWants = userMeta.quiere_tipo;
+
+  const charTipo = character.preferences.tipo;
+  const charWants = character.preferences.quiere_tipo;
+
+  const userLikesChara =
+    userTipo === "switch" || 
+    (userTipo === charWants);
+
+  const charaLikesUser =
+    charTipo === "switch" ||
+    (charTipo === userWants);
+
+  return userLikesChara && charaLikesUser;
+}
+
+function isApegoCompatible(userMeta, character) {
+  const userApego = userMeta.apego;
+  const userWants = userMeta.quiere_apego;
+
+  const charApego = character.preferences.apego;
+  const charWants = character.preferences.quiere_apego;
+
+  const userLikesChara =
+    userApego === charWants;
+
+  const charaLikesUser =
+    charApego === userWants;
+
+  return userLikesChara && charaLikesUser;
+}
+
 function metaScore(userMeta, character) {
   let score = 0;
 
   if (!isGenderCompatible(userMeta, character)) return -1;
 
-  if (userMeta.tipo === character.preferences.quiere_tipo) score += 1;
-  if (userMeta.apego === character.preferences.quiere_apego) score += 1;
+  if (isTipoCompatible) score += 1;
+  if (isApegoCompatible) score += 1;
   if (userMeta.child === character.preferences.child) score += 1;
   if (userMeta.relacion === character.preferences.relacion) score += 1;
   if (userMeta.libido === character.preferences.libido) score += 1;
