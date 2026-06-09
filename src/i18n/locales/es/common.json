@@ -61,6 +61,10 @@
     "loging": "Conectando..."
   },
 
+  "charaDetails": {
+    "compatible": "Personajes Compatibles"
+  },
+
   "tags": {
     "gender": {
       "masc": "Hombre",

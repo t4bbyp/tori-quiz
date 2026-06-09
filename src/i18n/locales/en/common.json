@@ -61,6 +61,10 @@
     "loging": "Signing in..."
   },
 
+  "charaDetails": {
+    "compatible": "Compatible Characters"
+  },
+
   "tags": {
     "gender": {
       "masc": "Man",
