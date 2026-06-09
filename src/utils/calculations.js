@@ -58,8 +58,10 @@ function metaScore(userMeta, character) {
   if (userMeta.apego === character.preferences.quiere_apego) score += 1;
   if (userMeta.child === character.preferences.child) score += 1;
   if (userMeta.relacion === character.preferences.relacion) score += 1;
+  if (userMeta.libido === character.preferences.libido) score += 1;
+  if (userMeta.lenguaje === character.preferences.lenguaje) score += 1;
 
-  return score / 4;
+  return score / 6;
 }
 
 export function calculateScore(character, userMeta, userDimensions) {
