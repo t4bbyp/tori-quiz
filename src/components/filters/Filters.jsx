@@ -17,9 +17,9 @@ const FILTER_CATEGORIES = [
     labelKey: "filters.sexuality",
     options: [
       { value: "hetero", labelKey: "tags.sexuality.hetero" },
-      { value: "homo", labelKey: "tags.sexuality.homo" },
-      { value: "bi", labelKey: "tags.sexuality.bi" },
-      { value: "asexual", labelKey: "tags.sexuality.asex" },
+      { value: "homo", labelKey: "Gay" },
+      { value: "bi", labelKey: "Bi/Pan" },
+      { value: "asexual", labelKey: "Asexual" },
     ],
   },
   {
