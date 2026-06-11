@@ -68,6 +68,7 @@ This project helped me practice and better understand the following:
 - integrating external services with SupaBase
 - deploying React apps through GitHub Pages
 - Understanding the limitations of static hosting and using createHashRouter for compatibility
+- Comparing different similarity metrics (cosine similarity vs. Euclidean distance) for recommendation and matching systems
 
 ## Collaboration & Requests
 
