@@ -17,7 +17,12 @@ export default function CharaDetails({ pjId, onBack }) {
 
   const tags = useMemo(() => {
     if (!character) return [];
-    return buildCharacterTags(character.rawTraits, character.preferences, character.dimensions, t);
+    return buildCharacterTags(
+      character.rawTraits,
+      character.preferences,
+      character.dimensions,
+      t,
+    );
   }, [character, t]);
 
   const topMatches = useMemo(() => {
@@ -27,14 +32,20 @@ export default function CharaDetails({ pjId, onBack }) {
     const charTraits = {};
 
     getFullAnswers(character.answers).forEach((answer) => {
-      if (answer.tags) for (const tag in answer.tags) charTraits[tag] = (charTraits[tag] || 0) + answer.tags[tag];
-      if (answer.meta) for (const key in answer.meta) charMeta[key] = answer.meta[key];
+      if (answer.tags)
+        for (const tag in answer.tags)
+          charTraits[tag] = (charTraits[tag] || 0) + answer.tags[tag];
+      if (answer.meta)
+        for (const key in answer.meta) charMeta[key] = answer.meta[key];
     });
 
     const charDimensions = character.dimensions;
 
     return others
-      .map((c) => ({ character: c, score: calculateScore(c, charMeta, charDimensions) }))
+      .map((c) => ({
+        character: c,
+        score: calculateScore(c, charMeta, charDimensions),
+      }))
       .filter((c) => c.score >= 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 2);
@@ -49,25 +60,41 @@ export default function CharaDetails({ pjId, onBack }) {
 
         <div className={classes.profile}>
           <div className={classes.pfp}>
-            <img src={character.img || "https://placehold.co/200x200"} alt={character.name} />
+            <img
+              src={character.img || "https://placehold.co/200x200"}
+              alt={character.name}
+            />
             {character.artist && <small>@{character.artist}</small>}
           </div>
-          <p className={classes.desc}>{character.desc}</p>
+
+          {tags.length > 0 && (
+            <div
+              className={classes.taglist}
+              aria-label="list of character tags"
+            >
+              {tags.map((tag) => (
+                <span
+                  key={tag.label}
+                  className={`${classes.tag_item} ${classes[tag.category]}`}
+                >
+                  {tag.label}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
-        {tags.length > 0 && (
-          <div className={classes.taglist} aria-label="list of character tags">
-            {tags.map((tag) => (
-              <span key={tag.label} className={`${classes.tag_item} ${classes[tag.category]}`}>
-                {tag.label}
-              </span>
-            ))}
-          </div>
-        )}
+        <p className={classes.desc}>{character.desc}</p>
 
         <div className={classes.footer}>
-          <button className={classes.return} onClick={onBack} aria-label="go back to characters list">
-            <span className="material-symbols-outlined" aria-hidden="true">arrow_circle_left</span>
+          <button
+            className={classes.return}
+            onClick={onBack}
+            aria-label="go back to characters list"
+          >
+            <span className="material-symbols-outlined" aria-hidden="true">
+              arrow_circle_left
+            </span>
           </button>
         </div>
       </div>

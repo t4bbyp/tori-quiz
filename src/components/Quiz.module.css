@@ -45,3 +45,23 @@ li button.keyboard-focused {
   outline: 2px solid red;
   outline-offset: 2px;
 }
+
+@media (max-width: 480px) {
+  ul {
+    width: 100%;
+  }
+
+  li {
+    width: 90%;
+    margin: 2% auto;
+  }
+
+  li button {
+    font-size: 0.85rem;
+    padding: 3% 4%;
+  }
+
+  .reset_btn {
+    padding: 6px;
+  }
+}

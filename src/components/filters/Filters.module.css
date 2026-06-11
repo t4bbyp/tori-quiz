@@ -113,3 +113,27 @@
   background: #f04181;
   color: #fde2ec;
 }
+
+@media (max-width: 480px) {
+  .panel {
+    width: 90vw;
+  }
+
+  .trigger {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .option {
+    font-size: 0.75rem;
+  }
+
+  .clear {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .menu {
+    min-width: 130px;
+  }
+}

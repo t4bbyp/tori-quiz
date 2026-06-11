@@ -49,3 +49,18 @@
 .panelActive {
     display: block;
 }
+
+@media (max-width: 480px) {
+  .accordion {
+    width: 90%;
+  }
+
+  .accordionBtn {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+
+  .panel {
+    font-size: 0.8rem;
+  }
+}

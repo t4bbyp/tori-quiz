@@ -1,43 +1,43 @@
 .text_container {
-  width: 40vw;
-  max-width: 50vw;
+  width: clamp(280px, 80vw, 600px);
+  max-width: 90vw;
   height: auto;
   border-radius: 20px;
   background: white;
   box-shadow: 0 5px 5px rgba(32, 77, 134, 0.5);
-  padding: 1% 2%;
-  font-size: 0.9rem;
+  padding: 4% 5%;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   margin-bottom: 1rem;
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
 .menu_btn {
-    width: 20vmin;
-    background-color: white;
-    border: none;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    padding: 0.5rem 0.3rem;
-    box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.3);
-    transition: transform 0.2s ease-in-out;
-    font-size: 0.9rem;
+  width: clamp(120px, 28vw, 180px);
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0.5rem 0.3rem;
+  box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.3);
+  transition: transform 0.2s ease-in-out;
+  font-size: clamp(0.75rem, 2.5vw, 0.9rem);
 }
 
 .menu_btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px 1px rgba(32, 77, 134, 0.5);
 }
 
-
 .menu_btn img {
-    width: 90%;
-    border-radius: 10px;
+  width: 90%;
+  border-radius: 10px;
 }

@@ -1,3 +1,10 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .mybox2 {
   width: clamp(280px, 32vw, 500px);
   max-width: 90vw;
@@ -125,4 +132,43 @@
 
 .reset_btn:hover {
   background-color: #f04181;
+}
+
+@media (max-width: 480px) {
+  .mybox2 {
+    width: 85vw;
+    padding: 5% 4%;
+  }
+
+  .mybox2 small {
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+  }
+
+  .mybox2 input {
+    width: 75%;
+    font-size: 0.85rem;
+  }
+
+  .mybox2 textarea {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+
+  .mybox2 li {
+    width: 90%;
+  }
+
+  .answer {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.5rem;
+  }
+
+  .save {
+    width: 55%;
+    font-size: 0.9rem;
+    padding: 3% 4%;
+  }
+
+  
 }

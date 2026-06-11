@@ -6,6 +6,7 @@ import LoginForm from "../components/LoginForm";
 import CharaList from "../components/CharaList";
 import { useTranslation } from "react-i18next";
 import { redirect } from "react-router";
+import { CharactersProvider } from "../store/charactersContext";
 
 export default function EditCharacterPage() {
   const {t} = useTranslation();
@@ -57,9 +58,9 @@ export default function EditCharacterPage() {
   return (
     <>
       {!isEditing && (
-        <>
-          <CharaList onSelect={(c) => navigate(`/edit/${c.character_id}`)} />
-        </>
+        <CharactersProvider>
+          <CharaList onSelect={(c) => navigate(`/edit/${c.id}`)} />
+        </CharactersProvider>
       )}
 
       {isEditing && <Editor pjId={params.id} />}

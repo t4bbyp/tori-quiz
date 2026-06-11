@@ -96,3 +96,46 @@ h3 {
   cursor: pointer;
   color: #fde2ec;
 }
+
+@media (max-width: 480px) {
+  .intro {
+    font-size: 0.85rem;
+  }
+
+  .desc {
+    width: 95%;
+    font-size: 0.8rem;
+  }
+
+  .first img {
+    width: 60%;
+    max-width: 180px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .runnerName {
+    font-size: 0.85rem;
+  }
+
+  .runner p {
+    font-size: 0.75rem;
+  }
+
+  .runner img {
+    width: 80%;
+    max-width: 120px;
+  }
+
+  .runners {
+    gap: 1rem;
+  }
+
+  .reset {
+    width: 60%;
+    font-size: 0.9rem;
+    padding: 3% 5%;
+  }
+}

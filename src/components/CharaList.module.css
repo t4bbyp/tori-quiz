@@ -79,3 +79,26 @@
   font-size: 1.4vmin;
   padding: 2rem 0;
 }
+
+@media (max-width: 480px) {
+  .container {
+    width: 90vw;
+    height: 65vh;
+    padding: 4%;
+    font-size: 0.8rem;
+  }
+
+  .innerContainer {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .item h3 {
+    font-size: 0.65rem;
+    margin: 0 0 4px;
+  }
+
+  .empty {
+    font-size: 0.8rem;
+  }
+}
