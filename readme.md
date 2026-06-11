@@ -40,16 +40,19 @@ So hopefully whoever finds this enjoys it too, or at least appreciates the effor
 - Home Page
 - Personality/compatibility quiz system
 - Top 3 matching characters
-- Character list page
+- Character list page + filters by traits
+- Character details/Profile page + 2 most compatible characters
 - Character management (adding/editing) — restricted and requires authentication
-- Authentication-protected admin functionality
+- Authenticated admin interface for character creation and editing
+- Database-level access control using Supabase RLS
 - English & Spanish localization
-- Responsive design (mobile responsive UI in progress)
+- Mobile responsive design 
 
 ## Installation
 
 ```bash
 git clone https://github.com/t4bbyp/tori-quiz.git
+cd tori-quiz
 npm install
 npm run dev
 ```
@@ -58,7 +61,7 @@ npm run dev
 
 This project helped me practice and better understand the following:
 - React component architecture
-- effects, state, context and portals
+- State management, effects, context and portals
 - Client-side routing with React Router
 - state-driven UI rendering
 - localization workflows
